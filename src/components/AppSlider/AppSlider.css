@@ -1,0 +1,33 @@
+.slide__item {
+  position: relative;
+  z-index: 2;
+}
+
+.slide__item__content__word {
+  font-size: 120px;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  color: rgba(147, 146, 146, 0.683);
+  text-transform: uppercase;
+  z-index: 0;
+  letter-spacing: 20px;
+  font-weight: 700;
+}
+
+.slide__item__content {
+  padding: 50px 70px;
+}
+
+.slide__item__content__title {
+  font-size: 40px;
+  color: #1b2129;
+  text-transform: capitalize;
+  width: 35%;
+}
+.slide__item__content__description {
+  font-size: 18px;
+  color: #1b2129e1;
+  width: 30%;
+  margin: 10px 0 20px 0;
+}

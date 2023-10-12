@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-
 import {
   AppBar,
   Box,
@@ -18,10 +17,14 @@ import {
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { AddCircle, Category } from "@mui/icons-material";
 const drawerWidth = 240;
+const routesAdmin = [
+  { namePage: "Products", routePage: "products", icon: <Category /> },
+  { namePage: "Add Product", routePage: "addProduct", icon: <AddCircle /> },
+];
 
 const AppSidebar = (props) => {
   const { window } = props;
@@ -33,31 +36,42 @@ const AppSidebar = (props) => {
 
   const drawer = (
     <div>
-      <Typography
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        m={1}
-        fontWeight={700}
-        fontSize={"30px"}
+      <Link
+        to={"/dashboard"}
+        style={{ textDecoration: "none", color: "inherit" }}
       >
-        Dashboard
-      </Typography>
-      {/* <Toolbar display="flex" justifyContent="center" alignItems="center">
-        Dashboard
-      </Toolbar> */}
+        <Typography
+          component={"a"}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          m={1}
+          fontWeight={700}
+          fontSize={"30px"}
+        >
+          Dashboard
+        </Typography>
+      </Link>
 
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {routesAdmin.map((route, index) => (
+          <Link
+            key={route.namePage}
+            to={route.routePage}
+            style={{ textDecoration: "none", color: "inherit" }}
+            activeStyle={{ fontWeight: "bold" }}
+          >
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
+                  {route.icon}
+                </ListItemIcon>
+                <ListItemText primary={route.namePage} to={route.routePage} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />

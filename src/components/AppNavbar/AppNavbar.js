@@ -1,38 +1,3 @@
-// import * as React from "react";
-// import AppBar from "@mui/material/AppBar";
-// import Box from "@mui/material/Box";
-// import Toolbar from "@mui/material/Toolbar";
-// import Typography from "@mui/material/Typography";
-// import Button from "@mui/material/Button";
-// import IconButton from "@mui/material/IconButton";
-// import MenuIcon from "@mui/icons-material/Menu";
-
-// const AppNavbar = () => {
-//   return (
-//     <Box sx={{ flexGrow: 1 }}>
-//       <AppBar position="static">
-//         <Toolbar>
-//           <IconButton
-//             size="large"
-//             edge="start"
-//             color="inherit"
-//             aria-label="menu"
-//             sx={{ mr: 2 }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//             News
-//           </Typography>
-//           <Button color="inherit">Login</Button>
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   );
-// };
-
-// export default AppNavbar;
-
 import * as React from "react";
 import {
   AppBar,
@@ -50,10 +15,33 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
 import "./AppNavbar.css";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
+import { useTheme } from "@emotion/react";
+import { useDispatch, useSelector } from "react-redux";
+import { changeMode } from "../../store/slices/modeSlice";
 const pages = ["Home", "Categories", "About us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function AppNavbar() {
+  //light and dark mode
+  const theme = useTheme();
+  const mode = useSelector((state) => state.mode);
+  console.log(mode);
+  const dispatch = useDispatch();
+
+  const handleMode = () => {
+    const currentMode = localStorage.getItem("currentMode");
+    if (currentMode === "light") {
+      theme.palette.mode = "dark";
+      dispatch(changeMode("dark"));
+      localStorage.setItem("currentMode", "dark");
+    } else {
+      theme.palette.mode = "light";
+      dispatch(changeMode("light"));
+      localStorage.setItem("currentMode", "light");
+    }
+  };
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -73,7 +61,11 @@ function AppNavbar() {
   };
 
   return (
-    <AppBar position="static" className="appNavbar">
+    <AppBar
+      position="static"
+      className="appNavbar"
+      sx={{ backgroundColor: theme.palette.background.default }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -112,7 +104,25 @@ function AppNavbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { md: "flex" }, mr: 1 }} />
+          <Typography
+            className="preLogo"
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              display: {
+                md: "flex",
+                background: theme.palette.background.sec,
+              },
+
+              fontWeight: 700,
+              color: theme.palette.text.logoSec,
+              textDecoration: "none",
+            }}
+          >
+            f
+          </Typography>
           <Typography
             variant="h6"
             noWrap
@@ -121,17 +131,17 @@ function AppNavbar() {
             sx={{
               mr: 2,
               display: { md: "flex" },
-              fontFamily: "monospace",
+
               fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
+              // letterSpacing: ".3rem",
+              // color: "inherit",
+              color: theme.palette.text.primary,
               textDecoration: "none",
               flexGrow: 1,
             }}
           >
-            LOGO
+            Fashion
           </Typography>
-
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -151,19 +161,38 @@ function AppNavbar() {
           >
             LOGO
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  display: "block",
+                  color: theme.palette.text.primary,
+                }}
               >
                 {page}
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
+            <IconButton
+              sx={{ ml: 1 }}
+              onClick={() => handleMode()}
+              color="inherit"
+            >
+              {theme.palette.mode === "dark" ? (
+                <Brightness7 sx={{ color: "orange" }} />
+              ) : (
+                <Brightness4 sx={{ color: "black" }} />
+              )}
+            </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

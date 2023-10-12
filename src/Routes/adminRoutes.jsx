@@ -15,10 +15,18 @@ const adminRoutes = {
       ),
     },
     {
-      path: "1",
+      path: "products",
       element: (
         //   <IsLoggedIn>
-        <h1>Dashboard 1</h1>
+        <h1>All Products</h1>
+        //   </IsLoggedIn>
+      ),
+    },
+    {
+      path: "addProduct",
+      element: (
+        //   <IsLoggedIn>
+        <h1>addProduct</h1>
         //   </IsLoggedIn>
       ),
     },
