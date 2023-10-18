@@ -1,9 +1,4 @@
 export const items = [
-  //   {
-  //     name: "Random Name #1",
-  //     description: "Probably the most random thing you have ever seen!",
-  //     img: "./Images/Slider/slide2.png",
-  //   },
   {
     name: "find the new collection in this winter season",
     description:
@@ -17,19 +12,9 @@ export const items = [
     img: "./Images/Slider/slide4.png",
   },
   {
-    name: "READY TO SHOP?",
+    name: "ready to shop?",
     description:
       "Browse from around thousands of outfits, makeup and more! We've something for everyone.",
     img: "./Images/Slider/slide5.png",
   },
-  //   {
-  //     name: "Random Name #2",
-  //     description: "Hello World!",
-  //     img: "./Images/Slider/slide6.png",
-  //   },
-  //   {
-  //     name: "Random Name #2",
-  //     description: "Hello World!",
-  //     img: "./Images/Slider/slide7.png",
-  //   },
 ];

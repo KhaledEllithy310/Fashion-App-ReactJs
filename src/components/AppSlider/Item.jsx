@@ -1,7 +1,6 @@
-import { Button, Paper } from "@mui/material";
+import {  Paper } from "@mui/material";
 import React from "react";
 import "./AppSlider.css";
-import { useTheme } from "@emotion/react";
 import AppButton from "../AppButton/AppButton";
 const Item = ({ item }) => {
   const slideStyle = {

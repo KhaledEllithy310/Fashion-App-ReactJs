@@ -1,0 +1,9 @@
+/* .radioInput {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+} */
+
+.label {
+  color: var(--placeholder) !important;
+}

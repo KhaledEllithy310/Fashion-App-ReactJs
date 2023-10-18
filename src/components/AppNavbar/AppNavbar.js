@@ -8,40 +8,87 @@ import {
   Menu,
   Container,
   Avatar,
-  Button,
   Tooltip,
   MenuItem,
+  Badge,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AdbIcon from "@mui/icons-material/Adb";
 import "./AppNavbar.css";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
-import { useDispatch, useSelector } from "react-redux";
-import { changeMode } from "../../store/slices/modeSlice";
-const pages = ["Home", "Categories", "About us"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import { useDispatch } from "react-redux";
+import { pages, settings } from "../../helpers/data-pages";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+// import Badge from "@mui/material/Badge";
+
+// const settings = [
+//   "Profile",
+//   "Account",
+//   "Dashboard",
+//   "Logout",
+//   "Login",
+//   "logout",
+// ];
 
 function AppNavbar() {
+  //get current route
+  const route = useLocation();
+
+  const navigate = useNavigate();
   //light and dark mode
   const theme = useTheme();
-  const mode = useSelector((state) => state.mode);
-  console.log(mode);
+  // const mode = useSelector((state) => state.mode);
   const dispatch = useDispatch();
 
-  const handleMode = () => {
-    const currentMode = localStorage.getItem("currentMode");
-    if (currentMode === "light") {
-      theme.palette.mode = "dark";
-      dispatch(changeMode("dark"));
-      localStorage.setItem("currentMode", "dark");
-    } else {
-      theme.palette.mode = "light";
-      dispatch(changeMode("light"));
-      localStorage.setItem("currentMode", "light");
-    }
-  };
+  // Get the current page URL
+  const currentPageUrl = window.location.href;
 
+  // Find all navigation links
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Remove the "active" class from all links
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  // Loop through the navigation links
+  navLinks.forEach((link) => {
+    // Check if the link's href matches the current page URL
+    if (link.href === currentPageUrl) {
+      // Add the active class to the link
+      link.classList.add("active");
+    }
+  });
+
+  // const handleMode = () => {
+  //   const currentMode = localStorage.getItem("currentMode");
+  //   if (currentMode === "light") {
+  //     theme.palette.mode = "dark";
+  //     dispatch(changeMode("dark"));
+  //     localStorage.setItem("currentMode", "dark");
+  //   } else {
+  //     theme.palette.mode = "light";
+  //     dispatch(changeMode("light"));
+  //     localStorage.setItem("currentMode", "light");
+  //   }
+  // };
+
+  const handleModeNew = () => {
+    const root = document.documentElement;
+    root.classList.toggle("dark-mode");
+    // Store the current mode in local storage
+    const isDarkMode = root.classList.contains("dark-mode");
+    localStorage.setItem("preferredMode", isDarkMode ? "dark" : "light");
+  };
+  // Restore the preferred mode from local storage on page load
+  window.addEventListener("load", function () {
+    const root = document.documentElement;
+    const preferredMode = localStorage.getItem("preferredMode");
+    if (preferredMode === "dark") {
+      root.classList.add("dark-mode");
+    }
+  });
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -55,7 +102,15 @@ function AppNavbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const handleMenuItemClick = (path) => {
+    handleCloseNavMenu();
+    navigate(path);
+  };
 
+  const handleUserMenu = (path) => {
+    setAnchorElUser(null);
+    navigate(path);
+  };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -98,8 +153,12 @@ function AppNavbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={page.name}
+                  onClick={() => handleMenuItemClick(page.path)}
+                  className="nav-link"
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -107,9 +166,9 @@ function AppNavbar() {
           <Typography
             className="preLogo"
             variant="h6"
+            onClick={() => navigate("/")}
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               display: {
                 md: "flex",
@@ -125,42 +184,18 @@ function AppNavbar() {
           </Typography>
           <Typography
             variant="h6"
+            className="logo"
             noWrap
+            onClick={() => navigate("/")}
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { md: "flex" },
-
-              fontWeight: 700,
-              // letterSpacing: ".3rem",
-              // color: "inherit",
-              color: theme.palette.text.primary,
-              textDecoration: "none",
               flexGrow: 1,
             }}
           >
             Fashion
           </Typography>
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -168,34 +203,40 @@ function AppNavbar() {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  display: "block",
-                  color: theme.palette.text.primary,
-                }}
+              <Link
+                key={page.path}
+                to={page.path}
+                className="nav-link"
+                // onClick={() => navigate(page.path)}
               >
-                {page}
-              </Button>
+                {page.name}
+              </Link>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <IconButton
               sx={{ ml: 1 }}
-              onClick={() => handleMode()}
-              color="inherit"
+              onClick={() => navigate("/cart")}
+              className="appNavbar__cartIcon"
+            >
+              <Badge badgeContent={17} color="error">
+                {<ShoppingBagIcon />}
+              </Badge>
+            </IconButton>
+            <IconButton
+              sx={{ ml: 1 }}
+              onClick={() => handleModeNew()}
+              className="appNavbar__mode"
             >
               {theme.palette.mode === "dark" ? (
                 <Brightness7 sx={{ color: "orange" }} />
               ) : (
-                <Brightness4 sx={{ color: "black" }} />
+                <Brightness4 />
               )}
             </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -215,8 +256,11 @@ function AppNavbar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem
+                  key={setting.name}
+                  onClick={() => handleUserMenu(setting.path)}
+                >
+                  <Typography textAlign="center">{setting.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>

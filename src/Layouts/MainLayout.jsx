@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, createTheme } from "@mui/material";
 import { useSelector } from "react-redux";
-import { amber, brown, deepOrange, grey } from "@mui/material/colors";
+import { grey } from "@mui/material/colors";
 
 const Layout = () => {
   const mode = useSelector((state) => state.mode);
-  console.log(mode);
+  // console.log(mode);
   const darkTheme = createTheme({
     palette: {
       mode,
@@ -21,11 +21,13 @@ const Layout = () => {
             background: {
               default: "#fff",
               sec: "black",
+              card: grey[300],
             },
             text: {
               primary: grey[900],
               secondary: grey[800],
               logoSec: "#fff",
+              active: grey[400],
             },
           }
         : {
@@ -35,11 +37,13 @@ const Layout = () => {
             },
             background: {
               sec: "#fff",
+              card: grey[600],
             },
             text: {
               primary: "#fff",
               secondary: grey[500],
               logoSec: grey[900],
+              active: grey[800],
             },
           }),
     },

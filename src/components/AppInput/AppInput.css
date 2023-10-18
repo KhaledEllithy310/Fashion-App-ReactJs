@@ -1,0 +1,31 @@
+.input {
+  background-color: var(--input) !important;
+  border-radius: 5px !important;
+  border: none !important;
+  width: 100%;
+  margin: 15px 0 !important;
+}
+
+input {
+  color: var(--text) !important;
+}
+/* textarea {
+  color: var(--text) !important;
+} */
+label {
+  color: var(--placeholder) !important;
+}
+
+.css-8992ld-MuiInputBase-root-MuiFilledInput-root:after {
+  border-bottom: 2px solid var(--accent) !important;
+  /* border-bottom: 2px solid red !important; */
+}
+
+.passwordInput {
+  width: 100%;
+  background-color: var(--input);
+}
+
+.iconPassword {
+  color: var(--accent) !important;
+}

@@ -1,0 +1,99 @@
+.productsSlider__cards {
+  /* height: 30px !important; */
+  overflow-x: hidden !important;
+}
+
+.productsSlider__card {
+  background-color: var(--secondary);
+  /* width: 200px !important; */
+  margin-inline: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: translateY 0.5s ease;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.productsSlider__card:hover {
+  /* transform: translateY(-3px); */
+}
+
+.productsSlider__card__details__img {
+  width: 100%;
+  display: block;
+  height: 260px;
+  border-radius: 10px;
+  transition: height 0.5s ease;
+}
+.productsSlider__card__details {
+  transition: all 0.5s ease;
+}
+.productsSlider__card:hover .productsSlider__card__details__img {
+  height: 220px;
+}
+
+.productsSlider__card:hover .productsSlider__card__details {
+  padding-bottom: 60px;
+}
+
+.productsSlider__card__details__content {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productsSlider__card__Icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+.productsSlider__card .productsSlider__card__Icons {
+}
+
+.productsSlider__card:hover .productsSlider__card__Icons {
+  bottom: 0.5rem;
+}
+
+.productsSlider__card__addToCart {
+  border: none;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 5px;
+  color: var(--text);
+  gap: 10px;
+  font-weight: 600;
+  font-family: "Poppins";
+  background-color: var(--primary);
+}
+
+.productsSlider__card__addToCart span {
+  color: var(--secondary);
+  transition: all 0.5s ease;
+}
+
+.productsSlider__card__addToCart:hover span {
+  transform: rotateY(360deg);
+}
+
+.productsSlider__card__Icons__wish {
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.productsSlider__card__Icons__wish:hover {
+  transform: scale(1.3);
+}

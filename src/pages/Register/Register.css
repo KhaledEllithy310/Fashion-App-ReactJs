@@ -1,0 +1,27 @@
+.form {
+  display: block !important;
+  width: 55% !important;
+  margin: 50px auto;
+  padding: 20px 50px;
+  border: 3px solid var(--accent) !important;
+  border-radius: 30% 5px;
+  justify-content: center;
+  transition: all 0.3s;
+  background-color: var(--);
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form.form__touched {
+  border-radius: 5px 30%;
+}
+
+.error {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: red;
+}
