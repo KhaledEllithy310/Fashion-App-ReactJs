@@ -2,47 +2,84 @@
   "products": [
     {
       "id": 55,
-      "title": "dd",
-      "price": 200,
-      "discountPercentage": 20,
+      "title": "shirt",
+      "price": 500,
+      "discountPercentage": 30,
       "description": "Iphone",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
           "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "white": [
+          "https://images.pexels.com/photos/6046231/pexels-photo-6046231.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/17503375/pexels-photo-17503375/free-photo-of-woman-in-blue-jeans-standing-on-one-leg.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "green": [
+          "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "yellow": [
+          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
+      }
+    },
+    {
+      "id": 66,
+      "title": "skirt",
+      "price": 1000,
+      "discountPercentage": 50,
+      "description": "Iphone",
+      "colors": ["black", "white", "green", "yellow"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "white": [
+          "https://images.pexels.com/photos/6046231/pexels-photo-6046231.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/17503375/pexels-photo-17503375/free-photo-of-woman-in-blue-jeans-standing-on-one-leg.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "green": [
+          "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "yellow": [
+          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "title": "sweeter",
+      "price": 600,
+      "discountPercentage": 20,
+      "description": "Iphone",
+      "colors": ["black", "white", "green", "yellow"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
           "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
         ],
         "white": [
@@ -107,9 +144,7 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
-      ]
+      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
     },
     {
       "id": 4,
@@ -670,37 +705,12 @@
       "title": "dd",
       "price": 200,
       "description": "Iphone",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -720,6 +730,72 @@
           "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
         ]
       }
+    }
+  ],
+  "carts": [
+    {
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
+      "id": 4
     }
   ]
 }

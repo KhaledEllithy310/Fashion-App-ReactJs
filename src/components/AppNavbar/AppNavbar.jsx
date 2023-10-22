@@ -16,10 +16,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./AppNavbar.css";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { pages, settings } from "../../helpers/data-pages";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import CartMenu from "../CartMenu/CartMenu";
 // import Badge from "@mui/material/Badge";
 
 // const settings = [
@@ -33,14 +34,28 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 function AppNavbar() {
   //get current route
-  const route = useLocation();
+  // const route = useLocation();
+  // control with cart side menu
+  const [cartMenu, setCartMenu] = React.useState({ right: false });
 
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setCartMenu({ [anchor]: open });
+  };
   const navigate = useNavigate();
   //light and dark mode
   const theme = useTheme();
   // const mode = useSelector((state) => state.mode);
-  const dispatch = useDispatch();
-
+  // const dispatch = useDispatch();
+  // total Items in cart
+  const { totalItems } = useSelector((state) => state.cart);
+  console.log(totalItems);
   // Get the current page URL
   const currentPageUrl = window.location.href;
 
@@ -216,13 +231,18 @@ function AppNavbar() {
           <Box sx={{ flexGrow: 0 }}>
             <IconButton
               sx={{ ml: 1 }}
-              onClick={() => navigate("/cart")}
+              onClick={toggleDrawer("right", true)}
               className="appNavbar__cartIcon"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={totalItems} color="error">
                 {<ShoppingBagIcon />}
               </Badge>
             </IconButton>
+            <CartMenu
+              open={cartMenu.right}
+              onClose={toggleDrawer("right", false)}
+              anchor="right"
+            />
             <IconButton
               sx={{ ml: 1 }}
               onClick={() => handleModeNew()}

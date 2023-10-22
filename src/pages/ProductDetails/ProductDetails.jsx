@@ -4,18 +4,61 @@ import { useFetchProducts } from "./../../hooks/useFetchProducts";
 import { Container, Grid } from "@mui/material";
 import "./ProductDetails.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/slices/cartSlice";
 const ProductDetails = ({ productId }) => {
   const { id } = useParams();
   const [product, setProduct] = useFetchProducts(id || productId);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
+  // const userId = JSON.parse(localStorage.getItem("userData")).id;
+  const dispatch = useDispatch();
+  // useEffect(() => {
+  //   if (userId) dispatch(getCartByUserID(userId));
+  // }, [dispatch, userId, product]);
+  const addProToCart = async (product) => {
+    const newProduct = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      discountPercentage: product.discountPercentage,
+      description: product.description,
+      color: selectedColor,
+      size: selectedSize,
+      images: product.images[selectedColor],
+    };
+    if (selectedColor && selectedSize) {
+      // const cartData = {
+      //   userId: JSON.parse(localStorage.getItem("userData")).id,
+      //   products: [],
+      // };
+      // cartData.products.push(newProduct);
+      // console.log(cartData);
+      // const res = await addProductToCart(cartData);
+      // console.log(res);
 
+      dispatch(addToCart(newProduct));
+    } else console.log(" no add product");
+  };
+  // set color for show his images in ui
   useEffect(() => {
     if (product?.colors) {
+      // set color for show his images in ui
       setSelectedColor(product.colors[0]);
     }
   }, [product]);
+
+  //set the color in the first with active class
+  useEffect(() => {
+    if (product?.colors) {
+      const colorElements = document.querySelectorAll(".product__colors li");
+      colorElements.forEach((colorElement) => {
+        if (colorElement.id === selectedColor)
+          colorElement.classList.add("active");
+      });
+    }
+  }, [product, selectedColor]);
 
   //select the color product
   const selectColor = (e, color) => {
@@ -27,6 +70,7 @@ const ProductDetails = ({ productId }) => {
     });
     e.target.classList.add("active");
   };
+
   //select the Size element
   const selectSize = (e, size) => {
     setSelectedSize(size);
@@ -53,6 +97,11 @@ const ProductDetails = ({ productId }) => {
 
     e.target.classList.add("active");
   };
+  // useEffect(() => {
+  //   console.log("selectedColor", selectedColor);
+  //   console.log("selectedImage", selectedImage);
+  //   console.log("selectedSize", selectedSize);
+  // }, [selectedColor, product, selectedImage, selectedSize]);
 
   useEffect(() => {
     if (selectedColor && product?.images?.[selectedColor]) {
@@ -141,6 +190,7 @@ const ProductDetails = ({ productId }) => {
                     product?.colors.map((color) => (
                       <li
                         key={color}
+                        id={color}
                         style={{ backgroundColor: color }}
                         onClick={(e) => selectColor(e, color)}
                       ></li>
@@ -155,7 +205,12 @@ const ProductDetails = ({ productId }) => {
                 </div>
 
                 <div className="productDetails__btns">
-                  <button className="productDetails__mainBtn">
+                  <button
+                    className="productDetails__mainBtn"
+                    onClick={() => {
+                      addProToCart(product);
+                    }}
+                  >
                     add to cart
                   </button>
                   <button className="productDetails__wishBtn">

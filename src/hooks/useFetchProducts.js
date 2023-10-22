@@ -11,7 +11,7 @@ export const useFetchProducts = (productId = null) => {
       if (productId === null) data = await getProducts();
       // fetch product By Id
       else data = await getProductById(productId);
-      console.log(data);
+      // console.log(data);
       setProducts(data.data);
     };
 

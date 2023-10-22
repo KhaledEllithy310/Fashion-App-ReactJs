@@ -11,7 +11,7 @@ export const useFetchCategories = (categoryId = null) => {
       if (categoryId === null) data = await getCategories();
       // fetch product By Id
       else data = await getCategoryById(categoryId);
-      console.log(data);
+      // console.log(data);
       setCategories(data.data);
     };
 

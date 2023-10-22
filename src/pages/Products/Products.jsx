@@ -6,8 +6,8 @@ import { useFetchCategories } from "../../hooks/useFetchCategories";
 const Products = () => {
   const [products, setProducts] = useFetchProducts();
   const [categories, setCategories] = useFetchCategories();
-  console.log(products);
-  console.log(categories);
+  // console.log(products);
+  // console.log(categories);
   const getProductsByCategory = (category) => {
     console.log(category);
   };

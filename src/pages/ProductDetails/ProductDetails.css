@@ -62,7 +62,7 @@
   object-fit: cover;
 } */
 
-.productDetails__content__title{
+.productDetails__content__title {
   text-transform: capitalize;
   font-size: 25px;
 }
@@ -84,7 +84,7 @@
 }
 
 .productDetails__content__price__after {
-  color: red;
+  color: rgb(44, 188, 44);
   font-family: "Poppins";
 }
 
