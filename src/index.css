@@ -83,6 +83,10 @@ small {
   font-size: 0.75rem; /* 12px */
 }
 
+.swal2-container {
+  z-index: 1500 !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

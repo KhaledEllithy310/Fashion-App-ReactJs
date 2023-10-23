@@ -111,7 +111,7 @@ export const cartSlice = createSlice({
           product.color === action.payload.color &&
           product.size === action.payload.size
       );
-      if (targetProduct.quantity > 0) targetProduct.quantity--;
+      if (targetProduct.quantity >= 1) targetProduct.quantity--;
       //calculate total price
       calculateTotalPrice(state);
       //calculate the count of products

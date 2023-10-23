@@ -1,0 +1,54 @@
+.cartPage__check {
+  padding: 0 10px;
+}
+.cartPage__check__details {
+  font-size: 22px;
+  text-transform: capitalize;
+  font-family: "Poppins";
+}
+
+.cartPage__check__details__subTotal,
+.cartPage__check__details__shipping,
+.cartPage__check__details__tax,
+.cartPage__check__details__totalPrice {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.text,
+.price {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.big {
+  font-size: 20px;
+  font-weight: 600;
+}
+.cartPage__check__details__promoCode * {
+  margin: 0;
+}
+.cartPage__check__details__promoCode input {
+  /* padding: 10px !important; */
+  margin: 0;
+  /* background-color: var(--placeholder); */
+}
+
+.cartPage__check__details__promoCode__text {
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.cartPage__check__details__promoCode__text:hover {
+  color: red;
+}
+
+.cartPage__check__details__btn {
+  text-align: center;
+  margin: 20px 0;
+}

@@ -1,26 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CartMenu.css";
 import { Drawer } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  clearCart,
-  decrement,
-  increment,
-  removeFromCart,
-} from "../../store/slices/cartSlice";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../../store/slices/cartSlice";
 import { useNavigate } from "react-router-dom";
+import UseGetCartData from "../../hooks/useGetCartData";
+import CartItem from "./CartItem";
 const CartMenu = ({ open, onClose, anchor }) => {
-  const [closeMenu, setCloseMenu] = useState({});
-  //destructing the data of cart
-  const { totalItems, cart, totalPrice } = useSelector((state) => state.cart);
-  //access to the productsCart
-  const productsCart = cart.productsCart;
+  // const [closeMenu, setCloseMenu] = useState({});
+  //get all data cart
+  const [productsCart, totalItems, totalPrice] = UseGetCartData();
+  // const redirectToCartPage = () => {
+  //   navigate("/cart");
+  //   //  setCloseMenu({toggleDrawer("right", false)})
+  // };
 
-  const redirectToCartPage = () => {
-    navigate("/cart");
-    //  setCloseMenu({toggleDrawer("right", false)})
-  };
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (
@@ -42,74 +36,7 @@ const CartMenu = ({ open, onClose, anchor }) => {
         <div className="cartMenu__content__products">
           {productsCart?.length > 0 ? (
             productsCart?.map((product, index) => (
-              <div className="cartMenu__content__products__item" key={index}>
-                <div className="cartMenu__content__products__item__img">
-                  <img src={product?.images[0]} alt="img" />
-                </div>
-                <div
-                  className="cartMenu__content__products__item__details"
-                >
-                  <h6 className="cartMenu__content__products__item__details__title">
-                    {product.title}
-                  </h6>
-                  <h6 className="cartMenu__content__products__item__details__price">
-                    {product?.discountPercentage ? (
-                      <>
-                        <p className="productDetails__content__price__before">
-                          <del>${product?.price}</del>
-                        </p>
-                        <p className="productDetails__content__price__after">
-                          $
-                          {(
-                            (product?.price *
-                              (100 - +product?.discountPercentage)) /
-                            100
-                          ).toFixed(2)}
-                        </p>
-                      </>
-                    ) : (
-                      <p>${product?.price}</p>
-                    )}
-                  </h6>
-                  <p className="cartMenu__content__products__item__details__size">
-                    Size : <span>{product?.size}</span>
-                  </p>
-                  <p className="cartMenu__content__products__item__details__color">
-                    <p>
-                      Color :<span> {product?.color}</span>
-                    </p>
-                    {/* <span
-                      style={{
-                        backgroundColor: product.color,
-                        width: "10px",
-                        height: "10px",
-                        borderRadius: "50%",
-                      }}
-                    ></span> */}
-                  </p>
-                  <div className="cartMenu__content__products__item__details__counter">
-                    <span
-                      className="decrement"
-                      onClick={() => dispatch(decrement(product))}
-                    >
-                      -
-                    </span>
-                    <span className="count">{product?.quantity}</span>
-                    <span
-                      className="increment"
-                      onClick={() => dispatch(increment(product))}
-                    >
-                      +
-                    </span>
-                  </div>
-                </div>
-                <div
-                  className="cartMenu__content__products__item__remove"
-                  onClick={() => dispatch(removeFromCart(product))}
-                >
-                  <DeleteForeverIcon />
-                </div>
-              </div>
+              <CartItem key={index} product={product} index={index} />
             ))
           ) : (
             <h5 className="cartMenu__content__title__sec">the cart is empty</h5>

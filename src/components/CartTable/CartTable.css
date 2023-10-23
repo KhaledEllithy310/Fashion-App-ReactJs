@@ -1,0 +1,49 @@
+.cartPage__table {
+  background-color: var(--secondary);
+}
+
+.cartPage__table td,
+.cartPage__table th {
+  color: var(--text);
+  text-align: center;
+}
+
+.cartPage__table th.item__text {
+  text-align: left !important;
+  padding-left: 25px;
+}
+
+.cartPage__table__item {
+  background-color: transparent !important;
+}
+.cartPage__table__quantity {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  width: fit-content;
+  background-color: var(--background);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.cartPage__table__remove {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.cartPage__table__remove:hover {
+  color: red;
+}
+.cartPage__table__price {
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cartPage__table__final {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+}

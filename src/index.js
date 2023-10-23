@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import "toastr//build/toastr.css";
+import "toastr//build/toastr.min.js";
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <React.StrictMode>
-    <App />
+  <App />
   // </React.StrictMode>
 );
 
