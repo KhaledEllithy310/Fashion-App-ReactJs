@@ -1,14 +1,26 @@
-import React, { useState } from "react";
-import { decrement, increment } from "../../store/slices/cartSlice";
+import React, { useEffect, useState } from "react";
+import {
+  addToCart,
+  decrement,
+  increment,
+  removeFromCart,
+} from "../../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { UseDetectProductQuantity } from "../../helpers/CartFunctions";
-import UseGetCartData from "../../hooks/useGetCartData";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { useGetCartDataFromLocalStorage } from "../../helpers/LocalStorageFunctions";
+import {
+  RemoveFromWishList,
+  addToWishList,
+} from "../../store/slices/wishListSlice";
+import { Favorite, ShoppingCart } from "@mui/icons-material";
+import { useLocation } from "react-router-dom";
+import UseGetCartData from "../../hooks/useGetCartData";
 
 export const CartItem = ({ product, index }) => {
   const dispatch = useDispatch();
-  const [productsCart, totalItems, totalPrice] = UseGetCartData();
-
+  //get all products cart from store
+  const [productsCart, ,] = UseGetCartData();
   // store the current index for product that quantity equals 0
   const [productIndex, setProductIndex] = useState(0);
   // when quantity equals 0 suggest to user to delete this product or make quantity equal 1
@@ -20,6 +32,12 @@ export const CartItem = ({ product, index }) => {
       setProductIndex(index);
     }
   };
+  // add product to wishlist and remove it from cart
+  const addProductToWishList = (product) => {
+    dispatch(removeFromCart(product));
+    dispatch(addToWishList(product));
+  };
+
   return (
     <div className="cartMenu__content__products__item" key={index}>
       <div className="cartMenu__content__products__item__img">
@@ -58,7 +76,7 @@ export const CartItem = ({ product, index }) => {
         <div className="cartMenu__content__products__item__details__counter">
           <span
             className="decrement"
-            onClick={() => dispatch(decrement(product))}
+            onClick={() => decrementQuantity(product, index)}
           >
             -
           </span>
@@ -71,11 +89,21 @@ export const CartItem = ({ product, index }) => {
           </span>
         </div>
       </div>
-      <div
-        className="cartMenu__content__products__item__remove"
-        onClick={() => decrementQuantity(product, index)}
-      >
-        <DeleteForeverIcon />
+      <div className="cartMenu__content__products__item__icons">
+        <div
+          className="cartMenu__content__products__item__addWishlist"
+          title="add to wishlist"
+          onClick={() => addProductToWishList(product)}
+        >
+          <Favorite />
+        </div>
+        <div
+          className="cartMenu__content__products__item__remove"
+          title="remove product"
+          onClick={() => dispatch(removeFromCart(product))}
+        >
+          <DeleteForeverIcon />
+        </div>
       </div>
     </div>
   );

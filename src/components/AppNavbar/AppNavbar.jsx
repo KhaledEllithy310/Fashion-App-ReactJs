@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Box,
@@ -13,31 +13,54 @@ import {
   Badge,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import "./AppNavbar.css";
-import { Brightness4, Brightness7 } from "@mui/icons-material";
+import { Brightness4, Brightness7, ShoppingBag } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
-import { useDispatch, useSelector } from "react-redux";
-import { pages, settings } from "../../helpers/data-pages";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import CartMenu from "../CartMenu/CartMenu";
-// import Badge from "@mui/material/Badge";
-
-// const settings = [
-//   "Profile",
-//   "Account",
-//   "Dashboard",
-//   "Logout",
-//   "Login",
-//   "logout",
-// ];
+import {
+  pages,
+  settingsNotSignIn,
+  settingsSignIn,
+} from "../../helpers/data-pages";
+import { logOutUser } from "../../helpers/AuthFunctions";
+import { storeProductsInServer } from "../../helpers/CartFunctions";
+import { logOut } from "../../store/slices/userSlice";
+import {
+  getAuthFromLocalStorage,
+  useGetCartDataFromLocalStorage,
+} from "../../helpers/LocalStorageFunctions";
+import { logOutCart } from "../../store/slices/cartSlice";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import useGetWishData from "../../hooks/useGetWishData";
+import "./AppNavbar.css";
+import UseGetCartData from "../../hooks/useGetCartData";
 
 function AppNavbar() {
+  const [settings, setSettings] = useState(settingsNotSignIn);
+  //control with open or close menu cart
+  const [cartMenu, setCartMenu] = useState({ right: false });
+  const dispatch = useDispatch();
+  //redirect to any page
+  const navigate = useNavigate();
+  //light and dark mode
+  const theme = useTheme();
+
+  //get all wishList data from store
+  const [, totalItemsWishProducts] = useGetWishData();
+  //get all cart data from store
+  const [productsCart, totalItemsCartProducts] = UseGetCartData();
+
+  //control to show settings menu
+  useEffect(() => {
+    const isAuth = getAuthFromLocalStorage();
+    if (isAuth === true) setSettings(settingsSignIn);
+    else setSettings(settingsNotSignIn);
+  });
   //get current route
   // const route = useLocation();
-  // control with cart side menu
-  const [cartMenu, setCartMenu] = React.useState({ right: false });
 
+  // control with cart side menu function
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -48,20 +71,22 @@ function AppNavbar() {
 
     setCartMenu({ [anchor]: open });
   };
-  const navigate = useNavigate();
-  //light and dark mode
-  const theme = useTheme();
-  // const mode = useSelector((state) => state.mode);
-  // const dispatch = useDispatch();
+
+  // store the products cart into the server when the cart menu disappears
+  useEffect(() => {
+    if (!cartMenu.right) {
+      storeProductsInServer(productsCart);
+    }
+  }, [cartMenu]);
   // total Items in cart
-  const { totalItems } = useSelector((state) => state.cart);
-  console.log(totalItems);
+  // const { totalItems } = useSelector((state) => state.cart);
+
   // Get the current page URL
   const currentPageUrl = window.location.href;
 
   // Find all navigation links
   const navLinks = document.querySelectorAll(".nav-link");
-
+  //* active navigation
   // Remove the "active" class from all links
   navLinks.forEach((link) => {
     link.classList.remove("active");
@@ -76,19 +101,7 @@ function AppNavbar() {
     }
   });
 
-  // const handleMode = () => {
-  //   const currentMode = localStorage.getItem("currentMode");
-  //   if (currentMode === "light") {
-  //     theme.palette.mode = "dark";
-  //     dispatch(changeMode("dark"));
-  //     localStorage.setItem("currentMode", "dark");
-  //   } else {
-  //     theme.palette.mode = "light";
-  //     dispatch(changeMode("light"));
-  //     localStorage.setItem("currentMode", "light");
-  //   }
-  // };
-
+  // change mode the website
   const handleModeNew = () => {
     const root = document.documentElement;
     root.classList.toggle("dark-mode");
@@ -96,6 +109,7 @@ function AppNavbar() {
     const isDarkMode = root.classList.contains("dark-mode");
     localStorage.setItem("preferredMode", isDarkMode ? "dark" : "light");
   };
+
   // Restore the preferred mode from local storage on page load
   window.addEventListener("load", function () {
     const root = document.documentElement;
@@ -104,6 +118,7 @@ function AppNavbar() {
       root.classList.add("dark-mode");
     }
   });
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -122,9 +137,17 @@ function AppNavbar() {
     navigate(path);
   };
 
+  //log out the user
   const handleUserMenu = (path) => {
     setAnchorElUser(null);
-    navigate(path);
+    if (path === "logout") {
+      logOutUser();
+      dispatch(logOut());
+      dispatch(logOutCart());
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+    } else navigate(path);
   };
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -228,14 +251,23 @@ function AppNavbar() {
               </Link>
             ))}
           </Box>
+          <IconButton
+            sx={{ ml: 1 }}
+            onClick={() => navigate("/wishList")}
+            className="appNavbar__cartIcon"
+          >
+            <Badge badgeContent={totalItemsWishProducts} color="error">
+              {<FavoriteIcon />}
+            </Badge>
+          </IconButton>
           <Box sx={{ flexGrow: 0 }}>
             <IconButton
               sx={{ ml: 1 }}
               onClick={toggleDrawer("right", true)}
               className="appNavbar__cartIcon"
             >
-              <Badge badgeContent={totalItems} color="error">
-                {<ShoppingBagIcon />}
+              <Badge badgeContent={totalItemsCartProducts} color="error">
+                {<ShoppingBag />}
               </Badge>
             </IconButton>
             <CartMenu

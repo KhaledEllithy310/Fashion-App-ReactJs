@@ -26,15 +26,21 @@
   background-color: var(--background);
   border-radius: 5px;
   font-size: 16px;
+  min-width: 82px;
 }
 
-.cartPage__table__remove {
+.cartPage__table__remove,
+.cartPage__table__add {
   cursor: pointer;
   transition: all 0.4s;
 }
 
 .cartPage__table__remove:hover {
   color: red;
+}
+
+.cartPage__table__add:hover {
+  color: var(--accent);
 }
 .cartPage__table__price {
   justify-content: center;

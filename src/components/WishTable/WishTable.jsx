@@ -8,37 +8,18 @@ import {
   TableHead,
 } from "@mui/material";
 import { StyledTableCell, StyledTableRow } from "../../helpers/CartTable";
-import {
-  decrement,
-  increment,
-  removeFromCart,
-} from "../../store/slices/cartSlice";
-import { UseDetectProductQuantity } from "../../helpers/CartFunctions";
+import { addToCart, removeFromCart } from "../../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
 import CloseIcon from "@mui/icons-material/Close";
-import "./CartTable.css";
-import { Favorite } from "@mui/icons-material";
-import { addToWishList } from "../../store/slices/wishListSlice";
-
-const CartTable = ({ productsCart }) => {
+import "./WishTable.css";
+import "../CartTable/CartTable.css";
+import { ShoppingCart } from "@mui/icons-material";
+import { RemoveFromWishList } from "../../store/slices/wishListSlice";
+const WishTable = ({ productsWish }) => {
   const dispatch = useDispatch();
-  // store the current index for product that quantity equals 0
-  const [productIndex, setProductIndex] = useState(0);
-  // when quantity equals 0 suggest to user to delete this product or make quantity equal 1
-  UseDetectProductQuantity(productsCart, productIndex);
-  //delete the product
-  const decrementQuantity = (product, index) => {
-    if (product.quantity >= 1) {
-      dispatch(decrement(product));
-      // store the current index for product that quantity equals 0
-      setProductIndex(index);
-    }
-  };
-
-  // add product to wishlist and remove it from cart
-  const addProductToWishList = (product) => {
-    dispatch(removeFromCart(product));
-    dispatch(addToWishList(product));
+  const addToCartFromWishList = (product) => {
+    dispatch(RemoveFromWishList(product));
+    dispatch(addToCart(product));
   };
   return (
     <TableContainer component={Paper}>
@@ -51,14 +32,12 @@ const CartTable = ({ productsCart }) => {
           <TableRow>
             <StyledTableCell className="item__text">Item</StyledTableCell>
             <StyledTableCell>Unit Price</StyledTableCell>
-            <StyledTableCell>Quantity</StyledTableCell>
-            <StyledTableCell>Final Price</StyledTableCell>
-            <StyledTableCell>Add To WishList</StyledTableCell>
+            <StyledTableCell>Add To Cart</StyledTableCell>
             <StyledTableCell>Remove</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {productsCart?.map((product, index) => (
+          {productsWish?.map((product, index) => (
             <StyledTableRow key={index}>
               <StyledTableCell component="th" scope="row">
                 <div className="cartMenu__content__products__item cartPage__table__item">
@@ -102,45 +81,17 @@ const CartTable = ({ productsCart }) => {
                 </h6>
               </StyledTableCell>
               <StyledTableCell>
-                <div className="cartPage__table__quantity">
-                  <span
-                    className="decrement"
-                    onClick={() => decrementQuantity(product, index)}
-                  >
-                    -
-                  </span>
-                  <span className="count">{product?.quantity}</span>
-                  <span
-                    className="increment"
-                    onClick={() => dispatch(increment(product))}
-                  >
-                    +
-                  </span>
-                </div>
-              </StyledTableCell>
-              <StyledTableCell>
-                <div className="cartPage__table__final">
-                  $
-                  {product?.quantity *
-                    (
-                      (product?.price * (100 - +product?.discountPercentage)) /
-                      100
-                    ).toFixed(2)}
-                </div>
-              </StyledTableCell>
-              <StyledTableCell>
                 <div
-                  className="cartMenu__content__products__item__addWishlist"
-                  title="add to wishlist"
-                  onClick={() => addProductToWishList(product)}
+                  className="cartPage__table__add"
+                  onClick={() => addToCartFromWishList(product)}
                 >
-                  <Favorite />
+                  <ShoppingCart />
                 </div>
               </StyledTableCell>
               <StyledTableCell>
                 <div
                   className="cartPage__table__remove"
-                  onClick={() => dispatch(removeFromCart(product))}
+                  onClick={() => dispatch(RemoveFromWishList(product))}
                 >
                   <CloseIcon />
                 </div>
@@ -153,4 +104,4 @@ const CartTable = ({ productsCart }) => {
   );
 };
 
-export default CartTable;
+export default WishTable;

@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["appbar", "btns", "formik", "promocode", "Swal", "zoomer"]
+  "cSpell.words": [
+    "appbar",
+    "btns",
+    "formik",
+    "haspopup",
+    "labelledby",
+    "promocode",
+    "reduxjs",
+    "Swal",
+    "zoomer"
+  ]
 }

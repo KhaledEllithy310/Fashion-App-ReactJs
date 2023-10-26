@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CartMenu.css";
 import { Drawer } from "@mui/material";
 import { useDispatch } from "react-redux";
@@ -6,6 +6,7 @@ import { clearCart } from "../../store/slices/cartSlice";
 import { useNavigate } from "react-router-dom";
 import UseGetCartData from "../../hooks/useGetCartData";
 import CartItem from "./CartItem";
+import { storeProductsInServer } from "../../helpers/CartFunctions";
 const CartMenu = ({ open, onClose, anchor }) => {
   // const [closeMenu, setCloseMenu] = useState({});
   //get all data cart
@@ -14,7 +15,11 @@ const CartMenu = ({ open, onClose, anchor }) => {
   //   navigate("/cart");
   //   //  setCloseMenu({toggleDrawer("right", false)})
   // };
-
+  useEffect(() => {
+    return async () => {
+      storeProductsInServer(productsCart);
+    };
+  }, []);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (

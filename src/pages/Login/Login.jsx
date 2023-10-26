@@ -1,30 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Grid } from "@mui/material";
 import { useFormik } from "formik";
 import "./Login.css";
 import AppInput from "../../components/AppInput/AppInput";
 import { validationSchemaLogin } from "../../helpers/validationForms";
-import { getAllUsers } from "../../Services/UsersApi";
+// import { getAllUsers } from "../../Services/UsersApi";
+import { useDispatch, useSelector } from "react-redux";
+import toastrMin from "toastr/build/toastr.min";
+import { getUsers, logIn } from "../../store/slices/userSlice";
+import { useNavigate } from "react-router-dom";
+import { getCartByUserID } from "../../store/slices/cartSlice";
+import { getUserIdFromLocalStorage } from "../../helpers/LocalStorageFunctions";
+import { showNotification } from "../../helpers/Notification";
+import { getWishListByUserID } from "../../store/slices/wishListSlice";
 
 const Login = () => {
-  const [userData, setUserData] = useState({});
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // const getUsers = async () => {
-  //   const allUsers = await getAllUsers();
-  //   return allUsers;
-  // };
+  // get all users and store them in store
+  useEffect(() => {
+    dispatch(getUsers());
+  }, []);
+
+  const { users } = useSelector((state) => state.users);
+  //login user function
   const loginUser = async (userData) => {
-    const allUsers = await getAllUsers();
-    console.log(allUsers);
-    const targetUser = allUsers.data.find(
+    const targetUser = users?.find(
       (user) =>
         user.email === userData.email && user.password === userData.password
     );
-
     if (targetUser) {
-      console.log("user login");
-      localStorage.setItem("userData", JSON.stringify(targetUser));
-    } else console.log("you are not logged in");
+      //show message for user
+      showNotification("success", "you are now logged in", 1000);
+      //store the user data in local storage and store
+      dispatch(logIn(targetUser));
+      const userId = getUserIdFromLocalStorage();
+      //get the cart by user id
+      dispatch(getCartByUserID(userId));
+      dispatch(getWishListByUserID(userId));
+      setTimeout(() => {
+        navigate("/");
+      }, 1500);
+      // localStorage.setItem("userData", JSON.stringify(targetUser));
+    } else toastrMin.error("you have not account");
   };
 
   const formik = useFormik({
@@ -34,8 +53,6 @@ const Login = () => {
     },
     validationSchema: validationSchemaLogin,
     onSubmit: (userData) => {
-      console.log(userData);
-      setUserData(userData);
       loginUser(userData);
       formik.resetForm();
     },

@@ -124,16 +124,26 @@
   vertical-align: middle;
 }
 
-.cartMenu__content__products__item__remove {
+.cartMenu__content__products__item__icons {
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.cartMenu__content__products__item__remove,
+.cartMenu__content__products__item__addWishlist {
   transition: all 0.5s;
   cursor: pointer;
 }
 
 .cartMenu__content__products__item__remove:hover {
   color: red;
+}
+
+.cartMenu__content__products__item__addWishlist:hover {
+  color: var(--accent);
 }
 
 /* check out */

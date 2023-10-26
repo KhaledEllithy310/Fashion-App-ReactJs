@@ -759,271 +759,129 @@
       "password": "3Brothers@@",
       "email": "khaledellessy307@gmail.com",
       "id": 2
-    },
+    }
+  ],
+  "product": [
     {
-      "firstName": "sara",
-      "lastName": "ellithy",
-      "gender": "male",
-      "password": "3Brothers@@",
-      "email": "saraellithy@gmail.com",
-      "id": 3
-    },
-    {
-      "firstName": "ahmed",
-      "lastName": "ellithy",
-      "gender": "male",
-      "password": "3Brothers@@",
-      "email": "ahmedellithy@gmail.com",
-      "id": 4
+      "title": "dd",
+      "price": 200,
+      "description": "Iphone",
+      "colors": [
+        "black",
+        "white",
+        "green",
+        "yellow"
+      ],
+      "sizes": {
+        "black": [
+          "xxs",
+          "sx",
+          "s",
+          "m",
+          "l",
+          "xl"
+        ],
+        "white": [
+          "xxs",
+          "sx",
+          "s",
+          "xl"
+        ],
+        "green": [
+          "xxs",
+          "l",
+          "xl"
+        ],
+        "yellow": [
+          "m",
+          "l",
+          "xl"
+        ]
+      },
+      "images": {
+        "black": [
+          "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "white": [
+          "https://images.pexels.com/photos/6046231/pexels-photo-6046231.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/17503375/pexels-photo-17503375/free-photo-of-woman-in-blue-jeans-standing-on-one-leg.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "green": [
+          "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ],
+        "yellow": [
+          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
+        ]
+      }
     }
   ],
   "carts": [
     {
-      "userId": 2,
+      "userId": 1,
       "productsCart": [
         {
           "id": 66,
-          "title": "skirt",
-          "price": 1000,
-          "discountPercentage": 50,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
           "description": "Iphone",
-          "color": "yellow",
-          "size": "xl",
-          "images": [
-            "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ],
-          "quantity": 2
-        }
-      ],
-      "isLoading": false,
-      "totalItems": 2,
-      "totalPrice": 1000,
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "productsCart": [
-        {
-          "id": 66,
-          "title": "skirt",
-          "price": 1000,
-          "discountPercentage": 50,
-          "description": "Iphone",
-          "color": "yellow",
-          "size": "xl",
-          "images": [
-            "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ],
+          "color": "black",
+          "size": "xxs",
           "quantity": 1
         }
       ],
-      "isLoading": false,
-      "totalItems": 1,
-      "totalPrice": 500,
-      "id": 2
-    },
-    {
-      "userId": 3,
-      "productsCart": [
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "green",
-          "size": "l",
-          "images": [
-            "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ],
-          "quantity": 4
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "yellow",
-          "size": "xl",
-          "images": [
-            "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ],
-          "quantity": 4
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "white",
-          "size": "xxs",
-          "images": [
-            "https://images.pexels.com/photos/6046231/pexels-photo-6046231.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/17503375/pexels-photo-17503375/free-photo-of-woman-in-blue-jeans-standing-on-one-leg.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ],
-          "quantity": 4
-        }
-      ],
-      "totalItems": 12,
-      "totalPrice": 4200,
-      "id": 3
-    },
-    {
-      "userId": 4,
-      "productsCart": [
-        {
-          "id": 44,
-          "title": "sweeter",
-          "price": 600,
-          "discountPercentage": 20,
-          "description": "Iphone",
-          "color": "green",
-          "size": "l",
-          "images": [
-            "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ],
-          "quantity": 3
-        }
-      ],
-      "isLoading": false,
-      "totalItems": 3,
-      "totalPrice": 1440,
-      "id": 4
-    }
-  ],
-  "wishLists": [
-    {
-      "userId": 1,
-      "productsWish": [
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "black",
-          "size": "sx",
-          "images": [
-            "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "black",
-          "size": "xl",
-          "images": [
-            "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "black",
-          "size": "s",
-          "images": [
-            "https://images.pexels.com/photos/3399996/pexels-photo-3399996.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/6311649/pexels-photo-6311649.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "green",
-          "size": "xl",
-          "images": [
-            "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "yellow",
-          "size": "xl",
-          "images": [
-            "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "yellow",
-          "size": "l",
-          "images": [
-            "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "white",
-          "size": "sx",
-          "images": [
-            "https://images.pexels.com/photos/6046231/pexels-photo-6046231.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/17503375/pexels-photo-17503375/free-photo-of-woman-in-blue-jeans-standing-on-one-leg.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        },
-        {
-          "id": 55,
-          "title": "shirt",
-          "price": 500,
-          "discountPercentage": 30,
-          "description": "Iphone",
-          "color": "white",
-          "size": "s",
-          "images": [
-            "https://images.pexels.com/photos/6046231/pexels-photo-6046231.jpeg?auto=compress&cs=tinysrgb&w=600",
-            "https://images.pexels.com/photos/17503375/pexels-photo-17503375/free-photo-of-woman-in-blue-jeans-standing-on-one-leg.jpeg?auto=compress&cs=tinysrgb&w=600"
-          ]
-        }
-      ],
-      "isLoading": false,
-      "totalItems": 8,
       "id": 1
     },
     {
-      "userId": 2,
-      "productsWish": [],
-      "isLoading": false,
-      "totalItems": 0,
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
       "id": 2
     },
     {
-      "userId": 2,
-      "productsWish": [],
-      "isLoading": false,
-      "totalItems": 0,
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
       "id": 3
+    },
+    {
+      "userId": 1,
+      "productsCart": [
+        {
+          "id": 66,
+          "title": "dd",
+          "price": 200,
+          "discountPercentage": 20,
+          "description": "Iphone",
+          "color": "black",
+          "size": "xxs",
+          "quantity": 1
+        }
+      ],
+      "id": 4
     }
   ]
 }

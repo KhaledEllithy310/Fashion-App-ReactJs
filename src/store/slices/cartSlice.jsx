@@ -1,35 +1,44 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getAllCarts, getCartByUserId } from "../../Services/CartApi";
+import { getCartByUserId } from "../../Services/CartApi";
 import {
   calculateTotalItems,
   calculateTotalPrice,
   storeInLocalStorage,
 } from "../../helpers/CartFunctions";
+import {
+  getCartFromLocalStorage,
+  getUserIdFromLocalStorage,
+  setDataInLocalStorage,
+} from "../../helpers/LocalStorageFunctions";
+import { showNotification } from "../../helpers/Notification";
+
+// Get cart data from localStorage
+let cartUser = getCartFromLocalStorage();
 
 export const getCartByUserID = createAsyncThunk("cart", async (userId) => {
-  const cart = await getCartByUserId(userId);
-  console.log(cart.data[0]);
-  return cart.data[0];
+  try {
+    if (userId) {
+      const cart = await getCartByUserId(userId);
+      return cart.data[0];
+    }
+  } catch (e) {
+    console.log(e);
+  }
 });
-
-const cartInLocalStorage = localStorage.getItem("cart");
+// Get initial state from localStorage or fallback to default values
 const initialState = {
-  cart: cartInLocalStorage ? JSON.parse(cartInLocalStorage).cart : {},
+  cart: cartUser ? cartUser.cart : {},
   isLoading: false,
-  totalPrice: cartInLocalStorage
-    ? JSON.parse(cartInLocalStorage).totalPrice
-    : 0,
-  totalItems: cartInLocalStorage
-    ? JSON.parse(cartInLocalStorage).totalItems
-    : 0,
-  count: 0,
+  totalPrice: cartUser ? cartUser.totalPrice : 0,
+  totalItems: cartUser ? cartUser.totalItems : 0,
 };
 export const cartSlice = createSlice({
   name: "cartSlice",
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const userId = JSON.parse(localStorage.getItem("userData")).id;
+      const userId = getUserIdFromLocalStorage();
+
       //if the productsCart is already existing
       if (state.cart?.productsCart) {
         const isProductExist = state.cart?.productsCart.find(
@@ -39,9 +48,15 @@ export const cartSlice = createSlice({
             product.size === action.payload.size
         );
         //if the product is already existing increment the quantity
-        if (isProductExist) isProductExist.quantity += 1;
+        if (isProductExist) {
+          isProductExist.quantity += 1;
+          showNotification("success", "Product increased successfully!", 800);
+        }
         // if the product is already not existing add it to the cart
-        else state.cart.productsCart.push({ ...action.payload, quantity: 1 });
+        else {
+          state.cart.productsCart.push({ ...action.payload, quantity: 1 });
+          showNotification("success", "Product added successfully!", 800);
+        }
       } else {
         //if the productsCart is not existing add first product and userId
         const cartData = {
@@ -49,6 +64,7 @@ export const cartSlice = createSlice({
           productsCart: [{ ...action.payload, quantity: 1 }],
         };
         state.cart = cartData;
+        showNotification("success", "Product added successfully!", 800);
       }
       //calculate total price
       calculateTotalPrice(state);
@@ -57,11 +73,9 @@ export const cartSlice = createSlice({
       // state.totalItems++;
       calculateTotalItems(state);
       //store the cart in local storage
-      // localStorage.setItem("cart", JSON.stringify(state));
-      storeInLocalStorage(state);
+      setDataInLocalStorage("cart", state);
     },
     removeFromCart: (state, action) => {
-      console.log(action.payload);
       state.cart.productsCart = state.cart.productsCart.filter(
         (product) =>
           !(
@@ -70,13 +84,12 @@ export const cartSlice = createSlice({
             product.size === action.payload.size
           )
       );
-      console.log(state.cart.productsCart);
       //calculate total price
       calculateTotalPrice(state);
       //calculate the count of products
       calculateTotalItems(state);
-      // localStorage.setItem("cart", JSON.stringify(state));
-      storeInLocalStorage(state);
+      //store the cart in local storage
+      setDataInLocalStorage("cart", state);
     },
     clearCart: (state, action) => {
       state.cart.productsCart = [];
@@ -84,8 +97,8 @@ export const cartSlice = createSlice({
       calculateTotalPrice(state);
       //calculate the count of products
       calculateTotalItems(state);
-      // localStorage.setItem("cart", JSON.stringify(state));
-      storeInLocalStorage(state);
+      //store the cart in local storage
+      setDataInLocalStorage("cart", state);
     },
     increment: (state, action) => {
       let targetProduct = state.cart?.productsCart.find(
@@ -102,7 +115,7 @@ export const cartSlice = createSlice({
       calculateTotalItems(state);
 
       //store the cart in local storage
-      localStorage.setItem("cart", JSON.stringify(state));
+      setDataInLocalStorage("cart", state);
     },
     decrement: (state, action) => {
       let targetProduct = state.cart?.productsCart.find(
@@ -117,19 +130,34 @@ export const cartSlice = createSlice({
       //calculate the count of products
       calculateTotalItems(state);
       //store the cart in local storage
-      localStorage.setItem("cart", JSON.stringify(state));
+      setDataInLocalStorage("cart", state);
     },
+    logOutCart: () => ({}),
   },
   extraReducers: (builder) => {
     builder.addCase(getCartByUserID.fulfilled, (state, action) => {
-      console.log(" state.cart", state.cart);
-      console.log("  action.payload", action.payload);
-      state.cart = action.payload;
+      const { userId, isLoading, totalItems, totalPrice, productsCart } =
+        action.payload || {};
+
+      const newCart = {
+        cart: { userId, productsCart },
+        isLoading,
+        totalItems,
+        totalPrice,
+      };
+      setDataInLocalStorage("cart", newCart);
+      return newCart;
     });
   },
 });
 
-export const { addToCart, removeFromCart, clearCart, increment, decrement } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  clearCart,
+  increment,
+  decrement,
+  logOutCart,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

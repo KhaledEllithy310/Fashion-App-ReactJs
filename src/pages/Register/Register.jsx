@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Register.css";
 import { Container, Grid } from "@mui/material";
 import AppInput from "../../components/AppInput/AppInput";
@@ -6,7 +6,12 @@ import AppRadioGroup from "../../components/AppRadioGroup/AppRadioGroup";
 import { useFormik } from "formik";
 import { validationSchemaRegister } from "../../helpers/validationForms";
 import { addUser, getAllUsers } from "../../Services/UsersApi";
+import { useDispatch, useSelector } from "react-redux";
+import { addNewUser, getUsers } from "../../store/slices/userSlice";
 const Register = () => {
+  const users = useSelector((state) => state.users);
+  const dispatch = useDispatch();
+
   //add user function
   const registerUser = async (userData) => {
     const allUsers = await getAllUsers();
@@ -18,6 +23,9 @@ const Register = () => {
     if (isEmailExisted === -1) {
       const res = await addUser(userData);
       console.log(res);
+      dispatch(addNewUser(userData));
+      //reset form after successful registration
+      formik.resetForm();
     } else console.log("this email is already registered");
   };
 
@@ -34,8 +42,6 @@ const Register = () => {
       try {
         // send request to add user
         registerUser(userData);
-        //reset form after successful registration
-        formik.resetForm();
       } catch (e) {
         console.log(e);
       }

@@ -13,7 +13,7 @@ export const pages = [
   },
 ];
 
-export const settings = [
+export const settingsNotSignIn = [
   {
     name: "Login",
     path: "/login",
@@ -21,5 +21,20 @@ export const settings = [
   {
     name: "Register",
     path: "/register",
+  },
+];
+
+export const settingsSignIn = [
+  {
+    name: "Logout",
+    path: "logout",
+  },
+  {
+    name: "my cart",
+    path: "/cart",
+  },
+  {
+    name: "my wishList",
+    path: "/wishList",
   },
 ];

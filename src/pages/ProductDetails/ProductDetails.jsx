@@ -1,23 +1,39 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useFetchProducts } from "./../../hooks/useFetchProducts";
 import { Container, Grid } from "@mui/material";
 import "./ProductDetails.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/slices/cartSlice";
+import { showNotification } from "./../../helpers/Notification";
+import { addToWishList } from "../../store/slices/wishListSlice";
+import { storeProductsInServer } from "../../helpers/CartFunctions";
+import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
+import { UseGetCartData } from "./../../hooks/useGetCartData";
+import { useGetWishData } from "./../../hooks/useGetWishData";
+
 const ProductDetails = ({ productId }) => {
   const { id } = useParams();
   const [product, setProduct] = useFetchProducts(id || productId);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
-  // const userId = JSON.parse(localStorage.getItem("userData")).id;
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   if (userId) dispatch(getCartByUserID(userId));
-  // }, [dispatch, userId, product]);
-  const addProToCart = async (product) => {
+
+
+  const [productsCart, ,] = UseGetCartData();
+  const [productsWish, ,] = useGetWishData();
+
+  useEffect(() => {
+    return () => {
+      storeProductsInServer(productsCart);
+      storeProductsWishListInServer(productsWish);
+    };
+  }, []);
+
+  //add to cart function
+  const addProToCart = (product) => {
     const newProduct = {
       id: product.id,
       title: product.title,
@@ -29,17 +45,29 @@ const ProductDetails = ({ productId }) => {
       images: product.images[selectedColor],
     };
     if (selectedColor && selectedSize) {
-      // const cartData = {
-      //   userId: JSON.parse(localStorage.getItem("userData")).id,
-      //   products: [],
-      // };
-      // cartData.products.push(newProduct);
-      // console.log(cartData);
-      // const res = await addProductToCart(cartData);
-      // console.log(res);
-
       dispatch(addToCart(newProduct));
-    } else console.log(" no add product");
+    } else {
+      showNotification("error", "You should select size and color", 1100);
+    }
+  };
+
+  //add to cart function
+  const addProToWishList = (product) => {
+    const newProduct = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      discountPercentage: product.discountPercentage,
+      description: product.description,
+      color: selectedColor,
+      size: selectedSize,
+      images: product.images[selectedColor],
+    };
+    if (selectedColor && selectedSize) {
+      dispatch(addToWishList(newProduct));
+    } else {
+      showNotification("error", "You should select size and color", 1100);
+    }
   };
   // set color for show his images in ui
   useEffect(() => {
@@ -213,7 +241,10 @@ const ProductDetails = ({ productId }) => {
                   >
                     add to cart
                   </button>
-                  <button className="productDetails__wishBtn">
+                  <button
+                    className="productDetails__wishBtn"
+                    onClick={() => addProToWishList(product)}
+                  >
                     <FavoriteIcon className="wish" />
                   </button>
                 </div>

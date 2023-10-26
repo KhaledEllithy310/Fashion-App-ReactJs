@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import Products from "../pages/Products/Products";
 import Register from "../pages/Register/Register";
+import WishList from "../pages/WishList/WishList";
 // import MainLayout from './../Layouts/MainLayout';
 
 const userRoutes = {
@@ -67,6 +68,14 @@ const userRoutes = {
       element: (
         //   <IsLoggedIn>
         <Register />
+        //   </IsLoggedIn>
+      ),
+    },
+    {
+      path: "wishList",
+      element: (
+        //   <IsLoggedIn>
+        <WishList />
         //   </IsLoggedIn>
       ),
     },
