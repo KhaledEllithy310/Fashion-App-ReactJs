@@ -1,0 +1,19 @@
+.pagination {
+  padding: 30px 0;
+}
+.pagination ul {
+  justify-content: center;
+}
+
+.pagination li * {
+  color: var(--text) !important;
+}
+
+.css-6y92bt-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--accent) !important;
+}
+
+.css-6y92bt-MuiButtonBase-root-MuiPaginationItem-root:hover {
+  background-color: var(--placeholder) !important;
+  color: var(--secondary) !important;
+}

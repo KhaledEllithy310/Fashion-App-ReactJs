@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useFetchProducts } from "./../../hooks/useFetchProducts";
 import { Container, Grid } from "@mui/material";
 import "./ProductDetails.css";
@@ -12,6 +12,7 @@ import { storeProductsInServer } from "../../helpers/CartFunctions";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 import { UseGetCartData } from "./../../hooks/useGetCartData";
 import { useGetWishData } from "./../../hooks/useGetWishData";
+import { getAuthFromLocalStorage } from "../../helpers/LocalStorageFunctions";
 
 const ProductDetails = ({ productId }) => {
   const { id } = useParams();
@@ -20,7 +21,6 @@ const ProductDetails = ({ productId }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const dispatch = useDispatch();
-
 
   const [productsCart, ,] = UseGetCartData();
   const [productsWish, ,] = useGetWishData();
@@ -31,6 +31,7 @@ const ProductDetails = ({ productId }) => {
       storeProductsWishListInServer(productsWish);
     };
   }, []);
+  const isAuth = getAuthFromLocalStorage();
 
   //add to cart function
   const addProToCart = (product) => {
@@ -45,7 +46,8 @@ const ProductDetails = ({ productId }) => {
       images: product.images[selectedColor],
     };
     if (selectedColor && selectedSize) {
-      dispatch(addToCart(newProduct));
+      if (isAuth === true) dispatch(addToCart(newProduct));
+      else showNotification("error", "You are not logged in", 1100);
     } else {
       showNotification("error", "You should select size and color", 1100);
     }
@@ -63,8 +65,11 @@ const ProductDetails = ({ productId }) => {
       size: selectedSize,
       images: product.images[selectedColor],
     };
+
+    console.log(isAuth);
     if (selectedColor && selectedSize) {
-      dispatch(addToWishList(newProduct));
+      if (isAuth === true) dispatch(addToWishList(newProduct));
+      else showNotification("error", "You are not logged in", 1100);
     } else {
       showNotification("error", "You should select size and color", 1100);
     }

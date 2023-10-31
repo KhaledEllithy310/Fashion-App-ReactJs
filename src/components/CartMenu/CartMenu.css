@@ -15,7 +15,7 @@
   /* padding: 20px 10px; */
   font-family: "Poppins";
   margin: auto;
-  height: 360px;
+  height: 450px;
   overflow: auto;
   position: relative;
 }
@@ -50,7 +50,7 @@
 /* img */
 
 .cartMenu__content__products__item__img {
-  width: 80px;
+  min-width: 80px;
   display: flex;
   align-items: center;
 }
@@ -71,6 +71,10 @@
 .cartMenu__content__products__item__details__title {
   font-size: 22px;
   text-transform: capitalize;
+  /* width: 50%; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
 }
 .cartMenu__content__products__item__details__price {
   display: flex;

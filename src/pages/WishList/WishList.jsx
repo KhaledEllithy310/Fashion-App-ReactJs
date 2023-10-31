@@ -3,29 +3,32 @@ import { useDispatch } from "react-redux";
 import { Container, Grid } from "@mui/material";
 import { clearCart } from "../../store/slices/cartSlice";
 import { GridView, TableRows } from "@mui/icons-material";
-import CartItem from "../../components/CartMenu/CartItem";
-import { useGetWishListDataFromLocalStorage } from "../../helpers/LocalStorageFunctions";
 import WishTable from "../../components/WishTable/WishTable";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 import useGetWishData from "../../hooks/useGetWishData";
 import WishItem from "../../components/WishItem/WishItem";
+import UseGetCartData from "../../hooks/useGetCartData";
+import { storeProductsInServer } from "../../helpers/CartFunctions";
 
 const WishList = () => {
   //get all wishList data from store
   const [productsWish] = useGetWishData();
   const dispatch = useDispatch();
+  const [productsCart, ,] = UseGetCartData();
 
-  const [arrangeDefault, setArrangeDefault] = useState(true);
   useEffect(() => {
-    return () => {
+    return async () => {
+      storeProductsInServer(productsCart);
       storeProductsWishListInServer(productsWish);
     };
   }, []);
+  const [arrangeDefault, setArrangeDefault] = useState(true);
+
   return (
     <Container className="">
       <div className="cartPage">
         <Grid container spacing={2}>
-          <Grid item xs={12} md={9}>
+          <Grid item xs={12} md={12}>
             <div className="cartPage__top">
               <h4 className="cartPage__title">Items in my wishList </h4>
               <div className="cartPage__iconsGrid">
@@ -55,7 +58,7 @@ const WishList = () => {
             </div>
 
             <Grid container spacing={2}>
-              {productsWish.length > 0 ? (
+              {productsWish?.length > 0 ? (
                 arrangeDefault ? (
                   <WishTable productsWish={productsWish} />
                 ) : (

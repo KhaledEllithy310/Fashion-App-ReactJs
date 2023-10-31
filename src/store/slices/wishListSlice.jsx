@@ -84,7 +84,6 @@ export const wishListSlice = createSlice({
       setDataInLocalStorage("wishList", state);
     },
     RemoveFromWishList: (state, action) => {
-
       state.wishList.productsWish = state.wishList.productsWish.filter(
         (product) =>
           !(
@@ -106,6 +105,7 @@ export const wishListSlice = createSlice({
       //store the cart in local storage
       setDataInLocalStorage("wishList", state);
     },
+    logOutWishList: () => ({}),
   },
   extraReducers: (builder) => {
     builder.addCase(getWishListByUserID.fulfilled, (state, action) => {
@@ -123,7 +123,11 @@ export const wishListSlice = createSlice({
   },
 });
 
-export const { addToWishList, RemoveFromWishList, clearWishList } =
-  wishListSlice.actions;
+export const {
+  addToWishList,
+  RemoveFromWishList,
+  clearWishList,
+  logOutWishList,
+} = wishListSlice.actions;
 
 export default wishListSlice.reducer;

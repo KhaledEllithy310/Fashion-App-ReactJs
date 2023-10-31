@@ -26,15 +26,15 @@ import {
 import { logOutUser } from "../../helpers/AuthFunctions";
 import { storeProductsInServer } from "../../helpers/CartFunctions";
 import { logOut } from "../../store/slices/userSlice";
-import {
-  getAuthFromLocalStorage,
-  useGetCartDataFromLocalStorage,
-} from "../../helpers/LocalStorageFunctions";
+import { getAuthFromLocalStorage } from "../../helpers/LocalStorageFunctions";
 import { logOutCart } from "../../store/slices/cartSlice";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import useGetWishData from "../../hooks/useGetWishData";
 import "./AppNavbar.css";
 import UseGetCartData from "../../hooks/useGetCartData";
+import { useFetchSections } from "./../../hooks/useFetchSections";
+import { logOutWishList } from "../../store/slices/wishListSlice";
+import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 
 function AppNavbar() {
   const [settings, setSettings] = useState(settingsNotSignIn);
@@ -121,7 +121,7 @@ function AppNavbar() {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  // console.log("anchorElUser", anchorElUser);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -137,21 +137,60 @@ function AppNavbar() {
     navigate(path);
   };
 
+  const [productsWish, ,] = useGetWishData();
+  // console.log("productsWish", productsWish);
   //log out the user
   const handleUserMenu = (path) => {
     setAnchorElUser(null);
+    storeProductsWishListInServer(productsWish);
+    storeProductsInServer(productsCart);
     if (path === "logout") {
-      logOutUser();
-      dispatch(logOut());
+      dispatch(logOutWishList());
       dispatch(logOutCart());
+      dispatch(logOut());
       setTimeout(() => {
+        logOutUser();
         navigate("/");
       }, 1000);
     } else navigate(path);
   };
+
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const handleProductsMenu = (path) => {
+    setAnchorElUser(null);
+    // if (path === "logout") {
+    //   logOutUser();
+    //   dispatch(logOut());
+    //   dispatch(logOutCart());
+    //   setTimeout(() => {
+    //     navigate("/");
+    //   }, 1000);
+    // } else navigate(path);
+  };
+
+  const [listSections, setListSections] = useState([]);
+  const [sections, setSections] = useFetchSections();
+
+  // console.log(sections);
+
+  useEffect(() => {
+    const createListOfSections = (sections) => {
+      const data = sections?.map((section) => {
+        return {
+          name: section.name,
+          path: `products/${section.name}`,
+        };
+      });
+      // console.log(data);
+      setListSections(data);
+      return data;
+    };
+    createListOfSections(sections);
+  }, []);
+  // console.log("listSections", listSections);
 
   return (
     <AppBar
@@ -240,16 +279,58 @@ function AppNavbar() {
               display: { xs: "none", md: "flex" },
             }}
           >
-            {pages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="nav-link"
-                // onClick={() => navigate(page.path)}
-              >
-                {page.name}
-              </Link>
-            ))}
+            {pages?.map((page) =>
+              page.name === "Products" ? (
+                <>
+                  <IconButton
+                    onClick={handleOpenUserMenu}
+                    key={page.path}
+                    // to={page.name}
+                    // sx={{ p: 0 }}
+                    className="nav-link"
+                  >
+                    {page.name}
+                  </IconButton>
+
+                  <Menu
+                    sx={{ mt: "45px" }}
+                    id=""
+                    anchorEl={anchorElUser}
+                    anchorOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    open={Boolean(anchorElUser)}
+                    onClose={handleCloseUserMenu}
+                  >
+                    {listSections?.map((section) => (
+                      <MenuItem
+                        key={section.name}
+                        onClick={() => handleProductsMenu(section.path)}
+                      >
+                        <Typography textAlign="center">
+                          {section.name}
+                        </Typography>
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </>
+              ) : (
+                <Link
+                  key={page.path}
+                  to={page.path}
+                  className="nav-link"
+                  // onClick={() => navigate(page.path)}
+                >
+                  {page.name}
+                </Link>
+              )
+            )}
           </Box>
           <IconButton
             sx={{ ml: 1 }}

@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  addToCart,
   decrement,
   increment,
   removeFromCart,
 } from "../../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
-import { UseDetectProductQuantity } from "../../helpers/CartFunctions";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import { useGetCartDataFromLocalStorage } from "../../helpers/LocalStorageFunctions";
-import {
-  RemoveFromWishList,
-  addToWishList,
-} from "../../store/slices/wishListSlice";
-import { Favorite, ShoppingCart } from "@mui/icons-material";
-import { useLocation } from "react-router-dom";
+import { addToWishList } from "../../store/slices/wishListSlice";
+import { Favorite } from "@mui/icons-material";
 import UseGetCartData from "../../hooks/useGetCartData";
+import Swal from "sweetalert2";
 
 export const CartItem = ({ product, index }) => {
   const dispatch = useDispatch();
@@ -23,13 +17,26 @@ export const CartItem = ({ product, index }) => {
   const [productsCart, ,] = UseGetCartData();
   // store the current index for product that quantity equals 0
   const [productIndex, setProductIndex] = useState(0);
-  // when quantity equals 0 suggest to user to delete this product or make quantity equal 1
-  UseDetectProductQuantity(productsCart, productIndex);
+
   //delete the product
   const decrementQuantity = (product, index) => {
-    if (product.quantity >= 1) {
+    if (product.quantity > 1) {
       dispatch(decrement(product));
       setProductIndex(index);
+    } else {
+      // when quantity equals 0 suggest to user to delete this product or make quantity equal 1
+      Swal.fire({
+        title: "Do you want to delete this product?",
+        showDenyButton: false,
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete this",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Deleted!", "", "success");
+          //delete this product
+          dispatch(removeFromCart(productsCart[productIndex]));
+        }
+      });
     }
   };
   // add product to wishlist and remove it from cart

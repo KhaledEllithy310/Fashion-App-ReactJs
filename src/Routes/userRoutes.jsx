@@ -32,6 +32,14 @@ const userRoutes = {
       ),
     },
     {
+      path: "products/:sectionName",
+      element: (
+        //   <IsLoggedIn>
+        <Products />
+        //   </IsLoggedIn>
+      ),
+    },
+    {
       path: "aboutUs",
       element: (
         //   <IsLoggedIn>

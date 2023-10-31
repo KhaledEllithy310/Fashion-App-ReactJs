@@ -17,6 +17,7 @@
   /* --input: #e3e3e3; */
   --input: #e5e5e6;
   --placeholder: #0000008d;
+  --overlay: rgba(0, 0, 0, 0.234);
 }
 
 /* Dark mode variables */
@@ -30,6 +31,7 @@
   --input: #1c1c1c;
   /* --input: #19191a; */
   --placeholder: #eeeeeea8;
+  --overlay: rgba(255, 255, 255, 0.157);
 }
 
 /* Common styles */
@@ -105,6 +107,25 @@ small {
   border-radius: 10px;
 }
 
+.secBtn {
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-weight: 400;
+  font-family: "Poppins";
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.secBtn:hover {
+  transform: translate(0, -3px);
+  outline: none;
+}
+
 .mainBtn {
   text-transform: capitalize;
   font-size: 18px;
@@ -124,24 +145,5 @@ small {
 .mainBtn:hover {
   transform: translate(0, -3px);
   box-shadow: 0 20px 80px -10px var(--primary);
-  outline: none;
-}
-
-.secBtn {
-  text-transform: capitalize;
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--secondary);
-  color: var(--text);
-  font-weight: 400;
-  font-family: "Poppins";
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.secBtn:hover {
-  transform: translate(0, -3px);
   outline: none;
 }

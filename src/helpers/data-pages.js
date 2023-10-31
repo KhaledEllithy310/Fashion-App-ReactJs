@@ -1,17 +1,28 @@
+
 export const pages = [
   {
     name: "Home",
     path: "/",
   },
+  // {
+  //   name: "Products",
+  //   path: "/products",
+  // },
   {
-    name: "Products",
-    path: "/products",
+    name: "Women",
+    path: "/products/women",
+  },
+  {
+    name: "Men",
+    path: "/products/men",
   },
   {
     name: "About Us",
     path: "/aboutUs",
   },
 ];
+
+
 
 export const settingsNotSignIn = [
   {

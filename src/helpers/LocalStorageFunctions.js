@@ -5,15 +5,15 @@ export const getCartFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("cart")) || {};
 };
 
-export const useGetCartDataFromLocalStorage = (key, data) => {
-  const { totalItems, cart, totalPrice } = JSON.parse(
-    localStorage.getItem("cart")
-  );
-  //access to the productsCart
-  const productsCart = cart?.productsCart;
+// export const useGetCartDataFromLocalStorage = (key, data) => {
+//   const { totalItems, cart, totalPrice } = JSON.parse(
+//     localStorage.getItem("cart")
+//   );
+//   //access to the productsCart
+//   const productsCart = cart?.productsCart;
 
-  return [productsCart, totalItems, totalPrice];
-};
+//   return [productsCart, totalItems, totalPrice];
+// };
 
 //****************** end cart ******************//
 
@@ -24,12 +24,13 @@ export const getWishListFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("wishList")) || {};
 };
 
-export const useGetWishListDataFromLocalStorage = () => {
-  const { totalItems, wishList } = JSON.parse(localStorage.getItem("wishList"));
-  //access to the productsCart
-  const productsWish = wishList?.productsWish;
-  return [productsWish, totalItems];
-};
+// export const useGetWishListDataFromLocalStorage = () => {
+//   const { totalItems, wishList } =
+//     JSON.parse(localStorage.getItem("wishList")) || {};
+//   //access to the productsCart
+//   const productsWish = wishList?.productsWish;
+//   return [productsWish, totalItems];
+// };
 
 //****************** end wishList ******************//
 

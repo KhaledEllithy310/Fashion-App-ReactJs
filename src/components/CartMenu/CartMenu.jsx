@@ -7,17 +7,19 @@ import { useNavigate } from "react-router-dom";
 import UseGetCartData from "../../hooks/useGetCartData";
 import CartItem from "./CartItem";
 import { storeProductsInServer } from "../../helpers/CartFunctions";
+import useGetWishData from "../../hooks/useGetWishData";
+import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 const CartMenu = ({ open, onClose, anchor }) => {
   // const [closeMenu, setCloseMenu] = useState({});
   //get all data cart
   const [productsCart, totalItems, totalPrice] = UseGetCartData();
-  // const redirectToCartPage = () => {
-  //   navigate("/cart");
-  //   //  setCloseMenu({toggleDrawer("right", false)})
-  // };
+  const [productsWish, ,] = useGetWishData();
+
+
   useEffect(() => {
     return async () => {
       storeProductsInServer(productsCart);
+      storeProductsWishListInServer(productsWish);
     };
   }, []);
   const navigate = useNavigate();

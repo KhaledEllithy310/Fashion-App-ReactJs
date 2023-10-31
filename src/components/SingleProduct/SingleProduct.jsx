@@ -19,6 +19,9 @@ import { useDispatch } from "react-redux";
 import { addToWishList } from "../../store/slices/wishListSlice";
 
 const SingleProduct = ({ item }) => {
+  // console.log("item", item.images);
+  const colors = Object.keys(item.images);
+  // console.log(item.images[colors[0]][0]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   //open dialog foe show product
@@ -40,7 +43,7 @@ const SingleProduct = ({ item }) => {
   return (
     <div className="product">
       <div className="product__image">
-        <img src={item.images[0]} alt="Image 1" />
+        <img src={item.images[colors[0]][0]} alt="Image 1" />
       </div>
       <div className="product__content">
         <div className="product__content__rating">
@@ -103,7 +106,7 @@ const SingleProduct = ({ item }) => {
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
         PaperProps={{
-          sx: { "max-width": "800px" },
+          sx: { maxWidth: "800px" },
         }}
       >
         <DialogTitle

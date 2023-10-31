@@ -12,7 +12,7 @@ import { storeProductsInServer } from "../../helpers/CartFunctions";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../../store/slices/cartSlice";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
-import { useGetWishListDataFromLocalStorage } from "../../helpers/LocalStorageFunctions";
+import useGetWishData from "../../hooks/useGetWishData";
 const Cart = () => {
   // const [page, setPage] = React.useState(0);
   // const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -32,7 +32,7 @@ const Cart = () => {
 
   //get all data cart
   const [productsCart, ,] = UseGetCartData();
-  const [productsWish, ,] = useGetWishListDataFromLocalStorage();
+  const [productsWish, ,] = useGetWishData();
   const dispatch = useDispatch();
 
   const [arrangeDefault, setArrangeDefault] = useState(true);

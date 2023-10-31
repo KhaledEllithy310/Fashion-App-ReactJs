@@ -13,25 +13,38 @@ import {
   increment,
   removeFromCart,
 } from "../../store/slices/cartSlice";
-import { UseDetectProductQuantity } from "../../helpers/CartFunctions";
 import { useDispatch } from "react-redux";
 import CloseIcon from "@mui/icons-material/Close";
 import "./CartTable.css";
 import { Favorite } from "@mui/icons-material";
 import { addToWishList } from "../../store/slices/wishListSlice";
+import Swal from "sweetalert2";
 
 const CartTable = ({ productsCart }) => {
   const dispatch = useDispatch();
   // store the current index for product that quantity equals 0
   const [productIndex, setProductIndex] = useState(0);
-  // when quantity equals 0 suggest to user to delete this product or make quantity equal 1
-  UseDetectProductQuantity(productsCart, productIndex);
+
   //delete the product
   const decrementQuantity = (product, index) => {
-    if (product.quantity >= 1) {
+    if (product.quantity > 1) {
       dispatch(decrement(product));
       // store the current index for product that quantity equals 0
       setProductIndex(index);
+    } else {
+      // when quantity equals 0 suggest to user to delete this product or make quantity equal 1
+      Swal.fire({
+        title: "Do you want to delete this product?",
+        showDenyButton: false,
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete this",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Deleted!", "", "success");
+          //delete this product
+          dispatch(removeFromCart(productsCart[productIndex]));
+        }
+      });
     }
   };
 
