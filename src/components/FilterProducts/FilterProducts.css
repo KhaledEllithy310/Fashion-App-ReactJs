@@ -1,0 +1,16 @@
+.filter_products__category__checkbox {
+  color: var(--accent) !important;
+}
+
+.MuiFormControlLabel-label {
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.filter_products__titles {
+  text-transform: capitalize;
+}
+
+.slider_price {
+  color: var(--accent);
+}

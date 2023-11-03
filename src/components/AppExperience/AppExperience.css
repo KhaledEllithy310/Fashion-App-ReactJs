@@ -1,6 +1,7 @@
 .experience {
   text-align: center;
   padding: 50px 0;
+  background-color: var(--backgroundSec);
 }
 
 .experience__title {

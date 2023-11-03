@@ -10,6 +10,7 @@
 :root {
   --text: #000205;
   --background: #dcdbdc;
+  --backgroundSec: #cfcfcf;
   --primary: #0c3fac;
   --secondary: #e7e4e4;
   --accent: #3b72e8;
@@ -18,12 +19,15 @@
   --input: #e5e5e6;
   --placeholder: #0000008d;
   --overlay: rgba(0, 0, 0, 0.234);
+  --overlayHome: rgba(255, 255, 255, 0.237);
 }
 
 /* Dark mode variables */
 :root.dark-mode {
   --text: #fafcff;
   --background: #242324;
+  --backgroundSec: #2b2a2b;
+
   --primary: #5386f3;
   --secondary: #1a1818;
   --accent: #174ec4;
@@ -32,6 +36,7 @@
   /* --input: #19191a; */
   --placeholder: #eeeeeea8;
   --overlay: rgba(255, 255, 255, 0.157);
+  --overlayHome: rgba(0, 0, 0, 0.234);
 }
 
 /* Common styles */

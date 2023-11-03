@@ -6,37 +6,12 @@
       "price": 500,
       "discountPercentage": 30,
       "description": "good light blazer ",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -66,37 +41,12 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "perfect light Jeans",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -126,37 +76,12 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "perfect light Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -186,37 +111,12 @@
       "price": 400,
       "discountPercentage": 30,
       "description": "good light blazer ",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -246,37 +146,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -306,42 +181,19 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "good jeans men",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://t3.ftcdn.net/jpg/02/11/71/06/240_F_211710600_v1ZWFOoNhFRGMowNwoHYTO25rZE2LXI6.jpg",
-          "https://t4.ftcdn.net/jpg/01/97/02/89/240_F_197028926_rGNFQ3lRUDO247rlBuZeF3kiq6Jk3Tsk.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421948f0635f7953218a2ddfea291e2acc6f07_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421949cc31153b3f333b4f5ed4b31de5173a05_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/16664219511ad3306e7882c4c2beaf6c2ad6b99607_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421952f71da003659b0383af556fd54eb5dbeb_thumbnail_900x.webp"
         ],
         "white": [
           "https://t4.ftcdn.net/jpg/02/71/40/21/240_F_271402174_3EOagFZhlPBPkMwYP3ZKAyh3icDsYURS.jpg",
@@ -366,37 +218,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -426,37 +253,12 @@
       "price": 500,
       "discountPercentage": 20,
       "description": "good jeans men",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -486,37 +288,12 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "perfect light Jeans",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -546,37 +323,12 @@
       "price": 1500,
       "discountPercentage": 20,
       "description": "good jeans men",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -606,37 +358,12 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "perfect light Jeans",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -666,37 +393,12 @@
       "price": 400,
       "discountPercentage": 30,
       "description": "good light blazer ",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -726,37 +428,12 @@
       "price": 400,
       "discountPercentage": 30,
       "description": "good light blazer ",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -786,37 +463,12 @@
       "price": 400,
       "discountPercentage": 30,
       "description": "good light blazer ",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -846,37 +498,12 @@
       "price": 400,
       "discountPercentage": 30,
       "description": "good light blazer ",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -906,37 +533,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -966,37 +568,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1026,37 +603,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1086,37 +638,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1146,37 +673,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1206,37 +708,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy T-Shirt and Blouses",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1266,37 +743,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy T-Shirt and Blouses",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1326,37 +778,12 @@
       "price": 1200,
       "discountPercentage": 20,
       "description": "perfect heavy Dress",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1386,37 +813,12 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "good jeans men",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1446,37 +848,12 @@
       "price": 600,
       "discountPercentage": 20,
       "description": "good jeans men",
-      "colors": [
-        "black",
-        "white",
-        "green",
-        "yellow"
-      ],
+      "colors": ["black", "white", "green", "yellow"],
       "sizes": {
-        "black": [
-          "xxs",
-          "sx",
-          "s",
-          "m",
-          "l",
-          "xl"
-        ],
-        "white": [
-          "xxs",
-          "sx",
-          "s",
-          "xl"
-        ],
-        "green": [
-          "xxs",
-          "l",
-          "xl"
-        ],
-        "yellow": [
-          "m",
-          "l",
-          "xl"
-        ]
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"],
+        "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
@@ -1498,6 +875,26 @@
       },
       "category": "Jeans",
       "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 27,
+      "title": "1111111111122",
+      "price": 600,
+      "discountPercentage": 20,
+      "description": "perfect light Dress",
+      "colors": ["yellow"],
+      "sizes": {
+        "yellow": ["m"]
+      },
+      "images": {
+        "yellow": [
+          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        ]
+      },
+      "category": "Dresses",
+      "section": "women",
       "stoke": 50
     }
   ],

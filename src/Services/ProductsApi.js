@@ -1,11 +1,26 @@
 import { myAxios } from "./BaseApi";
 
-export const getProducts = async (sectionName, pageNumber) => {
-  return await myAxios.get(`/products?section=${sectionName}`);
+export const getProducts = async (sectionName, searchValue = "") => {
+  console.log(searchValue);
+  const res = await myAxios.get(
+    `/products?section=${sectionName}${searchValue}`
+  );
+  console.log(res);
+  return res;
 };
 export const getProductsPaginate = async (sectionName, pageNumber) => {
   return await myAxios.get(
     `/products?section=${sectionName}&_page=${pageNumber}&_limit=8`
+  );
+};
+
+export const getProductsFilter = async (
+  sectionName,
+  pageNumber,
+  searchValue
+) => {
+  return await myAxios.get(
+    `/products?section=${sectionName}&_page=${pageNumber}&_limit=8${searchValue}`
   );
 };
 // export const getProducts = async (sectionName) => {

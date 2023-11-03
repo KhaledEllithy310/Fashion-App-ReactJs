@@ -23,8 +23,6 @@ const ProductsSlider = () => {
   // console.log(sectionData);
   const categoryData = categories[0]?.categories;
   const sectionIdOfCategory = categories[0]?.sectionId;
-  // console.log("targetSectionId", targetSectionId);
-  // console.log("targetCategoryName", targetCategoryName);
   useEffect(() => {
     setTargetSectionId(sectionIdOfCategory);
     //get all products according category - default categoryName = the first{index =0}
