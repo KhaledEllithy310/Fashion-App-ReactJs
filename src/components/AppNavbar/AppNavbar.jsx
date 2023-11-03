@@ -246,16 +246,6 @@ function AppNavbar() {
             onClick={() => navigate("/")}
             noWrap
             component="a"
-            sx={{
-              display: {
-                md: "flex",
-                background: theme.palette.background.sec,
-              },
-
-              fontWeight: 700,
-              color: theme.palette.text.logoSec,
-              textDecoration: "none",
-            }}
           >
             f
           </Typography>
