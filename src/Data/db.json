@@ -2,103 +2,99 @@
   "products": [
     {
       "id": 1,
-      "title": "light blazer women",
-      "price": 500,
+      "title": "T-shirt",
+      "price": 1000,
       "discountPercentage": 30,
-      "description": "good light blazer ",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good T-shirt",
+      "colors": ["black", "white", "gray"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
         "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://images.pexels.com/photos/6571972/pexels-photo-6571972.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/7105040/pexels-photo-7105040.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671145d7acec6eb7f7ab84be584df450e6f258_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671150e274f68ac44bae577aacb909063a72cb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671154170a7423c3156320615b4bdd625ee566_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671159d61a793626956c95e5131e31be5bd945_thumbnail_220x293.webp"
         ],
         "white": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/4621783/pexels-photo-4621783.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/167867865212b79adc9b8035774716f686424fc5fd_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678657a4279cde95a9d6a288de3ad1347be35d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678661f77cc6ec2a37007ac02c54762a4d5062_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/16786786805f0e22189d311695cbc652b6947c550b_thumbnail_220x293.webp"
         ],
-        "green": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/11191072/pexels-photo-11191072.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8498323/pexels-photo-8498323.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555390bfa6dc2272b933b48ce6957f311517c6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555399634b8df53c7ddde1985265ca88dca617_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555403c9f630a5039407bc1e710a25a0792de0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/16895554171c82548894bc8ce150aa70d9f615b146_thumbnail_220x293.webp"
         ]
       },
-      "category": "blazer",
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 3,
-      "title": "light Jeans women",
-      "price": 600,
+      "title": "Low-shoulder logo print T-shirt",
+      "price": 1300,
       "discountPercentage": 20,
-      "description": "perfect light Jeans",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "perfect light T-shirt",
+      "colors": ["black", "beige", "green"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "beige": ["xxs", "sx", "s", "m", "l", "xl"],
+        "black": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"]
       },
       "images": {
-        "black": [
-          "https://images.unsplash.com/photo-1485231183945-fffde7cc051e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsYWNrJTIwamVhbnMlMjBnaXJsfGVufDB8MXwwfHx8MA%3D%3D",
-          "https://images.unsplash.com/photo-1449614016987-8c215bb90b94?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBqZWFucyUyMGdpcmx8ZW58MHwxfDB8fHww"
+        "beige": [
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908014cb6e20415f70ffff018876d3d199cd89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908017c636875d04de0749015cfbfbaa04efdf_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908025abafaa41b22804d907220ee6fc21e3b1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/16759080313a876d3375d844724684710530c13880_thumbnail_220x293.webp"
         ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/17/94/71/240_F_217947112_HxWl25gV9wTo7ELCjhM0C70xuOAO0WD7.jpg",
-          "https://t3.ftcdn.net/jpg/02/90/98/92/240_F_290989204_dImbwMzIED46soYpuLiCIjkjctuDAbGd.jpg"
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812184d450aeb579a7fa442e6f39ed91486c78_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218987a64f0a50fe6d0d6ff9a3716cee0d89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219385eabe80cee1490855ae39200dc7a736_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/16818121982e85a6d39acad91ac9054f407f346192.webp"
         ],
         "green": [
-          "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218163c20e1a96c57f6f7bb637677bc3fe82_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812185b32144e80a3311136e6a99489dda2718_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812189a0c850f91421278cb6ce66a2754faf1b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219930cbc085b1a8d5f82789a1d9a431636f_thumbnail_220x293.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 4,
-      "title": "light Dress women",
-      "price": 600,
+      "title": "MOTF PREMIUM Raw contrast dress",
+      "price": 2000,
       "discountPercentage": 20,
-      "description": "perfect light Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "MOTF PREMIUM Raw contrast dress",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
         "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419854545c9b2a5379be53d984c95ec4a0242_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/168914198848e6b27b63d41cd5dfc6d3fd1d7737d5_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/1689141991faf41ca13b0976303366283406fcc95f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419932d34ee70e806b104eab9ff8b6db2bdad_thumbnail_220x293.webp"
         ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/3b/169710485573315368e2b91c76942b06e8f2107e32_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/86/16971048658dd418002e06b7d90924d8202f4a91f1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/17/1697104853703fa9360c4363b25c3ba10a272f0b7b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/5d/169710485919619d4716d9e27d1856fc4ed395b5b2_thumbnail_220x293.webp"
         ]
       },
       "category": "Dresses",
@@ -107,68 +103,20 @@
     },
     {
       "id": 2,
-      "title": "light blazer women",
+      "title": "Wedding Dresses",
       "price": 400,
       "discountPercentage": 30,
-      "description": "good light blazer ",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good Wedding Dresses",
+      "colors": ["white"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "white": ["xxs", "sx", "s", "xl"]
       },
       "images": {
-        "black": [
-          "https://images.pexels.com/photos/6571972/pexels-photo-6571972.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/7105040/pexels-photo-7105040.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
         "white": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/4621783/pexels-photo-4621783.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "green": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/11191072/pexels-photo-11191072.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8498323/pexels-photo-8498323.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ]
-      },
-      "category": "blazer",
-      "section": "women",
-      "stoke": 50
-    },
-    {
-      "id": 5,
-      "title": "heavy Dress women",
-      "price": 1200,
-      "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
-      "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
-      },
-      "images": {
-        "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
-        ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/d6/16980769112da62cda1302857f92a3f985eda6a72c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/96/169807691491f5d86c01bb11be2ed7543a4e6cb0d6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/56/1698076920296538fd4dd042d690082dc2262b0351_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/5d/1698076922d0ff638b426aaa4c4f7860d1c4655dc8_thumbnail_220x293.webp"
         ]
       },
       "category": "Dresses",
@@ -176,17 +124,37 @@
       "stoke": 50
     },
     {
-      "id": 6,
-      "title": "Jeans men",
-      "price": 600,
+      "id": 5,
+      "title": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "price": 1400,
       "discountPercentage": 20,
-      "description": "good jeans men",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "colors": ["blue"],
+      "sizes": {
+        "blue": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "blue": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/12/1697522439ffd73d2392f424afda14003c7df63f66_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/1e/16970774515be91788a7f4fa14a866a5ef27e6bdfa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/df/1697522446d65cd163a885040886160c5f08f9fbc8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/67/16975224485f3938d5cac69865f74d3f51b1295d5f_thumbnail_600x.webp"
+        ]
+      },
+      "category": "sweatshirt",
+      "section": "women",
+      "stoke": 50
+    },
+    {
+      "id": 6,
+      "title": "Pullover Low-shoulder",
+      "price": 1000,
+      "discountPercentage": 20,
+      "description": "good Pullover men",
+      "colors": ["black", "gray"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "sx", "s", "xl"]
       },
       "images": {
         "black": [
@@ -195,437 +163,358 @@
           "https://img.ltwebstatic.com/images3_pi/2022/10/22/16664219511ad3306e7882c4c2beaf6c2ad6b99607_thumbnail_220x293.webp",
           "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421952f71da003659b0383af556fd54eb5dbeb_thumbnail_900x.webp"
         ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/71/40/21/240_F_271402174_3EOagFZhlPBPkMwYP3ZKAyh3icDsYURS.jpg",
-          "https://t3.ftcdn.net/jpg/02/01/86/52/240_F_201865292_61RjHqqbEgTkX9CES3uiRgmLHilmSjTP.jpg"
-        ],
-        "green": [
-          "https://t4.ftcdn.net/jpg/01/06/63/89/360_F_106638911_BJHIqkDcElRGb7vLSLmMI3c0ZGFpZGLb.jpg",
-          "https://t4.ftcdn.net/jpg/01/35/33/79/360_F_135337960_u24xxxUN4mbzsWxmlhLglK9o2w5WQSbB.jpg"
-        ],
-        "yellow": [
-          "https://t3.ftcdn.net/jpg/04/22/73/26/240_F_422732623_i8vAgS5cxVbLYPV5wzXirkse9styYjA7.jpg",
-          "https://t4.ftcdn.net/jpg/02/83/01/77/240_F_283017722_HeBqhAkUkBJFyYtl2bUhF6h2TjYO43SB.jpg"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442086e2931a513a25d4216daada36ba0451ce_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/16624420886b4012ac0b3f4a75aa11b5787e774d36_thumbnail_220x293.webp",
+          " https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442090d1e37659107cba4b7f64e23331923beb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442093f526a02bab4bfcc7d50acabb6821f772_thumbnail_220x293.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "Pullover",
       "section": "men",
       "stoke": 50
     },
     {
       "id": 7,
-      "title": "heavy Dress women",
-      "price": 1200,
+      "title": "Faux Leather Slash Pocket High Waist Skirt",
+      "price": 1800,
       "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "Faux Leather Slash Pocket High Waist Skirt",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/16668352696129d9d6088038bda039da6478415dea_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835270fd7cde7d451cdd9dd23f1f658aeee9fc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/166683527280895278b42f1d1c62944d84c6ad4975_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835273d00d0661865b2d14bf162570eb31e625_thumbnail_220x293.webp"
+        ],
         "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
-        ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/16613090578c5bac9db9e75f6962ec082348566c64_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/166130905969a67582a978fda27aba0c962a23792e_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309060dfb5616ed95727b238065bd8ecbe5b3d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309062a4e79a599b386fd77ce0b5a0f503c201_thumbnail_220x293.webp"
         ]
       },
-      "category": "Dresses",
+      "category": "skirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 8,
-      "title": "Jeans men",
-      "price": 500,
+      "title": "Pants with cargo pocket",
+      "price": 800,
       "discountPercentage": 20,
-      "description": "good jeans men",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good Pants with cargo pocket men",
+      "colors": ["black", "gray", "yellow"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"],
         "yellow": ["m", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://t3.ftcdn.net/jpg/02/11/71/06/240_F_211710600_v1ZWFOoNhFRGMowNwoHYTO25rZE2LXI6.jpg",
-          "https://t4.ftcdn.net/jpg/01/97/02/89/240_F_197028926_rGNFQ3lRUDO247rlBuZeF3kiq6Jk3Tsk.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239674ad3c513d60fbcd77cf47597cac94375_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982397235bb6e69963e7677343e44f08237a5f3_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_900x.webp"
         ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/71/40/21/240_F_271402174_3EOagFZhlPBPkMwYP3ZKAyh3icDsYURS.jpg",
-          "https://t3.ftcdn.net/jpg/02/01/86/52/240_F_201865292_61RjHqqbEgTkX9CES3uiRgmLHilmSjTP.jpg"
-        ],
-        "green": [
-          "https://t4.ftcdn.net/jpg/01/06/63/89/360_F_106638911_BJHIqkDcElRGb7vLSLmMI3c0ZGFpZGLb.jpg",
-          "https://t4.ftcdn.net/jpg/01/35/33/79/360_F_135337960_u24xxxUN4mbzsWxmlhLglK9o2w5WQSbB.jpg"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982398852b402294ab3bdef673a9368de147d0d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823992593dabf060efbc20cbe093f95a704b43_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_900x.webp"
         ],
         "yellow": [
-          "https://t3.ftcdn.net/jpg/04/22/73/26/240_F_422732623_i8vAgS5cxVbLYPV5wzXirkse9styYjA7.jpg",
-          "https://t4.ftcdn.net/jpg/02/83/01/77/240_F_283017722_HeBqhAkUkBJFyYtl2bUhF6h2TjYO43SB.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/ea/16967596598cfec2070b654250dbdc82094cd2050f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/c6/1696759662a7fdb81760a02c8fb009d2c456fd2a91_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_900x.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "Pants with cargo pocket",
       "section": "men",
       "stoke": 50
     },
     {
       "id": 9,
-      "title": "light Jeans women",
-      "price": 600,
+      "title": "Faux Leather Slash Pocket High Waist Skirt",
+      "price": 1800,
       "discountPercentage": 20,
-      "description": "perfect light Jeans",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "Faux Leather Slash Pocket High Waist Skirt",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/16668352696129d9d6088038bda039da6478415dea_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835270fd7cde7d451cdd9dd23f1f658aeee9fc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/166683527280895278b42f1d1c62944d84c6ad4975_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835273d00d0661865b2d14bf162570eb31e625_thumbnail_220x293.webp"
+        ],
         "black": [
-          "https://images.unsplash.com/photo-1485231183945-fffde7cc051e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsYWNrJTIwamVhbnMlMjBnaXJsfGVufDB8MXwwfHx8MA%3D%3D",
-          "https://images.unsplash.com/photo-1449614016987-8c215bb90b94?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBqZWFucyUyMGdpcmx8ZW58MHwxfDB8fHww"
-        ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/17/94/71/240_F_217947112_HxWl25gV9wTo7ELCjhM0C70xuOAO0WD7.jpg",
-          "https://t3.ftcdn.net/jpg/02/90/98/92/240_F_290989204_dImbwMzIED46soYpuLiCIjkjctuDAbGd.jpg"
-        ],
-        "green": [
-          "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/16613090578c5bac9db9e75f6962ec082348566c64_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/166130905969a67582a978fda27aba0c962a23792e_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309060dfb5616ed95727b238065bd8ecbe5b3d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309062a4e79a599b386fd77ce0b5a0f503c201_thumbnail_220x293.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "skirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 10,
-      "title": "Jeans men",
+      "title": "Pants with cargo pocket",
       "price": 1500,
       "discountPercentage": 20,
-      "description": "good jeans men",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good Pants with cargo pocket with Wave design men",
+      "colors": ["gray"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "sx", "s", "m", "l", "xl"]
       },
       "images": {
-        "black": [
-          "https://t3.ftcdn.net/jpg/02/11/71/06/240_F_211710600_v1ZWFOoNhFRGMowNwoHYTO25rZE2LXI6.jpg",
-          "https://t4.ftcdn.net/jpg/01/97/02/89/240_F_197028926_rGNFQ3lRUDO247rlBuZeF3kiq6Jk3Tsk.jpg"
-        ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/71/40/21/240_F_271402174_3EOagFZhlPBPkMwYP3ZKAyh3icDsYURS.jpg",
-          "https://t3.ftcdn.net/jpg/02/01/86/52/240_F_201865292_61RjHqqbEgTkX9CES3uiRgmLHilmSjTP.jpg"
-        ],
-        "green": [
-          "https://t4.ftcdn.net/jpg/01/06/63/89/360_F_106638911_BJHIqkDcElRGb7vLSLmMI3c0ZGFpZGLb.jpg",
-          "https://t4.ftcdn.net/jpg/01/35/33/79/360_F_135337960_u24xxxUN4mbzsWxmlhLglK9o2w5WQSbB.jpg"
-        ],
-        "yellow": [
-          "https://t3.ftcdn.net/jpg/04/22/73/26/240_F_422732623_i8vAgS5cxVbLYPV5wzXirkse9styYjA7.jpg",
-          "https://t4.ftcdn.net/jpg/02/83/01/77/240_F_283017722_HeBqhAkUkBJFyYtl2bUhF6h2TjYO43SB.jpg"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/43/1695293786005a93cec764f19c3d7dc7a2196e52dc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/2b/16952937891c54b14da0b12da9dc9b73e4742c7589_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/ee/169529379209e4926d5c4a544ced9647621676994c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/1d/1695293795efd2c2d623309cf02d8f56b172abbdee_thumbnail_220x293.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "Pants with cargo pocket",
       "section": "men",
       "stoke": 50
     },
     {
       "id": 11,
-      "title": "light Jeans women",
-      "price": 600,
+      "title": "Faux Leather Slash Pocket High Waist Skirt",
+      "price": 1800,
       "discountPercentage": 20,
-      "description": "perfect light Jeans",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "Faux Leather Slash Pocket High Waist Skirt",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/16668352696129d9d6088038bda039da6478415dea_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835270fd7cde7d451cdd9dd23f1f658aeee9fc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/166683527280895278b42f1d1c62944d84c6ad4975_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835273d00d0661865b2d14bf162570eb31e625_thumbnail_220x293.webp"
+        ],
         "black": [
-          "https://images.unsplash.com/photo-1485231183945-fffde7cc051e?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsYWNrJTIwamVhbnMlMjBnaXJsfGVufDB8MXwwfHx8MA%3D%3D",
-          "https://images.unsplash.com/photo-1449614016987-8c215bb90b94?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBqZWFucyUyMGdpcmx8ZW58MHwxfDB8fHww"
-        ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/17/94/71/240_F_217947112_HxWl25gV9wTo7ELCjhM0C70xuOAO0WD7.jpg",
-          "https://t3.ftcdn.net/jpg/02/90/98/92/240_F_290989204_dImbwMzIED46soYpuLiCIjkjctuDAbGd.jpg"
-        ],
-        "green": [
-          "https://images.pexels.com/photos/5262485/pexels-photo-5262485.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8484040/pexels-photo-8484040.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/13704161/pexels-photo-13704161.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/16613090578c5bac9db9e75f6962ec082348566c64_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/166130905969a67582a978fda27aba0c962a23792e_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309060dfb5616ed95727b238065bd8ecbe5b3d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309062a4e79a599b386fd77ce0b5a0f503c201_thumbnail_220x293.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "skirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 12,
-      "title": "light blazer women",
-      "price": 400,
-      "discountPercentage": 30,
-      "description": "good light blazer ",
-      "colors": ["black", "white", "green", "yellow"],
+      "title": "Faux Leather Slash Pocket High Waist Skirt",
+      "price": 1800,
+      "discountPercentage": 20,
+      "description": "Faux Leather Slash Pocket High Waist Skirt",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/16668352696129d9d6088038bda039da6478415dea_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835270fd7cde7d451cdd9dd23f1f658aeee9fc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/166683527280895278b42f1d1c62944d84c6ad4975_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/27/1666835273d00d0661865b2d14bf162570eb31e625_thumbnail_220x293.webp"
+        ],
         "black": [
-          "https://images.pexels.com/photos/6571972/pexels-photo-6571972.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/7105040/pexels-photo-7105040.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "white": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/4621783/pexels-photo-4621783.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "green": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/11191072/pexels-photo-11191072.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8498323/pexels-photo-8498323.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/16613090578c5bac9db9e75f6962ec082348566c64_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/166130905969a67582a978fda27aba0c962a23792e_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309060dfb5616ed95727b238065bd8ecbe5b3d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/08/24/1661309062a4e79a599b386fd77ce0b5a0f503c201_thumbnail_220x293.webp"
         ]
       },
-      "category": "blazer",
+      "category": "skirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 14,
-      "title": "light blazer women",
-      "price": 400,
+      "title": "T-shirt",
+      "price": 1000,
       "discountPercentage": 30,
-      "description": "good light blazer ",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good T-shirt",
+      "colors": ["black", "white", "gray"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
         "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://images.pexels.com/photos/6571972/pexels-photo-6571972.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/7105040/pexels-photo-7105040.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671145d7acec6eb7f7ab84be584df450e6f258_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671150e274f68ac44bae577aacb909063a72cb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671154170a7423c3156320615b4bdd625ee566_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671159d61a793626956c95e5131e31be5bd945_thumbnail_220x293.webp"
         ],
         "white": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/4621783/pexels-photo-4621783.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/167867865212b79adc9b8035774716f686424fc5fd_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678657a4279cde95a9d6a288de3ad1347be35d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678661f77cc6ec2a37007ac02c54762a4d5062_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/16786786805f0e22189d311695cbc652b6947c550b_thumbnail_220x293.webp"
         ],
-        "green": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/11191072/pexels-photo-11191072.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8498323/pexels-photo-8498323.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555390bfa6dc2272b933b48ce6957f311517c6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555399634b8df53c7ddde1985265ca88dca617_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555403c9f630a5039407bc1e710a25a0792de0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/16895554171c82548894bc8ce150aa70d9f615b146_thumbnail_220x293.webp"
         ]
       },
-      "category": "blazer",
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 15,
-      "title": "light blazer women",
-      "price": 400,
+      "title": "T-shirt",
+      "price": 1000,
       "discountPercentage": 30,
-      "description": "good light blazer ",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good T-shirt",
+      "colors": ["black", "white", "gray"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
         "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://images.pexels.com/photos/6571972/pexels-photo-6571972.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/7105040/pexels-photo-7105040.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671145d7acec6eb7f7ab84be584df450e6f258_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671150e274f68ac44bae577aacb909063a72cb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671154170a7423c3156320615b4bdd625ee566_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671159d61a793626956c95e5131e31be5bd945_thumbnail_220x293.webp"
         ],
         "white": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/4621783/pexels-photo-4621783.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/167867865212b79adc9b8035774716f686424fc5fd_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678657a4279cde95a9d6a288de3ad1347be35d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678661f77cc6ec2a37007ac02c54762a4d5062_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/16786786805f0e22189d311695cbc652b6947c550b_thumbnail_220x293.webp"
         ],
-        "green": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/11191072/pexels-photo-11191072.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8498323/pexels-photo-8498323.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555390bfa6dc2272b933b48ce6957f311517c6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555399634b8df53c7ddde1985265ca88dca617_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555403c9f630a5039407bc1e710a25a0792de0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/16895554171c82548894bc8ce150aa70d9f615b146_thumbnail_220x293.webp"
         ]
       },
-      "category": "blazer",
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 16,
-      "title": "light blazer women",
-      "price": 400,
+      "title": "T-shirt",
+      "price": 1000,
       "discountPercentage": 30,
-      "description": "good light blazer ",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good T-shirt",
+      "colors": ["black", "white", "gray"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
         "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://images.pexels.com/photos/6571972/pexels-photo-6571972.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/7105040/pexels-photo-7105040.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671145d7acec6eb7f7ab84be584df450e6f258_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671150e274f68ac44bae577aacb909063a72cb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671154170a7423c3156320615b4bdd625ee566_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671159d61a793626956c95e5131e31be5bd945_thumbnail_220x293.webp"
         ],
         "white": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/4621783/pexels-photo-4621783.jpeg?auto=compress&cs=tinysrgb&w=600"
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/167867865212b79adc9b8035774716f686424fc5fd_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678657a4279cde95a9d6a288de3ad1347be35d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678661f77cc6ec2a37007ac02c54762a4d5062_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/16786786805f0e22189d311695cbc652b6947c550b_thumbnail_220x293.webp"
         ],
-        "green": [
-          "https://images.pexels.com/photos/4869834/pexels-photo-4869834.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/11191072/pexels-photo-11191072.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/8498323/pexels-photo-8498323.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555390bfa6dc2272b933b48ce6957f311517c6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555399634b8df53c7ddde1985265ca88dca617_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555403c9f630a5039407bc1e710a25a0792de0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/16895554171c82548894bc8ce150aa70d9f615b146_thumbnail_220x293.webp"
         ]
       },
-      "category": "blazer",
-      "section": "women",
-      "stoke": 50
-    },
-    {
-      "id": 17,
-      "title": "heavy Dress women",
-      "price": 1200,
-      "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
-      "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
-      },
-      "images": {
-        "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
-        ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
-        ]
-      },
-      "category": "Dresses",
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 18,
-      "title": "heavy Dress women",
-      "price": 1200,
-      "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "title": "T-shirt",
+      "price": 1000,
+      "discountPercentage": 30,
+      "description": "good T-shirt",
+      "colors": ["black", "white", "gray"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
         "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "gray": ["xxs", "l", "xl"]
       },
       "images": {
         "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671145d7acec6eb7f7ab84be584df450e6f258_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671150e274f68ac44bae577aacb909063a72cb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671154170a7423c3156320615b4bdd625ee566_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671159d61a793626956c95e5131e31be5bd945_thumbnail_220x293.webp"
         ],
         "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/167867865212b79adc9b8035774716f686424fc5fd_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678657a4279cde95a9d6a288de3ad1347be35d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/1678678661f77cc6ec2a37007ac02c54762a4d5062_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/03/13/16786786805f0e22189d311695cbc652b6947c550b_thumbnail_220x293.webp"
         ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555390bfa6dc2272b933b48ce6957f311517c6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555399634b8df53c7ddde1985265ca88dca617_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/1689555403c9f630a5039407bc1e710a25a0792de0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/17/16895554171c82548894bc8ce150aa70d9f615b146_thumbnail_220x293.webp"
         ]
       },
-      "category": "Dresses",
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     },
     {
-      "id": 19,
-      "title": "heavy Dress women",
-      "price": 1200,
+      "id": 17,
+      "title": "MOTF PREMIUM Raw contrast dress",
+      "price": 2000,
       "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "MOTF PREMIUM Raw contrast dress",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
         "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419854545c9b2a5379be53d984c95ec4a0242_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/168914198848e6b27b63d41cd5dfc6d3fd1d7737d5_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/1689141991faf41ca13b0976303366283406fcc95f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419932d34ee70e806b104eab9ff8b6db2bdad_thumbnail_220x293.webp"
         ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/3b/169710485573315368e2b91c76942b06e8f2107e32_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/86/16971048658dd418002e06b7d90924d8202f4a91f1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/17/1697104853703fa9360c4363b25c3ba10a272f0b7b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/5d/169710485919619d4716d9e27d1856fc4ed395b5b2_thumbnail_220x293.webp"
         ]
       },
       "category": "Dresses",
@@ -634,138 +523,100 @@
     },
     {
       "id": 20,
-      "title": "heavy Dress women",
-      "price": 1200,
+      "title": "MOTF PREMIUM Raw contrast dress",
+      "price": 2000,
       "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "MOTF PREMIUM Raw contrast dress",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
         "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419854545c9b2a5379be53d984c95ec4a0242_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/168914198848e6b27b63d41cd5dfc6d3fd1d7737d5_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/1689141991faf41ca13b0976303366283406fcc95f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419932d34ee70e806b104eab9ff8b6db2bdad_thumbnail_220x293.webp"
         ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/3b/169710485573315368e2b91c76942b06e8f2107e32_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/86/16971048658dd418002e06b7d90924d8202f4a91f1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/17/1697104853703fa9360c4363b25c3ba10a272f0b7b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/5d/169710485919619d4716d9e27d1856fc4ed395b5b2_thumbnail_220x293.webp"
         ]
       },
-      "category": "T-Shirt and Blouses",
+      "category": "Dresses",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 21,
-      "title": "heavy Dress women",
-      "price": 1200,
+      "title": "MOTF PREMIUM Raw contrast dress",
+      "price": 2000,
       "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "MOTF PREMIUM Raw contrast dress",
+      "colors": ["black", "brown"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "xl"]
       },
       "images": {
         "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419854545c9b2a5379be53d984c95ec4a0242_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/168914198848e6b27b63d41cd5dfc6d3fd1d7737d5_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/1689141991faf41ca13b0976303366283406fcc95f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/12/16891419932d34ee70e806b104eab9ff8b6db2bdad_thumbnail_220x293.webp"
         ],
-        "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/3b/169710485573315368e2b91c76942b06e8f2107e32_thumbnail_900x.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/86/16971048658dd418002e06b7d90924d8202f4a91f1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/17/1697104853703fa9360c4363b25c3ba10a272f0b7b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/5d/169710485919619d4716d9e27d1856fc4ed395b5b2_thumbnail_220x293.webp"
         ]
       },
-      "category": "T-Shirt and Blouses",
+      "category": "Dresses",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 22,
-      "title": "heavy T-Shirt and Blouses women",
-      "price": 1200,
-      "discountPercentage": 20,
-      "description": "perfect heavy T-Shirt and Blouses",
-      "colors": ["black", "white", "green", "yellow"],
+      "title": "Wedding Dresses",
+      "price": 400,
+      "discountPercentage": 30,
+      "description": "good Wedding Dresses",
+      "colors": ["white"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "white": ["xxs", "sx", "s", "xl"]
       },
       "images": {
-        "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
-        ],
         "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/d6/16980769112da62cda1302857f92a3f985eda6a72c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/96/169807691491f5d86c01bb11be2ed7543a4e6cb0d6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/56/1698076920296538fd4dd042d690082dc2262b0351_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/5d/1698076922d0ff638b426aaa4c4f7860d1c4655dc8_thumbnail_220x293.webp"
         ]
       },
-      "category": "T-Shirt and Blouses",
+      "category": "Dresses",
       "section": "women",
       "stoke": 50
     },
     {
       "id": 23,
-      "title": "heavy T-Shirt and Blouses women",
-      "price": 1200,
-      "discountPercentage": 20,
-      "description": "perfect heavy T-Shirt and Blouses",
-      "colors": ["black", "white", "green", "yellow"],
+      "title": "Wedding Dresses",
+      "price": 400,
+      "discountPercentage": 30,
+      "description": "good Wedding Dresses",
+      "colors": ["white"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "white": ["xxs", "sx", "s", "xl"]
       },
       "images": {
-        "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
-        ],
         "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/d6/16980769112da62cda1302857f92a3f985eda6a72c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/96/169807691491f5d86c01bb11be2ed7543a4e6cb0d6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/56/1698076920296538fd4dd042d690082dc2262b0351_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/5d/1698076922d0ff638b426aaa4c4f7860d1c4655dc8_thumbnail_220x293.webp"
         ]
       },
       "category": "Dresses",
@@ -774,33 +625,20 @@
     },
     {
       "id": 24,
-      "title": "heavy Dress women",
-      "price": 1200,
-      "discountPercentage": 20,
-      "description": "perfect heavy Dress",
-      "colors": ["black", "white", "green", "yellow"],
+      "title": "Wedding Dresses",
+      "price": 400,
+      "discountPercentage": 30,
+      "description": "good Wedding Dresses",
+      "colors": ["white"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "white": ["xxs", "sx", "s", "xl"]
       },
       "images": {
-        "black": [
-          "https://t4.ftcdn.net/jpg/00/49/44/21/240_F_49442193_UHxgxx7hnQoKb936ulLRvRM8k9fJiOQ3.jpg",
-          "https://t4.ftcdn.net/jpg/02/98/78/09/240_F_298780933_gYLm3B6vMJdQI1FiZgkVq2vvbOFLyrxV.jpg"
-        ],
         "white": [
-          "https://t3.ftcdn.net/jpg/04/19/53/80/240_F_419538057_e7TAtmgWWMmjN3tukoKDiCE743UG834c.jpg",
-          "https://t4.ftcdn.net/jpg/03/46/17/19/240_F_346171979_nR5T8zvmrP6Zqt7irokNDyjX6wxagJeK.jpg"
-        ],
-        "green": [
-          "https://t3.ftcdn.net/jpg/01/83/54/08/240_F_183540800_DW0JjgPnS6tu5RA2fEoA7mPMiwjug7Gk.jpg",
-          "https://t4.ftcdn.net/jpg/00/69/41/07/240_F_69410731_zmlHPpTQzD51O9mDlsNIg4fOHA0l7Jww.jpg"
-        ],
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/d6/16980769112da62cda1302857f92a3f985eda6a72c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/96/169807691491f5d86c01bb11be2ed7543a4e6cb0d6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/56/1698076920296538fd4dd042d690082dc2262b0351_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/24/5d/1698076922d0ff638b426aaa4c4f7860d1c4655dc8_thumbnail_220x293.webp"
         ]
       },
       "category": "Dresses",
@@ -809,91 +647,618 @@
     },
     {
       "id": 25,
-      "title": "Jeans men2",
-      "price": 600,
+      "title": "jacket Legnd",
+      "price": 1500,
       "discountPercentage": 20,
-      "description": "good jeans men",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good jacket Legnd",
+      "colors": ["brown"],
       "sizes": {
-        "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "brown": ["xxs", "sx", "s", "m", "l", "xl"]
       },
       "images": {
-        "black": [
-          "https://t3.ftcdn.net/jpg/02/11/71/06/240_F_211710600_v1ZWFOoNhFRGMowNwoHYTO25rZE2LXI6.jpg",
-          "https://t4.ftcdn.net/jpg/01/97/02/89/240_F_197028926_rGNFQ3lRUDO247rlBuZeF3kiq6Jk3Tsk.jpg"
-        ],
-        "white": [
-          "https://t4.ftcdn.net/jpg/02/71/40/21/240_F_271402174_3EOagFZhlPBPkMwYP3ZKAyh3icDsYURS.jpg",
-          "https://t3.ftcdn.net/jpg/02/01/86/52/240_F_201865292_61RjHqqbEgTkX9CES3uiRgmLHilmSjTP.jpg"
-        ],
-        "green": [
-          "https://t4.ftcdn.net/jpg/01/06/63/89/360_F_106638911_BJHIqkDcElRGb7vLSLmMI3c0ZGFpZGLb.jpg",
-          "https://t4.ftcdn.net/jpg/01/35/33/79/360_F_135337960_u24xxxUN4mbzsWxmlhLglK9o2w5WQSbB.jpg"
-        ],
-        "yellow": [
-          "https://t3.ftcdn.net/jpg/04/22/73/26/240_F_422732623_i8vAgS5cxVbLYPV5wzXirkse9styYjA7.jpg",
-          "https://t4.ftcdn.net/jpg/02/83/01/77/240_F_283017722_HeBqhAkUkBJFyYtl2bUhF6h2TjYO43SB.jpg"
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/166557436570b8ad1e58f5310164c235a6b1e41ffa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/166557436644a48dd983c66d8df6c5b16b9f6ff03c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665574367c325639b4b872090763f93bf0339b1b6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665574369ab393eb1cb42935e3ff9872c1f0ffb86_thumbnail_220x293.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "jacket",
       "section": "men",
       "stoke": 50
     },
     {
       "id": 26,
-      "title": "Jeans men3",
-      "price": 600,
+      "title": "puffy",
+      "price": 1300,
       "discountPercentage": 20,
-      "description": "good jeans men",
-      "colors": ["black", "white", "green", "yellow"],
+      "description": "good puffy men",
+      "colors": ["black", "white"],
       "sizes": {
         "black": ["xxs", "sx", "s", "m", "l", "xl"],
-        "white": ["xxs", "sx", "s", "xl"],
-        "green": ["xxs", "l", "xl"],
-        "yellow": ["m", "l", "xl"]
+        "white": ["xxs", "sx", "s", "xl"]
       },
       "images": {
-        "black": [
-          "https://t3.ftcdn.net/jpg/02/11/71/06/240_F_211710600_v1ZWFOoNhFRGMowNwoHYTO25rZE2LXI6.jpg",
-          "https://t4.ftcdn.net/jpg/01/97/02/89/240_F_197028926_rGNFQ3lRUDO247rlBuZeF3kiq6Jk3Tsk.jpg"
-        ],
         "white": [
-          "https://t4.ftcdn.net/jpg/02/71/40/21/240_F_271402174_3EOagFZhlPBPkMwYP3ZKAyh3icDsYURS.jpg",
-          "https://t3.ftcdn.net/jpg/02/01/86/52/240_F_201865292_61RjHqqbEgTkX9CES3uiRgmLHilmSjTP.jpg"
+          "https://img.ltwebstatic.com/images3_pi/2023/10/07/66/1696669628c8906bb8577f72977e43e2b4a85118c8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/07/d7/1696669687e539360e4b8c0d000815a0bc1fb35457_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/08/22/f4/169269396706d22449f03c463060c38124974bf1e0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/08/22/f6/1692693969b12e9e850d5e82ac8a7bfdbfa8e4ddc6_thumbnail_220x293.webp"
         ],
-        "green": [
-          "https://t4.ftcdn.net/jpg/01/06/63/89/360_F_106638911_BJHIqkDcElRGb7vLSLmMI3c0ZGFpZGLb.jpg",
-          "https://t4.ftcdn.net/jpg/01/35/33/79/360_F_135337960_u24xxxUN4mbzsWxmlhLglK9o2w5WQSbB.jpg"
-        ],
-        "yellow": [
-          "https://t3.ftcdn.net/jpg/04/22/73/26/240_F_422732623_i8vAgS5cxVbLYPV5wzXirkse9styYjA7.jpg",
-          "https://t4.ftcdn.net/jpg/02/83/01/77/240_F_283017722_HeBqhAkUkBJFyYtl2bUhF6h2TjYO43SB.jpg"
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/18/ef/169762862453d032c133c96025aa79718474a60a6a_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/ae/1695778329f58de966415661609c1c548111ef5fab_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/a5/1695778327496bce82f1cfa7f07efa65178697e2a2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/b5/169577833446197b84d92235fb3dfcffd68eb22d01_thumbnail_900x.webp"
         ]
       },
-      "category": "Jeans",
+      "category": "puffy",
       "section": "men",
       "stoke": 50
     },
     {
       "id": 27,
-      "title": "1111111111122",
-      "price": 600,
+      "title": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "price": 1400,
       "discountPercentage": 20,
-      "description": "perfect light Dress",
-      "colors": ["yellow"],
+      "description": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "colors": ["blue"],
       "sizes": {
-        "yellow": ["m"]
+        "blue": ["xxs", "sx", "s", "m", "l", "xl"]
       },
       "images": {
-        "yellow": [
-          "https://images.pexels.com/photos/13704154/pexels-photo-13704154.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://t3.ftcdn.net/jpg/01/11/38/04/240_F_111380465_4mIon7RQJW5v5jjgC36shc1IM8stTo3O.jpg"
+        "blue": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/12/1697522439ffd73d2392f424afda14003c7df63f66_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/1e/16970774515be91788a7f4fa14a866a5ef27e6bdfa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/df/1697522446d65cd163a885040886160c5f08f9fbc8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/67/16975224485f3938d5cac69865f74d3f51b1295d5f_thumbnail_600x.webp"
         ]
       },
-      "category": "Dresses",
+      "category": "sweatshirt",
+      "section": "women",
+      "stoke": 50
+    },
+    {
+      "id": 28,
+      "title": "puffy",
+      "price": 1300,
+      "discountPercentage": 20,
+      "description": "good puffy men",
+      "colors": ["black", "white"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"]
+      },
+      "images": {
+        "white": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/07/66/1696669628c8906bb8577f72977e43e2b4a85118c8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/07/d7/1696669687e539360e4b8c0d000815a0bc1fb35457_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/08/22/f4/169269396706d22449f03c463060c38124974bf1e0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/08/22/f6/1692693969b12e9e850d5e82ac8a7bfdbfa8e4ddc6_thumbnail_220x293.webp"
+        ],
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/18/ef/169762862453d032c133c96025aa79718474a60a6a_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/ae/1695778329f58de966415661609c1c548111ef5fab_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/a5/1695778327496bce82f1cfa7f07efa65178697e2a2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/b5/169577833446197b84d92235fb3dfcffd68eb22d01_thumbnail_900x.webp"
+        ]
+      },
+      "category": "puffy",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 29,
+      "title": "puffy",
+      "price": 1300,
+      "discountPercentage": 20,
+      "description": "good puffy men",
+      "colors": ["black", "white"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "white": ["xxs", "sx", "s", "xl"]
+      },
+      "images": {
+        "white": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/07/66/1696669628c8906bb8577f72977e43e2b4a85118c8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/07/d7/1696669687e539360e4b8c0d000815a0bc1fb35457_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/08/22/f4/169269396706d22449f03c463060c38124974bf1e0_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/08/22/f6/1692693969b12e9e850d5e82ac8a7bfdbfa8e4ddc6_thumbnail_220x293.webp"
+        ],
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/18/ef/169762862453d032c133c96025aa79718474a60a6a_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/ae/1695778329f58de966415661609c1c548111ef5fab_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/a5/1695778327496bce82f1cfa7f07efa65178697e2a2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/27/b5/169577833446197b84d92235fb3dfcffd68eb22d01_thumbnail_900x.webp"
+        ]
+      },
+      "category": "puffy",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 30,
+      "title": "jacket Legnd",
+      "price": 1500,
+      "discountPercentage": 20,
+      "description": "good jacket Legnd",
+      "colors": ["brown"],
+      "sizes": {
+        "brown": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/166557436570b8ad1e58f5310164c235a6b1e41ffa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/166557436644a48dd983c66d8df6c5b16b9f6ff03c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665574367c325639b4b872090763f93bf0339b1b6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665574369ab393eb1cb42935e3ff9872c1f0ffb86_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "jacket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 31,
+      "title": "jacket Legnd",
+      "price": 1500,
+      "discountPercentage": 20,
+      "description": "good jacket Legnd",
+      "colors": ["brown"],
+      "sizes": {
+        "brown": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "brown": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/166557436570b8ad1e58f5310164c235a6b1e41ffa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/166557436644a48dd983c66d8df6c5b16b9f6ff03c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665574367c325639b4b872090763f93bf0339b1b6_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/12/1665574369ab393eb1cb42935e3ff9872c1f0ffb86_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "jacket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 32,
+      "title": "Pullover Low-shoulder",
+      "price": 2000,
+      "discountPercentage": 20,
+      "description": "good Pullover men",
+      "colors": ["black", "gray"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421948f0635f7953218a2ddfea291e2acc6f07_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421949cc31153b3f333b4f5ed4b31de5173a05_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/16664219511ad3306e7882c4c2beaf6c2ad6b99607_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421952f71da003659b0383af556fd54eb5dbeb_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442086e2931a513a25d4216daada36ba0451ce_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/16624420886b4012ac0b3f4a75aa11b5787e774d36_thumbnail_220x293.webp",
+          " https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442090d1e37659107cba4b7f64e23331923beb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442093f526a02bab4bfcc7d50acabb6821f772_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pullover",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 33,
+      "title": "Pullover Low-shoulder",
+      "price": 1000,
+      "discountPercentage": 20,
+      "description": "good Pullover men",
+      "colors": ["black", "gray"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421948f0635f7953218a2ddfea291e2acc6f07_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421949cc31153b3f333b4f5ed4b31de5173a05_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/16664219511ad3306e7882c4c2beaf6c2ad6b99607_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421952f71da003659b0383af556fd54eb5dbeb_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442086e2931a513a25d4216daada36ba0451ce_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/16624420886b4012ac0b3f4a75aa11b5787e774d36_thumbnail_220x293.webp",
+          " https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442090d1e37659107cba4b7f64e23331923beb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442093f526a02bab4bfcc7d50acabb6821f772_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pullover",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 34,
+      "title": "Pullover Low-shoulder",
+      "price": 1000,
+      "discountPercentage": 20,
+      "description": "good Pullover men",
+      "colors": ["black", "gray"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421948f0635f7953218a2ddfea291e2acc6f07_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421949cc31153b3f333b4f5ed4b31de5173a05_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/16664219511ad3306e7882c4c2beaf6c2ad6b99607_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421952f71da003659b0383af556fd54eb5dbeb_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442086e2931a513a25d4216daada36ba0451ce_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/16624420886b4012ac0b3f4a75aa11b5787e774d36_thumbnail_220x293.webp",
+          " https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442090d1e37659107cba4b7f64e23331923beb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442093f526a02bab4bfcc7d50acabb6821f772_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pullover",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 35,
+      "title": "Pullover Low-shoulder",
+      "price": 1000,
+      "discountPercentage": 20,
+      "description": "good Pullover men",
+      "colors": ["black", "gray"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421948f0635f7953218a2ddfea291e2acc6f07_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421949cc31153b3f333b4f5ed4b31de5173a05_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/16664219511ad3306e7882c4c2beaf6c2ad6b99607_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/10/22/1666421952f71da003659b0383af556fd54eb5dbeb_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442086e2931a513a25d4216daada36ba0451ce_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/16624420886b4012ac0b3f4a75aa11b5787e774d36_thumbnail_220x293.webp",
+          " https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442090d1e37659107cba4b7f64e23331923beb_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2022/09/06/1662442093f526a02bab4bfcc7d50acabb6821f772_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pullover",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 36,
+      "title": "Pants with cargo pocket",
+      "price": 800,
+      "discountPercentage": 20,
+      "description": "good Pants with cargo pocket men",
+      "colors": ["black", "gray", "yellow"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"],
+        "yellow": ["m", "l", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239674ad3c513d60fbcd77cf47597cac94375_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982397235bb6e69963e7677343e44f08237a5f3_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982398852b402294ab3bdef673a9368de147d0d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823992593dabf060efbc20cbe093f95a704b43_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_900x.webp"
+        ],
+        "yellow": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/ea/16967596598cfec2070b654250dbdc82094cd2050f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/c6/1696759662a7fdb81760a02c8fb009d2c456fd2a91_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_900x.webp"
+        ]
+      },
+      "category": "Pants with cargo pocket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 37,
+      "title": "Pants with cargo pocket",
+      "price": 800,
+      "discountPercentage": 20,
+      "description": "good Pants with cargo pocket men",
+      "colors": ["black", "gray", "yellow"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"],
+        "yellow": ["m", "l", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239674ad3c513d60fbcd77cf47597cac94375_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982397235bb6e69963e7677343e44f08237a5f3_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982398852b402294ab3bdef673a9368de147d0d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823992593dabf060efbc20cbe093f95a704b43_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_900x.webp"
+        ],
+        "yellow": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/ea/16967596598cfec2070b654250dbdc82094cd2050f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/c6/1696759662a7fdb81760a02c8fb009d2c456fd2a91_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_900x.webp"
+        ]
+      },
+      "category": "Pants with cargo pocket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 38,
+      "title": "Pants with cargo pocket",
+      "price": 800,
+      "discountPercentage": 20,
+      "description": "good Pants with cargo pocket men",
+      "colors": ["black", "gray", "yellow"],
+      "sizes": {
+        "black": ["xxs", "sx", "s", "m", "l", "xl"],
+        "gray": ["xxs", "sx", "s", "xl"],
+        "yellow": ["m", "l", "xl"]
+      },
+      "images": {
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239674ad3c513d60fbcd77cf47597cac94375_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982397235bb6e69963e7677343e44f08237a5f3_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/16898239694c280ace90fb1d80efacb2bccda3c3d2_thumbnail_900x.webp"
+        ],
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/168982398852b402294ab3bdef673a9368de147d0d_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823992593dabf060efbc20cbe093f95a704b43_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/07/20/1689823990f9eed154025fe29bef1b5772874c95d1_thumbnail_900x.webp"
+        ],
+        "yellow": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/ea/16967596598cfec2070b654250dbdc82094cd2050f_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/c6/1696759662a7fdb81760a02c8fb009d2c456fd2a91_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/08/76/16967596613136a383dc6f644dcfc13194317029a4_thumbnail_900x.webp"
+        ]
+      },
+      "category": "Pants with cargo pocket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 39,
+      "title": "Pants with cargo pocket",
+      "price": 1500,
+      "discountPercentage": 20,
+      "description": "good Pants with cargo pocket with Wave design men",
+      "colors": ["gray"],
+      "sizes": {
+        "gray": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/43/1695293786005a93cec764f19c3d7dc7a2196e52dc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/2b/16952937891c54b14da0b12da9dc9b73e4742c7589_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/ee/169529379209e4926d5c4a544ced9647621676994c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/1d/1695293795efd2c2d623309cf02d8f56b172abbdee_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pants with cargo pocket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 40,
+      "title": "Pants with cargo pocket",
+      "price": 1500,
+      "discountPercentage": 20,
+      "description": "good Pants with cargo pocket with Wave design men",
+      "colors": ["gray"],
+      "sizes": {
+        "gray": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/43/1695293786005a93cec764f19c3d7dc7a2196e52dc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/2b/16952937891c54b14da0b12da9dc9b73e4742c7589_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/ee/169529379209e4926d5c4a544ced9647621676994c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/1d/1695293795efd2c2d623309cf02d8f56b172abbdee_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pants with cargo pocket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 41,
+      "title": "Pants with cargo pocket",
+      "price": 1500,
+      "discountPercentage": 20,
+      "description": "good Pants with cargo pocket with Wave design men",
+      "colors": ["gray"],
+      "sizes": {
+        "gray": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "gray": [
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/43/1695293786005a93cec764f19c3d7dc7a2196e52dc_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/2b/16952937891c54b14da0b12da9dc9b73e4742c7589_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/ee/169529379209e4926d5c4a544ced9647621676994c_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/09/21/1d/1695293795efd2c2d623309cf02d8f56b172abbdee_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "Pants with cargo pocket",
+      "section": "men",
+      "stoke": 50
+    },
+    {
+      "id": 42,
+      "title": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "price": 1400,
+      "discountPercentage": 20,
+      "description": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "colors": ["blue"],
+      "sizes": {
+        "blue": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "blue": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/12/1697522439ffd73d2392f424afda14003c7df63f66_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/1e/16970774515be91788a7f4fa14a866a5ef27e6bdfa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/df/1697522446d65cd163a885040886160c5f08f9fbc8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/67/16975224485f3938d5cac69865f74d3f51b1295d5f_thumbnail_600x.webp"
+        ]
+      },
+      "category": "sweatshirt",
+      "section": "women",
+      "stoke": 50
+    },
+    {
+      "id": 43,
+      "title": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "price": 1400,
+      "discountPercentage": 20,
+      "description": "Solid color low shoulder sweatshirt & flap pocket sweatpants",
+      "colors": ["blue"],
+      "sizes": {
+        "blue": ["xxs", "sx", "s", "m", "l", "xl"]
+      },
+      "images": {
+        "blue": [
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/12/1697522439ffd73d2392f424afda14003c7df63f66_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/12/1e/16970774515be91788a7f4fa14a866a5ef27e6bdfa_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/df/1697522446d65cd163a885040886160c5f08f9fbc8_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/10/17/67/16975224485f3938d5cac69865f74d3f51b1295d5f_thumbnail_600x.webp"
+        ]
+      },
+      "category": "sweatshirt",
+      "section": "women",
+      "stoke": 50
+    },
+    {
+      "id": 44,
+      "title": "Low-shoulder logo print T-shirt",
+      "price": 1300,
+      "discountPercentage": 20,
+      "description": "perfect light T-shirt",
+      "colors": ["black", "beige", "green"],
+      "sizes": {
+        "beige": ["xxs", "sx", "s", "m", "l", "xl"],
+        "black": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"]
+      },
+      "images": {
+        "beige": [
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908014cb6e20415f70ffff018876d3d199cd89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908017c636875d04de0749015cfbfbaa04efdf_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908025abafaa41b22804d907220ee6fc21e3b1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/16759080313a876d3375d844724684710530c13880_thumbnail_220x293.webp"
+        ],
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812184d450aeb579a7fa442e6f39ed91486c78_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218987a64f0a50fe6d0d6ff9a3716cee0d89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219385eabe80cee1490855ae39200dc7a736_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/16818121982e85a6d39acad91ac9054f407f346192.webp"
+        ],
+        "green": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218163c20e1a96c57f6f7bb637677bc3fe82_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812185b32144e80a3311136e6a99489dda2718_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812189a0c850f91421278cb6ce66a2754faf1b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219930cbc085b1a8d5f82789a1d9a431636f_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "T-shirt",
+      "section": "women",
+      "stoke": 50
+    },
+    {
+      "id": 45,
+      "title": "Low-shoulder logo print T-shirt",
+      "price": 1300,
+      "discountPercentage": 20,
+      "description": "perfect light T-shirt",
+      "colors": ["black", "beige", "green"],
+      "sizes": {
+        "beige": ["xxs", "sx", "s", "m", "l", "xl"],
+        "black": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl"]
+      },
+      "images": {
+        "beige": [
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908014cb6e20415f70ffff018876d3d199cd89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908017c636875d04de0749015cfbfbaa04efdf_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908025abafaa41b22804d907220ee6fc21e3b1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/16759080313a876d3375d844724684710530c13880_thumbnail_220x293.webp"
+        ],
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812184d450aeb579a7fa442e6f39ed91486c78_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218987a64f0a50fe6d0d6ff9a3716cee0d89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219385eabe80cee1490855ae39200dc7a736_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/16818121982e85a6d39acad91ac9054f407f346192.webp"
+        ],
+        "green": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218163c20e1a96c57f6f7bb637677bc3fe82_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812185b32144e80a3311136e6a99489dda2718_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812189a0c850f91421278cb6ce66a2754faf1b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219930cbc085b1a8d5f82789a1d9a431636f_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "T-shirt",
+      "section": "women",
+      "stoke": 50
+    },
+    {
+      "id": 46,
+      "title": "Low-shoulder logo print T-shirt",
+      "price": 1300,
+      "discountPercentage": 20,
+      "description": "perfect light T-shirt",
+      "colors": ["black", "beige", "green"],
+      "sizes": {
+        "beige": ["xxs", "sx", "s", "m", "l", "xl"],
+        "black": ["xxs", "sx", "s", "xl"],
+        "green": ["xxs", "l", "xl", "mm"]
+      },
+      "images": {
+        "beige": [
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908014cb6e20415f70ffff018876d3d199cd89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908017c636875d04de0749015cfbfbaa04efdf_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/1675908025abafaa41b22804d907220ee6fc21e3b1_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/02/09/16759080313a876d3375d844724684710530c13880_thumbnail_220x293.webp"
+        ],
+        "black": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812184d450aeb579a7fa442e6f39ed91486c78_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218987a64f0a50fe6d0d6ff9a3716cee0d89_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219385eabe80cee1490855ae39200dc7a736_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/16818121982e85a6d39acad91ac9054f407f346192.webp"
+        ],
+        "green": [
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181218163c20e1a96c57f6f7bb637677bc3fe82_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812185b32144e80a3311136e6a99489dda2718_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/1681812189a0c850f91421278cb6ce66a2754faf1b_thumbnail_220x293.webp",
+          "https://img.ltwebstatic.com/images3_pi/2023/04/18/168181219930cbc085b1a8d5f82789a1d9a431636f_thumbnail_220x293.webp"
+        ]
+      },
+      "category": "T-shirt",
       "section": "women",
       "stoke": 50
     }
@@ -914,11 +1279,11 @@
       "categories": [
         {
           "id": 1,
-          "name": "blazer"
+          "name": "sweatshirt"
         },
         {
           "id": 2,
-          "name": "T-Shirt and Blouses"
+          "name": "T-shirt"
         },
         {
           "id": 3,
@@ -926,7 +1291,7 @@
         },
         {
           "id": 4,
-          "name": "Jeans"
+          "name": "skirt"
         }
       ]
     },
@@ -935,11 +1300,19 @@
       "categories": [
         {
           "id": 1,
-          "name": "blazer"
+          "name": "Pants with cargo pocket"
         },
         {
           "id": 2,
-          "name": "Jeans"
+          "name": "Pullover"
+        },
+        {
+          "id": 2,
+          "name": "jacket"
+        },
+        {
+          "id": 2,
+          "name": "puffy"
         }
       ]
     }

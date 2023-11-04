@@ -22,7 +22,7 @@ import { useParams } from "react-router-dom";
 import FilterProducts from "../../components/FilterProducts/FilterProducts";
 import { getProductsFilter } from "../../Services/ProductsApi";
 import { useTheme } from "@emotion/react";
-import { Close } from "@mui/icons-material";
+import { Close, FilterAlt } from "@mui/icons-material";
 import ProductDetails from "../ProductDetails/ProductDetails";
 const Products = () => {
   const { sectionName } = useParams();
@@ -81,42 +81,19 @@ const Products = () => {
     setOpen(false);
   };
 
+  const resetFilterProducts = () => {
+    setAllSearchValue("");
+    console.log("resetFilter");
+  };
+  const check = () => {
+    setAllSearchValue("");
+    console.log("resetFilter");
+  };
+  console.log(resetFilterProducts);
   return (
-    // <Container>
-    //   <h1>All Products</h1>
-    //   <Grid container spacing={2}>
-    //     <Grid item xs={12} sm={4} md={3}>
-    //       <FilterProducts
-    //         sectionName={sectionName}
-    //         page={page}
-    //         filterProducts={filterProducts}
-    //       />
-    //     </Grid>
-    //     <Grid item xs={12} sm={8} md={9}>
-    //       {/* Products */}
-    //       <Grid container spacing={2}>
-    //         {products.map((item) => (
-    //           <Grid key={item.id} item xs={12} sm={6} md={4}>
-    //             <SingleProduct item={item} />
-    //           </Grid>
-    //         ))}
-    //       </Grid>
-    //       <div className="pagination">
-    //         <Pagination
-    //           count={totalPageNum}
-    //           page={page}
-    //           onChange={handleChange}
-    //         />
-    //       </div>
-    //     </Grid>
-    //   </Grid>
-    // </Container>
-
     <Container>
       <h1>All Products</h1>
-      <div className="showFilter mainBtn" onClick={handleClickOpen}>
-        showFilter
-      </div>
+
       <Dialog
         fullScreen={fullScreen}
         open={open}
@@ -126,10 +103,7 @@ const Products = () => {
           sx: { maxWidth: "800px" },
         }}
       >
-        <DialogTitle
-          id="responsive-dialog-title"
-          className="dialog__filter"
-        >
+        <DialogTitle id="responsive-dialog-title" className="dialog__filter">
           filter options
         </DialogTitle>
         <IconButton
@@ -151,6 +125,8 @@ const Products = () => {
               sectionName={sectionName}
               page={page}
               filterProducts={filterProducts}
+              resetFilterProducts={resetFilterProducts}
+              check={check}
             />
           </DialogContentText>
         </DialogContent>
@@ -161,9 +137,20 @@ const Products = () => {
             sectionName={sectionName}
             page={page}
             filterProducts={filterProducts}
+            resetFilterProducts={resetFilterProducts}
+            check={check}
           />
         </Grid>
         <Grid item xs={12} sm={8} md={9}>
+          <div className="filter__options">
+            <div className="showFilter " onClick={handleClickOpen}>
+              <FilterAlt />
+            </div>
+
+            <div className="resetFilter secBtn " onClick={resetFilterProducts}>
+              Reset
+            </div>
+          </div>
           {loading ? (
             <div>Loading...</div>
           ) : (

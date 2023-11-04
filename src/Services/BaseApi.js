@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://fashion-data-server.onrender.com/";
 
 export const myAxios = axios.create({
   baseURL: BASE_URL,

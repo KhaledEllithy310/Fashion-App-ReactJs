@@ -12,7 +12,6 @@ import {
 import "./FilterProducts.css";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 import styled from "@emotion/styled";
-import { getProductsFilter } from "../../Services/ProductsApi";
 
 const AirbnbSlider = styled(Slider)(({ theme }) => ({
   color: "#3a8589",
@@ -55,26 +54,29 @@ function AirbnbThumbComponent(props) {
     </SliderThumb>
   );
 }
-
-const FilterProducts = ({ sectionName, page, filterProducts }) => {
+const FilterProducts = ({
+  sectionName,
+  page,
+  filterProducts,
+  resetFilterProducts,
+}) => {
   const [sections] = useFetchSections();
-  const [products, setProducts] = useFetchProducts(null, sectionName);
-  const [newproducts, setNewProducts] = useState([]);
+  const [products] = useFetchProducts(null, sectionName);
   const [targetSection, setTargetSection] = useState();
-  const [categorySearch, setCategorySearch] = useState("");
-  const [colorSearch, setColorSearch] = useState("");
-  const [sizeSearch, setSizeSearch] = useState("");
-  const [priceSearch, setPriceSearch] = useState("");
+  const [, setCategorySearch] = useState("");
+  const [, setColorSearch] = useState("");
+  const [, setSizeSearch] = useState("");
+  const [,] = useState("");
 
   useEffect(() => {
     sections.forEach((section) => {
       if (section.name === sectionName) setTargetSection(section);
     });
-  }, []);
-
+  }, [sectionName, sections]);
   const [categories] = useFetchCategories(targetSection?.id);
   const categoryData = categories[0]?.categories;
   let searchDataRef = useRef([]);
+  // const [resetChecked, setResetChecked] = useState(true);
 
   const handlePriceChange = (e) => {
     const priceRange = e.target.value;
@@ -85,15 +87,12 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
         // console.log(element);
         console.log(element.includes("price_lte"));
         if (element.includes("price_lte")) {
-          console.log("11");
           searchDataRef.current.splice(index, 1);
         } else {
           searchDataRef.current.push(
             `&price_gte=${priceRange[0]}&price_lte=${priceRange[1]}`
           );
-          console.log("22");
         }
-        // return element.contain("price_lte");
       });
     } else
       searchDataRef.current.push(
@@ -104,10 +103,10 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
   const handleColorChange = (e, color) => {
     const isChecked = e.target.checked;
     // Add color to searchData if it's checked
-    if (isChecked) searchDataRef.current.push(`&color=${color}`);
+    if (isChecked) searchDataRef.current.push(`&colors_like=${color}`);
     else {
       // Remove color from searchData if it's unchecked
-      const index = searchDataRef.current.indexOf(`&color=${color}`);
+      const index = searchDataRef.current.indexOf(`&colors_like=${color}`);
       if (index > -1) {
         searchDataRef.current.splice(index, 1);
       }
@@ -138,6 +137,7 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
 
   const handleCategoryChange = (e, category) => {
     const isChecked = e.target.checked;
+    console.log(e);
     // Add category to searchData if it's checked
     if (isChecked) searchDataRef.current.push(`&category=${category.name}`);
     else {
@@ -154,8 +154,73 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
     console.log(searchDataRef.current);
   };
 
-  console.log();
-  // console.log(categorySearch);
+  // const handleReset = () => {
+  //   const inputs = document.querySelectorAll("input");
+  //   console.log("inputs BEFORE", inputs[0].checked);
+  //   setResetChecked(false);
+  //   // Uncheck all checkboxes
+  //   inputs.forEach((input) => {
+  //     input.checked = false;
+  //   });
+  //   console.log("inputs BEFORE", inputs[0].checked);
+
+  //   searchDataRef.current = [];
+  //   // Reset category, color, and size search states
+  //   setColorSearch(""); // Update colorSearch state
+  //   setSizeSearch(""); // Update sizeSearch state
+  //   setCategorySearch(""); // Update categorySearch state
+  //   // Call the resetFilterProducts function to remove the filters
+  //   resetFilterProducts();
+  // };
+
+  const handleReset = () => {
+    // Uncheck all category checkboxes
+    // setCategories([]);
+
+    // Uncheck all color checkboxes
+    const colorCheckboxes = Array.from(
+      document.querySelectorAll(".color-checkbox")
+    );
+    colorCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+    console.log("colorCheckboxes", colorCheckboxes);
+    // Uncheck all size checkboxes
+    const sizeCheckboxes = Array.from(
+      document.querySelectorAll(".size-checkbox")
+    );
+    sizeCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+    console.log("sizeCheckboxes", sizeCheckboxes);
+
+    // Reset the price slider
+    const priceSlider = document.querySelector(".slider_price");
+    // priceSlider.noUiSlider.reset();
+    console.log("priceSlider", priceSlider);
+
+    // Clear the search data
+    searchDataRef.current = [];
+
+    // Reset category, color, and size search states
+    setColorSearch("");
+    setSizeSearch("");
+    setCategorySearch("");
+
+    // Call the resetFilterProducts function to remove the filters
+    resetFilterProducts();
+  };
+
+  // const handleCheck = () => {
+  //   console.log("check");
+  //   const inputs = document.querySelectorAll("input");
+  //   console.log("inputs BEFORE", inputs);
+  //   setResetChecked(!resetChecked);
+  //   // console.log("inputs BEFORE", inputs.checked);
+  //   // Uncheck all checkboxes
+  //   // inputs.forEach((input) => {
+  //   //   input.checked = false;
+  //   // });
+  //   inputs.checked = !inputs.checked;
+  //   // console.log("inputs BEFORE", inputs.checked);
+  // };
+  // console.log("resetChecked", resetChecked);
   return (
     <div className="filter_products">
       <div className="filter_products__category filter_products__section">
@@ -169,6 +234,7 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
                   <Checkbox
                     className="filter_products__category__checkbox"
                     onChange={(e) => handleCategoryChange(e, category)}
+                    // checked={resetChecked}
                   />
                 }
                 label={category?.name}
@@ -189,6 +255,7 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
                   <Checkbox
                     className="filter_products__category__checkbox"
                     onChange={(e) => handleColorChange(e, color)}
+                    // checked={resetChecked === false ? false : ""}
                   />
                 }
                 label={color}
@@ -209,6 +276,7 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
                   <Checkbox
                     className="filter_products__category__checkbox"
                     onChange={(e) => handleSizeChange(e, size)}
+                    // checked={resetChecked === false ? false : ""}
                   />
                 }
                 label={size}
@@ -225,23 +293,26 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
           getAriaLabel={(index) =>
             index === 0 ? "Minimum price" : "Maximum price"
           }
-          defaultValue={[0, 10000]}
+          defaultValue={[0, 5000]}
           valueLabelDisplay="on"
           className="slider_price"
           onChange={(e) => handlePriceChange(e)}
-          max={10000}
+          max={5000}
         />
       </div>
       <div className="filter_products__btn">
         <button
           className="mainBtn"
-          onClick={() =>
-            // filterProducts(categorySearch, colorSearch, sizeSearch, priceSearch)
-            filterProducts(searchDataRef.current)
-          }
+          onClick={() => filterProducts(searchDataRef.current)}
         >
           filter
         </button>
+        <div className=" secBtn " onClick={handleReset}>
+          Reset
+        </div>
+        {/* <div className=" secBtn " onClick={handleCheck}>
+          check
+        </div> */}
       </div>
     </div>
   );
