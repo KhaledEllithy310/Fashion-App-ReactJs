@@ -52,50 +52,51 @@ const ProductsSlider = () => {
 
   // Limit the number of products to 6
   const limitedProducts = products.slice(0, 6);
-  // const limitedProducts = products;
   return (
-    <Container className="productsSlider">
-      <h2 className="productsSlider__title">our top seller products</h2>
-      {/* render the sections */}
-      <div className="container__sections__btn">
-        {sections?.map((section) => (
-          <button
-            key={section.id}
-            className={`secBtn mx-10 ${
-              section.id === targetSectionId ? "active" : ""
-            }`}
-            onClick={() => handleSectionBtn(section)}
-          >
-            {section.name}
-          </button>
-        ))}
-      </div>
-      {/* render the categories of section */}
-      <div className="container__sections__btn">
-        {categoryData?.map((category) => (
-          <button
-            key={category.id}
-            className={`secBtn mx-10 cateBtn ${
-              category.name === targetCategoryName ? "activeAccent" : ""
-            }`}
-            onClick={() =>
-              handleCategoriesBtn(targetSectionName, category.name)
-            }
-          >
-            {category.name}
-          </button>
-        ))}
-      </div>
-      {/* render the products of category */}
-
-      {limitedProducts && (
-        <Carousel responsive={responsive} className="productsSlider__cards">
-          {limitedProducts?.map((item) => (
-            <SingleProduct key={item.id} item={item} />
+    <div className="productsSlider">
+      {" "}
+      <Container>
+        <h2 className="productsSlider__title">our top seller products</h2>
+        {/* render the sections */}
+        <div className="container__sections__btn">
+          {sections?.map((section) => (
+            <button
+              key={section.id}
+              className={`secBtn mx-10 ${
+                section.id === targetSectionId ? "active" : ""
+              }`}
+              onClick={() => handleSectionBtn(section)}
+            >
+              {section.name}
+            </button>
           ))}
-        </Carousel>
-      )}
-    </Container>
+        </div>
+        {/* render the categories of section */}
+        <div className="container__sections__btn">
+          {categoryData?.map((category) => (
+            <button
+              key={category.id}
+              className={`secBtn mx-10 cateBtn ${
+                category.name === targetCategoryName ? "activeAccent" : ""
+              }`}
+              onClick={() =>
+                handleCategoriesBtn(targetSectionName, category.name)
+              }
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+        {/* render the products of category */}
+        {limitedProducts && (
+          <Carousel responsive={responsive} className="productsSlider__cards">
+            {limitedProducts?.map((item) => (
+              <SingleProduct key={item.id} item={item} />
+            ))}
+          </Carousel>
+        )}
+      </Container>
+    </div>
   );
 };
 

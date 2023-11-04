@@ -158,7 +158,7 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
   // console.log(categorySearch);
   return (
     <div className="filter_products">
-      <div className="filter_products__category">
+      <div className="filter_products__category filter_products__section">
         <h4 className="filter_products__titles">category</h4>
         <FormGroup>
           {categoryData?.map((category) => {
@@ -177,7 +177,7 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
           })}
         </FormGroup>
       </div>
-      <div className="filter_products__color">
+      <div className="filter_products__color filter_products__section ">
         <h4 className="filter_products__titles">colors</h4>
 
         <FormGroup>
@@ -197,21 +197,8 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
           })}
         </FormGroup>
       </div>
-      <div className="filter_products__price">
-        <Typography gutterBottom>Airbnb</Typography>
-        <AirbnbSlider
-          slots={{ thumb: AirbnbThumbComponent }}
-          getAriaLabel={(index) =>
-            index === 0 ? "Minimum price" : "Maximum price"
-          }
-          defaultValue={[0, 10000]}
-          valueLabelDisplay="auto"
-          className="slider_price"
-          onChange={(e) => handlePriceChange(e)}
-          max={10000}
-        />
-      </div>
-      <div className="filter_products__size">
+
+      <div className="filter_products__size filter_products__section">
         <h4 className="filter_products__titles">size</h4>
         <FormGroup>
           {products[0]?.sizes["black"]?.map((size) => {
@@ -230,17 +217,32 @@ const FilterProducts = ({ sectionName, page, filterProducts }) => {
           })}
         </FormGroup>
       </div>
+      <div className="filter_products__price filter_products__section filter_products__section--last">
+        <h4 className="filter_products__titles">Price</h4>
 
-      <button
-        className="mainBtn"
-        onClick={() =>
-          // filterProducts(categorySearch, colorSearch, sizeSearch, priceSearch)
-          filterProducts(searchDataRef.current)
-        }
-      >
-        {" "}
-        filter
-      </button>
+        <AirbnbSlider
+          slots={{ thumb: AirbnbThumbComponent }}
+          getAriaLabel={(index) =>
+            index === 0 ? "Minimum price" : "Maximum price"
+          }
+          defaultValue={[0, 10000]}
+          valueLabelDisplay="on"
+          className="slider_price"
+          onChange={(e) => handlePriceChange(e)}
+          max={10000}
+        />
+      </div>
+      <div className="filter_products__btn">
+        <button
+          className="mainBtn"
+          onClick={() =>
+            // filterProducts(categorySearch, colorSearch, sizeSearch, priceSearch)
+            filterProducts(searchDataRef.current)
+          }
+        >
+          filter
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,16 @@
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
-import { Container, Grid, Pagination } from "@mui/material";
+import {
+  Container,
+  Dialog,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Grid,
+  IconButton,
+  Pagination,
+  useMediaQuery,
+} from "@mui/material";
 import "./Products.css";
 import { useFetchCategories } from "../../hooks/useFetchCategories";
 import UseGetCartData from "../../hooks/useGetCartData";
@@ -11,6 +21,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FilterProducts from "../../components/FilterProducts/FilterProducts";
 import { getProductsFilter } from "../../Services/ProductsApi";
+import { useTheme } from "@emotion/react";
+import { Close } from "@mui/icons-material";
+import ProductDetails from "../ProductDetails/ProductDetails";
 const Products = () => {
   const { sectionName } = useParams();
   const [page, setPage] = useState(1);
@@ -55,6 +68,19 @@ const Products = () => {
 
     setAllSearchValue(value);
   };
+  const [open, setOpen] = useState(false);
+  const theme = useTheme();
+
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     // <Container>
     //   <h1>All Products</h1>
@@ -88,8 +114,49 @@ const Products = () => {
 
     <Container>
       <h1>All Products</h1>
+      <div className="showFilter mainBtn" onClick={handleClickOpen}>
+        showFilter
+      </div>
+      <Dialog
+        fullScreen={fullScreen}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="responsive-dialog-title"
+        PaperProps={{
+          sx: { maxWidth: "800px" },
+        }}
+      >
+        <DialogTitle
+          id="responsive-dialog-title"
+          className="dialog__filter"
+        >
+          filter options
+        </DialogTitle>
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <Close />
+        </IconButton>
+        <DialogContent className="dialog__filter__content">
+          <DialogContentText>
+            {/* Filter Products component */}
+            <FilterProducts
+              sectionName={sectionName}
+              page={page}
+              filterProducts={filterProducts}
+            />
+          </DialogContentText>
+        </DialogContent>
+      </Dialog>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={4} md={3}>
+        <Grid item xs={12} sm={4} md={3} className="filter__container">
           <FilterProducts
             sectionName={sectionName}
             page={page}

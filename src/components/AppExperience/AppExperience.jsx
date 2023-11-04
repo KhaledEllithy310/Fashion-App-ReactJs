@@ -34,10 +34,7 @@ const AppExperience = () => {
               md={3}
               className="experience__cards__item"
             >
-              <StyledPaper
-                className="experience__cards__item__content"
-                sx={{ bgcolor: theme.palette.background.card }}
-              >
+              <StyledPaper className="experience__cards__item__content">
                 <Typography
                   className="experience__cards__item__content__icon"
                   sx={{ fontSize: "50px" }}
@@ -45,16 +42,19 @@ const AppExperience = () => {
                   {data.icon}
                 </Typography>
                 <Typography
-                  sx={{
-                    fontSize: "20px",
-                    textTransform: "capitalize",
-                    fontWeight: "700",
-                    mb: "10px",
-                  }}
+                  // sx={{
+                  //   fontSize: "20px",
+                  //   textTransform: "capitalize",
+                  //   fontWeight: "700",
+                  //   mb: "10px",
+                  // }}
+                  className="experience__cards__item__content__title"
                 >
                   {data.title}
                 </Typography>
-                <Typography>{data.description}</Typography>
+                <Typography className="experience__cards__item__content__description">
+                  {data.description}
+                </Typography>
               </StyledPaper>
             </Grid>
           ))}

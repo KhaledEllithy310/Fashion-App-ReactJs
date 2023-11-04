@@ -17,3 +17,16 @@
   background-color: var(--placeholder) !important;
   color: var(--secondary) !important;
 }
+
+.showFilter {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__container {
+    display: none;
+  }
+  .showFilter {
+    display: block;
+  }
+}

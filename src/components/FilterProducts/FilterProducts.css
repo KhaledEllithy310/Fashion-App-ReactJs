@@ -9,8 +9,62 @@
 
 .filter_products__titles {
   text-transform: capitalize;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  color: var(--placeholder);
+}
+
+.filter_products__titles::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), var(--background));
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .slider_price {
-  color: var(--accent);
+  color: var(--accent) !important;
+  margin-top: 30px;
+  width: 80% !important;
+  margin-left: 15px;
+}
+
+.css-lzklpr-MuiSlider-root .MuiSlider-rail {
+  color: var(--text) !important;
+}
+
+
+.filter_products__section {
+  padding-bottom: 15px;
+  padding: 0 20px 15px;
+}
+
+.filter_products__section:not(.filter_products__section--last) {
+  border-bottom: 1px solid var(--placeholder);
+  margin-bottom: 15px; 
+}
+
+
+.dialog__filter {
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.dialog__filter__content {
+  padding: 0 !important;
+}
+
+.filter_products__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px 0;
+}
+
+.filter_products__btn .mainBtn {
+  margin: 0 !important;
 }

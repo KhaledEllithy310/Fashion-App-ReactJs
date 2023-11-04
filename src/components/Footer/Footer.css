@@ -1,0 +1,79 @@
+.footer {
+  padding: 50px 0;
+}
+
+.footer__top {
+  margin-bottom: 20px;
+}
+.footer__header {
+  margin-bottom: 20px;
+  color: var(--text);
+  font-family: "Poppins";
+  text-transform: capitalize;
+}
+
+.footer__logo .logo {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.footer__logo {
+  margin-bottom: 13px;
+}
+
+.footer__about-text {
+  font-size: 16px !important;
+  color: var(--placeholder) !important;
+}
+
+.footer__link__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px !important;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--text);
+  color: var(--placeholder);
+
+  transition: all 0.4s;
+  text-transform: capitalize;
+  font-size: 17px;
+  /* margin-bottom: 20px !important; */
+}
+
+.footer__link__container:hover .footer__link {
+  padding-left: 8px;
+  color: var(--accent);
+}
+
+.footer__bottom {
+  text-align: center;
+  /* padding: 30px 0; */
+}
+
+.footer__social {
+  margin-bottom: 15px;
+}
+
+.footer__social-icon svg {
+  color: var(--input);
+  width: 3rem;
+  height: 3rem;
+  margin-right: 20px;
+  transition: all 0.4s;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.footer__social-icon:hover svg {
+  transform: rotateY(180deg);
+  background: linear-gradient(to top, var(--accent), var(--primary));
+}
+
+.footer__bottom__copyRight {
+  background-color: var(--secondary);
+  padding: 20px;
+}

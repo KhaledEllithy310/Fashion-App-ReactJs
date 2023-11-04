@@ -1,3 +1,8 @@
+.productsSlider {
+  padding: 50px 0;
+  background-color: var(--backgroundSec);
+}
+
 .productsSlider__title {
   text-align: center;
   text-transform: capitalize;
@@ -5,13 +10,11 @@
 }
 
 .productsSlider__cards {
-  /* height: 30px !important; */
   overflow-x: hidden !important;
 }
 
 .productsSlider__card {
   background-color: var(--secondary);
-  /* width: 200px !important; */
   margin-inline: 10px;
   border-radius: 10px;
   margin: 10px;

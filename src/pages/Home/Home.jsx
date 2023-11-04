@@ -3,6 +3,7 @@ import AppSlider from "../../components/AppSlider/AppSlider";
 import AppExperience from "../../components/AppExperience/AppExperience";
 import ProductsSlider from "../../components/ProductsSlider/ProductsSlider";
 import BannersSections from "../../components/BannersSections/BannersSections";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <AppExperience />
       <BannersSections />
       <ProductsSlider />
+      <Footer />
     </div>
   );
 };

@@ -35,6 +35,7 @@ import UseGetCartData from "../../hooks/useGetCartData";
 import { useFetchSections } from "./../../hooks/useFetchSections";
 import { logOutWishList } from "../../store/slices/wishListSlice";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
+import Logo from "../Logo/Logo";
 
 function AppNavbar() {
   const [settings, setSettings] = useState(settingsNotSignIn);
@@ -196,7 +197,6 @@ function AppNavbar() {
     <AppBar
       position="static"
       className="appNavbar"
-      sx={{ backgroundColor: theme.palette.background.default }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -240,29 +240,7 @@ function AppNavbar() {
               ))}
             </Menu>
           </Box>
-          <Typography
-            className="preLogo"
-            variant="h6"
-            onClick={() => navigate("/")}
-            noWrap
-            component="a"
-          >
-            f
-          </Typography>
-          <Typography
-            variant="h6"
-            className="logo"
-            noWrap
-            onClick={() => navigate("/")}
-            component="a"
-            sx={{
-              mr: 2,
-              display: { md: "flex" },
-              flexGrow: 1,
-            }}
-          >
-            Fashion
-          </Typography>
+          <Logo />
           <Box
             sx={{
               flexGrow: 1,
