@@ -144,22 +144,27 @@
   display: flex;
   gap: 10px;
   flex-flow: column wrap;
+  margin-right: 10px;
 }
 
 .productDetails__slider__images img {
-  height: 90px;
-  width: 80px;
+  height: 80px;
+  width: 60px;
   /* margin-bottom: 10px; */
   cursor: pointer;
+  object-fit: cover;
 }
 
 .productDetails__slider__targetImage {
-  min-width: 250px;
+  /* min-width: 230px; */
+  width: 250px;
+  margin: auto;
 }
 
 .productDetails__slider__targetImage img {
   width: 100%;
   border: 1px solid white;
+  object-fit: contain;
 }
 
 .css-rserl-MuiPaper-root-MuiDialog-paper {
@@ -185,4 +190,6 @@
   .productDetails__content {
     padding-left: 0px;
   }
+
+
 }

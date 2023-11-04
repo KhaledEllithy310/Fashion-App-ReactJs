@@ -9,9 +9,14 @@
 input {
   color: var(--text) !important;
 }
-/* textarea {
-  color: var(--text) !important;
-} */
+
+.css-1jjm1qg-MuiInputBase-root-MuiFilledInput-root {
+  background-color: var(--overlay) !important;
+}
+
+.passwordInput div {
+  background-color: var(--overlay) !important;
+}
 label {
   color: var(--placeholder) !important;
 }

@@ -6,7 +6,7 @@ import { Container } from "@mui/material";
 // console.log(items);
 const AppSlider = () => {
   return (
-    <Carousel indicators={false} navButtonsAlwaysVisible={true}>
+    <Carousel indicators={false} navButtonsAlwaysVisible={true}className="slider">
       {items.map((item, i) => (
           <Item key={i} item={item} />
       ))}

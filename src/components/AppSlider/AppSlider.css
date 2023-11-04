@@ -1,14 +1,10 @@
+.slider {
+  /* padding: 50px 0; */
+}
+
 .slide__item {
-  /* position: relative; */
-  /* z-index: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 60% center;
-  background-size: cover; */
   width: 100%;
   height: 90vh;
-  /* background-color: var(--background) !important;
-  color: var(--text) !important; */
 }
 
 .slide__item__content__word {
@@ -18,10 +14,7 @@
   right: 50px;
   bottom: 120px;
   color: rgba(147, 146, 146, 0.683);
-  /* background: linear-gradient(120deg, var(--primary), var(--accent)); */
   color: var(--secondary);
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
   text-transform: uppercase;
   z-index: -1;
   letter-spacing: 60px;
@@ -48,13 +41,10 @@
 
 .slide__item__content__title {
   font-size: 50px;
-  /* color: #1b2129; */
   text-transform: capitalize;
-  /* width: 35%; */
 }
 .slide__item__content__description {
   font-size: 18px;
-  /* color: #1b2129e1; */
   width: 80%;
   margin-right: auto;
   margin-top: 20px;
@@ -67,7 +57,6 @@
   margin-right: 50px;
   margin: auto;
   margin-top: 50px;
-  /* padding-top: 10px; */
   border-radius: 0 0 0 100px;
   overflow: hidden;
   position: relative;
@@ -87,7 +76,6 @@
 }
 
 .img__add {
-  /* background-image: url("../../assets/Images/Slider/dots.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -134,7 +122,6 @@
 
   .slide__item::after {
     content: "";
-    /* background-color: rgba(255, 255, 255, 0.239); */
     backdrop-filter: blur(2px);
     background-color: var(--overlayHome);
     position: absolute;
@@ -179,9 +166,7 @@
 
   .slide__item__content__title {
     font-size: 35px;
-    /* color: #1b2129; */
     text-transform: capitalize;
-    /* width: 35%; */
   }
   .slide__item__content__description {
     font-size: 15px;
@@ -193,14 +178,6 @@
     font-size: 25px;
   }
 
-  /* .slide__item__img {
-    width: 90%;
-    border-radius: 0 0 0 50px;
-  } */
-
-  /* .slide__item__img img {
-    height: 400px;
-  } */
 }
 
 @media screen and (max-width: 585px) {

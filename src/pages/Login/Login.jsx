@@ -71,36 +71,47 @@ const Login = () => {
 
   return (
     <Container>
-      <form className="form" onSubmit={formik.handleSubmit}>
-        <h3 className="form__title">Sign In</h3>
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item sm={12}>
-            <AppInput
-              label="Email Address"
-              type="email"
-              name="email"
-              value={formik.values.email}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-            {renderError("email")}
+    <Grid container display="flex" justifyContent="center">
+      <Grid item xs={12} md={8} lg={6}>
+        <form className="form" onSubmit={formik.handleSubmit}>
+          <h3 className="form__title">Sign In</h3>
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            className="form__container"
+          >
+            <Grid item sm={12}>
+              <AppInput
+                label="Email Address"
+                type="email"
+                name="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {renderError("email")}
+            </Grid>
+            <Grid item sm={12}>
+              <AppInput
+                label="Password"
+                type="password"
+                name="password"
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {renderError("password")}
+            </Grid>
+            <div className="form__btn">
+              <button className="mainBtn" type="submit">
+                Sign In
+              </button>
+            </div>
           </Grid>
-          <Grid item sm={12}>
-            <AppInput
-              label="Password"
-              type="password"
-              name="password"
-              value={formik.values.password}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-            {renderError("password")}
-          </Grid>
-          <button className="mainBtn" type="submit">
-            Sign In
-          </button>
-        </Grid>
-      </form>
+        </form>
+      </Grid>
+    </Grid>
     </Container>
   );
 };

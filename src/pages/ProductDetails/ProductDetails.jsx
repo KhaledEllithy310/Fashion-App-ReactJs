@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useFetchProducts } from "./../../hooks/useFetchProducts";
 import { Container, Grid } from "@mui/material";
 import "./ProductDetails.css";
@@ -130,11 +130,6 @@ const ProductDetails = ({ productId }) => {
 
     e.target.classList.add("active");
   };
-  // useEffect(() => {
-  //   console.log("selectedColor", selectedColor);
-  //   console.log("selectedImage", selectedImage);
-  //   console.log("selectedSize", selectedSize);
-  // }, [selectedColor, product, selectedImage, selectedSize]);
 
   useEffect(() => {
     if (selectedColor && product?.images?.[selectedColor]) {
@@ -175,21 +170,27 @@ const ProductDetails = ({ productId }) => {
               </Grid> */}
 
               <Grid item sm={6} className="productDetails__slider">
-                <div className="productDetails__slider__images">
-                  {selectedImages?.map((image) => (
-                    <img
-                      key={image}
-                      src={image}
-                      alt="imgProduct"
-                      onClick={(e) => {
-                        handleSelectImage(e, image);
-                      }}
-                    />
-                  ))}
-                </div>
-                <div className="productDetails__slider__targetImage">
-                  <img id="targetImage" src={selectedImage} alt="" />
-                </div>
+                <Grid container className="" spacing={3}>
+                  <Grid item sm={2} className="">
+                    <div className="productDetails__slider__images">
+                      {selectedImages?.map((image) => (
+                        <img
+                          key={image}
+                          src={image}
+                          alt="imgProduct"
+                          onClick={(e) => {
+                            handleSelectImage(e, image);
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </Grid>
+                  <Grid item sm={10} className="">
+                    <div className="productDetails__slider__targetImage">
+                      <img id="targetImage" src={selectedImage} alt="" />
+                    </div>
+                  </Grid>
+                </Grid>
               </Grid>
               <Grid item sm={6} className="productDetails__content">
                 <h5 className="productDetails__content__title">

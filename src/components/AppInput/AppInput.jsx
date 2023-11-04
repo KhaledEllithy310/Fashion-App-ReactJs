@@ -22,7 +22,7 @@ const AppInput = ({ label, type, name, value, onChange, onBlur }) => {
   return (
     <>
       {type === "password" ? (
-        <FormControl className="passwordInput" variant="filled">
+        <FormControl className="passwordInput " variant="filled">
           <InputLabel htmlFor={`filled-adornment-${name}`}>{label}</InputLabel>
           <FilledInput
             id={`filled-adornment-${name}`}
