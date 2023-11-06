@@ -18,43 +18,10 @@ import "./Footer.css";
 function Footer() {
   return (
     <>
-      {/* <section className="subscribe-section">
-        <Container>
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="center"
-            spacing={2}
-          >
-            <Grid item xs={12} sm={2}>
-              <Email sx={{ fontSize: 18 }} />
-            </Grid>
-            <Grid item xs={12} sm={10} md={9}>
-              <Typography variant="h5" sx={{ mb: 0 }}>
-                SUBSCRIBE TO OUR NEWSLETTER
-              </Typography>
-              <Typography variant="body2" sx={{ mb: 0 }}>
-                Get all the latest information on Events, Sales and Offers.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={10} md={9}>
-              <TextField
-                fullWidth
-                label="Email address"
-                variant="outlined"
-                placeholder="name@example.com"
-                sx={{ mt: 2, py: 0 }}
-              />
-            </Grid>
-            <Grid item xs={12} sm={2} md={3}>
-              <AppButton variant="dark" />
-            </Grid>
-          </Grid>
-        </Container>
-      </section> */}
+
       <footer className="footer">
         <Container className="footer__top">
-          <Grid container spacing={2} className="">
+          <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3} className="footer__about">
               <h4 className="footer__header footer__logo">
                 <Logo />
@@ -65,7 +32,6 @@ function Footer() {
                 interface ensure a seamless experience.
               </Typography>
             </Grid>
-
             <Grid item xs={12} sm={6} md={2.5} className="footer__pages">
               <h4 className="footer__header">pages</h4>
               <div className="footer__link__container">

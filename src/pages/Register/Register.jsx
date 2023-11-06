@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Register.css";
 import { Container, Grid } from "@mui/material";
 import AppInput from "../../components/AppInput/AppInput";
@@ -6,10 +6,9 @@ import AppRadioGroup from "../../components/AppRadioGroup/AppRadioGroup";
 import { useFormik } from "formik";
 import { validationSchemaRegister } from "../../helpers/validationForms";
 import { addUser, getAllUsers } from "../../Services/UsersApi";
-import { useDispatch, useSelector } from "react-redux";
-import { addNewUser, getUsers } from "../../store/slices/userSlice";
+import { useDispatch } from "react-redux";
+import { addNewUser } from "../../store/slices/userSlice";
 const Register = () => {
-  const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
   //add user function

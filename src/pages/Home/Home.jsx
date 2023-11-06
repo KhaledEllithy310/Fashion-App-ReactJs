@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppSlider from "../../components/AppSlider/AppSlider";
 import AppExperience from "../../components/AppExperience/AppExperience";
 import ProductsSlider from "../../components/ProductsSlider/ProductsSlider";

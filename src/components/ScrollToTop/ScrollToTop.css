@@ -1,0 +1,22 @@
+.scroll__top {
+  background-color: var(--primary);
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 50%;
+  bottom: 10%;
+  cursor: pointer;
+  height: 50px;
+  position: fixed;
+  right: 3%;
+  width: 50px;
+  border: 1px solid var(--primary);
+  transition: transform 0.3s ease-in-out;
+  color: var(--text);
+}
+
+.iconTop {
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll__top:hover {
+  transform: translateY(-5px);
+}

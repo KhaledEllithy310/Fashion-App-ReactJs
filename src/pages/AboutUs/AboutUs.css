@@ -1,0 +1,119 @@
+.aboutUs {
+  /* height: 3000px; */
+}
+
+.aboutUs__title {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.aboutUs__content {
+}
+
+.aboutUs img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.backgroundSec {
+  background-color: var(--backgroundSec);
+}
+
+.p-50 {
+  padding: 50px 0;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.textCenter {
+  text-align: center;
+}
+.aboutUs__content__WhoWeAre__image {
+  text-align: left;
+}
+.aboutUs__content__WhoWeAre__image img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.aboutUs__content__WhyWe__image img {
+  height: 400px;
+
+  object-fit: contain;
+}
+
+.aboutUs__main__title {
+  color: var(--accent);
+  text-transform: capitalize;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.aboutUs__content__WhoWeAre__description {
+  color: var(--text);
+  font-family: "Poppins";
+  font-size: 1.1rem;
+}
+
+.aboutUs__content__WhyWe__description li {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.aboutUs__content__WhyWe__description li svg {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.aboutUs__content__team__card {
+  text-align: center;
+  background-color: var(--secondary);
+  border-radius: 20px;
+  /* width: 300px; */
+  padding: 20px;
+}
+.aboutUs__content__team__card__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.aboutUs__content__team__card__name,
+.aboutUs__content__team__card__role {
+  margin: 10px 0;
+}
+
+.aboutUs__content__team__card__social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutUs__content__team__card__social svg {
+  color: var(--input);
+  width: 2rem !important;
+  height: 2rem !important;
+  transition: all 0.4s;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 50%;
+  padding: 5px !important;
+}
+
+.aboutUs__content__team__card__social .footer__social-icon:hover {
+  transform: scale(1.05) !important;
+}

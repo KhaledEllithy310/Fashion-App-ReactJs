@@ -12,7 +12,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import "./Products.css";
-import { useFetchCategories } from "../../hooks/useFetchCategories";
 import UseGetCartData from "../../hooks/useGetCartData";
 import useGetWishData from "../../hooks/useGetWishData";
 import { storeProductsInServer } from "../../helpers/CartFunctions";
@@ -20,17 +19,15 @@ import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FilterProducts from "../../components/FilterProducts/FilterProducts";
-import { getProductsFilter } from "../../Services/ProductsApi";
 import { useTheme } from "@emotion/react";
 import { Close, FilterAlt } from "@mui/icons-material";
-import ProductDetails from "../ProductDetails/ProductDetails";
 const Products = () => {
   const { sectionName } = useParams();
   const [page, setPage] = useState(1);
   const [allSearchValue, setAllSearchValue] = useState("");
   const [loading, setLoading] = useState(true); // Add loading state
 
-  const [products, setProducts, totalPageNum] = useFetchProducts(
+  const [products, , totalPageNum] = useFetchProducts(
     null,
     sectionName,
     page,
@@ -58,14 +55,8 @@ const Products = () => {
     }
   }, [products]);
   const filterProducts = async (searchValue) => {
-    // console.log("searchValue", searchValue);
     const value = searchValue.join("");
     console.log(value);
-    // const newProducts = await getProductsFilter(sectionName, page, value);
-
-    // console.log("newProducts", newProducts);
-    // setProducts(newProducts.data);
-
     setAllSearchValue(value);
   };
   const [open, setOpen] = useState(false);

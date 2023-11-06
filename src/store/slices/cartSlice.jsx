@@ -138,7 +138,7 @@ export const cartSlice = createSlice({
     builder.addCase(getCartByUserID.fulfilled, (state, action) => {
       const { userId, isLoading, totalItems, totalPrice, productsCart } =
         action.payload || {};
-
+      // console.log(action.payload);
       const newCart = {
         cart: { userId, productsCart },
         isLoading,

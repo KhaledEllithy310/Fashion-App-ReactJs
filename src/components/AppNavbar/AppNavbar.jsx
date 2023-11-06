@@ -51,7 +51,7 @@ function AppNavbar() {
   const [, totalItemsWishProducts] = useGetWishData();
   //get all cart data from store
   const [productsCart, totalItemsCartProducts] = UseGetCartData();
-
+  const [preferredMode, setPreferredMode] = useState("light");
   //control to show settings menu
   useEffect(() => {
     const isAuth = getAuthFromLocalStorage();
@@ -101,7 +101,6 @@ function AppNavbar() {
       link.classList.add("active");
     }
   });
-
   // change mode the website
   const handleModeNew = () => {
     const root = document.documentElement;
@@ -109,6 +108,8 @@ function AppNavbar() {
     // Store the current mode in local storage
     const isDarkMode = root.classList.contains("dark-mode");
     localStorage.setItem("preferredMode", isDarkMode ? "dark" : "light");
+    const newMode = preferredMode === "light" ? "dark" : "light";
+    setPreferredMode(newMode);
   };
 
   // Restore the preferred mode from local storage on page load
@@ -194,181 +195,178 @@ function AppNavbar() {
   // console.log("listSections", listSections);
 
   return (
-    <AppBar
-      position="static"
-      className="appNavbar"
-    >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem
-                  key={page.name}
-                  onClick={() => handleMenuItemClick(page.path)}
-                  className="nav-link"
-                >
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Logo />
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-            }}
-          >
-            {pages?.map((page) =>
-              page.name === "Products" ? (
-                <>
-                  <IconButton
-                    onClick={handleOpenUserMenu}
-                    key={page.path}
-                    // to={page.name}
-                    // sx={{ p: 0 }}
+    <div className="appNavbar__container">
+      <AppBar position="static" className="appNavbar">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Box sx={{ display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+                className="menuIcon"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                {pages.map((page) => (
+                  <MenuItem
+                    key={page.name}
+                    onClick={() => handleMenuItemClick(page.path)}
                     className="nav-link"
                   >
-                    {page.name}
-                  </IconButton>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+            <Logo />
+            <Box
+              className="pages__container"
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+              }}
+            >
+              {pages?.map((page) =>
+                page.name === "Products" ? (
+                  <>
+                    <IconButton
+                      onClick={handleOpenUserMenu}
+                      key={page.path}
+                      className="nav-link"
+                    >
+                      {page.name}
+                    </IconButton>
 
-                  <Menu
-                    sx={{ mt: "45px" }}
-                    id=""
-                    anchorEl={anchorElUser}
-                    anchorOrigin={{
-                      vertical: "top",
-                      horizontal: "right",
-                    }}
-                    keepMounted
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "right",
-                    }}
-                    open={Boolean(anchorElUser)}
-                    onClose={handleCloseUserMenu}
+                    <Menu
+                      sx={{ mt: "45px" }}
+                      id=""
+                      anchorEl={anchorElUser}
+                      anchorOrigin={{
+                        vertical: "top",
+                        horizontal: "right",
+                      }}
+                      keepMounted
+                      transformOrigin={{
+                        vertical: "top",
+                        horizontal: "right",
+                      }}
+                      open={Boolean(anchorElUser)}
+                      onClose={handleCloseUserMenu}
+                    >
+                      {listSections?.map((section) => (
+                        <MenuItem
+                          key={section.name}
+                          onClick={() => handleProductsMenu(section.path)}
+                        >
+                          <Typography textAlign="center">
+                            {section.name}
+                          </Typography>
+                        </MenuItem>
+                      ))}
+                    </Menu>
+                  </>
+                ) : (
+                  <Link
+                    key={page.path}
+                    to={page.path}
+                    className="nav-link"
+                    // onClick={() => navigate(page.path)}
                   >
-                    {listSections?.map((section) => (
-                      <MenuItem
-                        key={section.name}
-                        onClick={() => handleProductsMenu(section.path)}
-                      >
-                        <Typography textAlign="center">
-                          {section.name}
-                        </Typography>
-                      </MenuItem>
-                    ))}
-                  </Menu>
-                </>
-              ) : (
-                <Link
-                  key={page.path}
-                  to={page.path}
-                  className="nav-link"
-                  // onClick={() => navigate(page.path)}
-                >
-                  {page.name}
-                </Link>
-              )
-            )}
-          </Box>
-          <IconButton
-            sx={{ ml: 1 }}
-            onClick={() => navigate("/wishList")}
-            className="appNavbar__cartIcon"
-          >
-            <Badge badgeContent={totalItemsWishProducts} color="error">
-              {<FavoriteIcon />}
-            </Badge>
-          </IconButton>
-          <Box sx={{ flexGrow: 0 }}>
-            <IconButton
-              sx={{ ml: 1 }}
-              onClick={toggleDrawer("right", true)}
-              className="appNavbar__cartIcon"
-            >
-              <Badge badgeContent={totalItemsCartProducts} color="error">
-                {<ShoppingBag />}
-              </Badge>
-            </IconButton>
-            <CartMenu
-              open={cartMenu.right}
-              onClose={toggleDrawer("right", false)}
-              anchor="right"
-            />
-            <IconButton
-              sx={{ ml: 1 }}
-              onClick={() => handleModeNew()}
-              className="appNavbar__mode"
-            >
-              {theme.palette.mode === "dark" ? (
-                <Brightness7 sx={{ color: "orange" }} />
-              ) : (
-                <Brightness4 />
+                    {page.name}
+                  </Link>
+                )
               )}
-            </IconButton>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="" src="/static/images/avatar/2.jpg" />
+            </Box>
+
+            <Box sx={{ flexGrow: 0 }} className="appNavbar__icons">
+              <IconButton
+                sx={{ ml: 1 }}
+                onClick={() => navigate("/wishList")}
+                className="appNavbar__cartIcon"
+              >
+                <Badge badgeContent={totalItemsWishProducts} color="error">
+                  {<FavoriteIcon />}
+                </Badge>
               </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem
-                  key={setting.name}
-                  onClick={() => handleUserMenu(setting.path)}
-                >
-                  <Typography textAlign="center">{setting.name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+              <IconButton
+                sx={{ ml: 1 }}
+                onClick={toggleDrawer("right", true)}
+                className="appNavbar__cartIcon"
+              >
+                <Badge badgeContent={totalItemsCartProducts} color="error">
+                  {<ShoppingBag />}
+                </Badge>
+              </IconButton>
+              <CartMenu
+                open={cartMenu.right}
+                onClose={toggleDrawer("right", false)}
+                anchor="right"
+                setCartMenu={setCartMenu}
+              />
+              <IconButton
+                sx={{ ml: 1 }}
+                onClick={() => handleModeNew()}
+                className="appNavbar__mode"
+              >
+                {preferredMode === "dark" ? <Brightness7 /> : <Brightness4 />}
+              </IconButton>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="" src="/static/images/avatar/2.jpg" />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem
+                    key={setting.name}
+                    onClick={() => handleUserMenu(setting.path)}
+                  >
+                    <Typography textAlign="center">{setting.name}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </div>
   );
 }
 export default AppNavbar;

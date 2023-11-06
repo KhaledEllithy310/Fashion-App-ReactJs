@@ -27,43 +27,46 @@ const WishList = () => {
   return (
     <Container className="">
       <div className="cartPage">
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={12}>
-            <div className="cartPage__top">
-              <h4 className="cartPage__title">Items in my wishList </h4>
-              <div className="cartPage__iconsGrid">
-                {productsWish?.length > 0 ? (
-                  <button
-                    className="cartMenu__content__products__clearAll secBtn"
-                    onClick={() => dispatch(clearCart())}
-                  >
-                    clear all
-                  </button>
-                ) : (
-                  ""
-                )}
-                <span
-                  className={!arrangeDefault ? "active" : ""}
-                  onClick={() => setArrangeDefault(false)}
+        <div className="cartPage__top">
+          <Grid item xs={6}>
+            <h4 className="cartPage__title">my wishList </h4>
+          </Grid>
+          <Grid item xs={6}>
+            <div className="cartPage__iconsGrid">
+              {productsWish?.length > 0 ? (
+                <button
+                  className="cartMenu__content__products__clearAll secBtn"
+                  onClick={() => dispatch(clearCart())}
                 >
-                  <GridView />
-                </span>
-                <span
-                  className={arrangeDefault ? "active" : ""}
-                  onClick={() => setArrangeDefault(true)}
-                >
-                  <TableRows />
-                </span>
-              </div>
+                  clear all
+                </button>
+              ) : (
+                ""
+              )}
+              <span
+                className={!arrangeDefault ? "active" : ""}
+                onClick={() => setArrangeDefault(false)}
+              >
+                <GridView />
+              </span>
+              <span
+                className={arrangeDefault ? "active" : ""}
+                onClick={() => setArrangeDefault(true)}
+              >
+                <TableRows />
+              </span>
             </div>
-
+          </Grid>
+        </div>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
             <Grid container spacing={2}>
               {productsWish?.length > 0 ? (
                 arrangeDefault ? (
                   <WishTable productsWish={productsWish} />
                 ) : (
                   productsWish?.map((product, index) => (
-                    <Grid key={index} item xs={12} sm={6}>
+                    <Grid key={index} item xs={12} sm={6} md={4}>
                       <WishItem product={product} index={index} />
                     </Grid>
                   ))
@@ -75,9 +78,6 @@ const WishList = () => {
               )}
             </Grid>
           </Grid>
-          {/* <Grid item xs={12} md={3}>
-            <CartCheckOut />
-          </Grid> */}
         </Grid>
       </div>
     </Container>

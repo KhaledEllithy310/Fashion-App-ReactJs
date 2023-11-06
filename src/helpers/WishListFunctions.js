@@ -1,7 +1,6 @@
 import {
   addWishList,
   getWishListByUserId,
-  getWishListIdByUserId,
   putProductsToWishList,
 } from "../Services/WishListApi";
 import {

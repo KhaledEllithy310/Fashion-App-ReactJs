@@ -16,7 +16,7 @@ import { getAuthFromLocalStorage } from "../../helpers/LocalStorageFunctions";
 
 const ProductDetails = ({ productId }) => {
   const { id } = useParams();
-  const [product, setProduct] = useFetchProducts(id || productId);
+  const [product] = useFetchProducts(id || productId);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);

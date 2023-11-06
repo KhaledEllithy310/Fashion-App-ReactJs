@@ -46,7 +46,7 @@ const SingleProduct = ({ item }) => {
         <img src={item.images[colors[0]][0]} alt="Image 1" />
       </div>
       <div className="product__content">
-        <div className="product__content__rating">
+        <ul className="product__content__rating">
           <li>
             <StarIcon />
           </li>
@@ -62,7 +62,7 @@ const SingleProduct = ({ item }) => {
           <li>
             <StarIcon />
           </li>
-        </div>
+        </ul>
         <h6 className="product__content__text">
           <Link to={""}>{item.title}</Link>
         </h6>
@@ -85,7 +85,7 @@ const SingleProduct = ({ item }) => {
           )}
         </div>
       </div>
-      <div className="product__icons">
+      <ul className="product__icons">
         <li title="Add to Wishlist" onClick={handleClickOpen}>
           <FavoriteIcon />
         </li>
@@ -98,7 +98,7 @@ const SingleProduct = ({ item }) => {
         <li title="Add to Cart" onClick={handleClickOpen}>
           <ShoppingCart />
         </li>
-      </div>
+      </ul>
       <span className="product__discount">-{item.discountPercentage}%</span>
       <Dialog
         fullScreen={fullScreen}

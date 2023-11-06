@@ -2,5 +2,5 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  align-items: start;
+  /* align-items: start; */
 }

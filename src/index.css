@@ -19,7 +19,8 @@
   --input: #e5e5e6;
   --placeholder: #0000008d;
   --overlay: rgba(0, 0, 0, 0.234);
-  --overlayHome: rgba(255, 255, 255, 0.237);
+  --overlayHome: rgba(255, 255, 255, 0.507);
+  --mode: #0c3fac;
 }
 
 /* Dark mode variables */
@@ -37,6 +38,8 @@
   --placeholder: #eeeeeea8;
   --overlay: rgba(255, 255, 255, 0.157);
   --overlayHome: rgba(0, 0, 0, 0.234);
+  --overlayHome: rgba(0, 0, 0, 0.497);
+  --mode: orange;
 }
 
 /* Common styles */

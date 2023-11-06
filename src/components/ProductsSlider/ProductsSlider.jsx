@@ -8,56 +8,69 @@ import SingleProduct from "../SingleProduct/SingleProduct";
 import { useFetchSections } from "../../hooks/useFetchSections";
 import { useFetchCategories } from "../../hooks/useFetchCategories";
 import { getProductByCategoryName } from "../../Services/ProductsApi";
+
 const ProductsSlider = () => {
   const [targetSectionId, setTargetSectionId] = useState(null);
   const [targetSectionName, setTargetSectionName] = useState(null);
   const [targetCategoryName, setTargetCategoryName] = useState("");
+  const [categoryList, setCategoryList] = useState([]);
+  const [allCategories, setAllCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  //get all categories according section id - default sectionId =1
+
   const [categories] = useFetchCategories(targetSectionId);
-  //get all sections
   const [sections] = useFetchSections();
-  //store all category according sectionId in {categoryData}
-  // console.log(sections);
-  const sectionData = sections[0];
-  // console.log(sectionData);
-  const categoryData = categories[0]?.categories;
+
+  const defaultSectionData = sections[0];
+
+  // const [categoryData, sectionIdOfCategory] = categoriesData?.[0] || [];
+  const defaultCategoryData = categories[0]?.categories;
   const sectionIdOfCategory = categories[0]?.sectionId;
+  console.log("sections", sections);
+  console.log("defaultSectionData", defaultSectionData);
+  console.log("defaultCategoryData", defaultCategoryData);
   useEffect(() => {
-    setTargetSectionId(sectionIdOfCategory);
-    //get all products according category - default categoryName = the first{index =0}
-    if (sectionData && categoryData) {
-      setTargetCategoryName(categoryData[0]?.name);
-      setTargetSectionName(sectionData?.name);
-      //get all products according category name and put it in store {redux toolkit}
+    if (defaultSectionData && defaultCategoryData) {
+      setAllCategories(categories);
+      setCategoryList(defaultCategoryData);
+      setTargetSectionId(sectionIdOfCategory);
+      setTargetCategoryName(defaultCategoryData[0]?.name);
+      setTargetSectionName(defaultSectionData?.name);
 
-      handleSectionBtn(sectionData);
+      handleSectionButtonClick(defaultSectionData, categories);
     }
-  }, [sectionData]);
-  //fetch all products from server
+    console.log("only default section");
+  }, [defaultSectionData]);
 
-  //set the section that selected to show the categories
-  const handleSectionBtn = (section) => {
+  const handleSectionButtonClick = (section, categories) => {
+    console.log(section);
+    console.log(categories);
     setTargetSectionId(section.id);
     setTargetSectionName(section.name);
 
-    handleCategoriesBtn(section.name, categoryData[0]?.name);
-  };
+    const targetCategories = allCategories?.find(
+      (category) => category.sectionId === section.id
+    );
+    setTargetCategoryName(targetCategories?.categories?.[0]?.name);
 
-  const handleCategoriesBtn = async (sectionName, categoryName) => {
+    console.log("targetCategories", targetCategories);
+    // const categoryName = targetCategories?.categories?.[0]?.name;
+    console.log("targetCategoryName", targetCategoryName);
+    handleCategoryButtonClick(section.name, targetCategoryName);
+  };
+  // console.log("categoryList", categoryList);
+  const handleCategoryButtonClick = async (sectionName, categoryName) => {
+    console.log("categoryName222222222222", categoryName);
     setTargetCategoryName(categoryName);
     const products = await getProductByCategoryName(sectionName, categoryName);
     setProducts(products.data);
   };
 
-  // Limit the number of products to 6
   const limitedProducts = products.slice(0, 6);
+
   return (
     <div className="productsSlider">
-      {" "}
       <Container>
-        <h2 className="productsSlider__title">our top seller products</h2>
-        {/* render the sections */}
+        <h2 className="productsSlider__title">Our top-selling products</h2>
         <div className="container__sections__btn">
           {sections?.map((section) => (
             <button
@@ -65,32 +78,30 @@ const ProductsSlider = () => {
               className={`secBtn mx-10 ${
                 section.id === targetSectionId ? "active" : ""
               }`}
-              onClick={() => handleSectionBtn(section)}
+              onClick={() => handleSectionButtonClick(section, allCategories)}
             >
               {section.name}
             </button>
           ))}
         </div>
-        {/* render the categories of section */}
         <div className="container__sections__btn">
-          {categoryData?.map((category) => (
+          {categoryList?.map((category) => (
             <button
               key={category.id}
               className={`secBtn mx-10 cateBtn ${
                 category.name === targetCategoryName ? "activeAccent" : ""
               }`}
               onClick={() =>
-                handleCategoriesBtn(targetSectionName, category.name)
+                handleCategoryButtonClick(targetSectionName, category.name)
               }
             >
               {category.name}
             </button>
           ))}
         </div>
-        {/* render the products of category */}
-        {limitedProducts && (
+        {limitedProducts.length > 0 && (
           <Carousel responsive={responsive} className="productsSlider__cards">
-            {limitedProducts?.map((item) => (
+            {limitedProducts.map((item) => (
               <SingleProduct key={item.id} item={item} />
             ))}
           </Carousel>

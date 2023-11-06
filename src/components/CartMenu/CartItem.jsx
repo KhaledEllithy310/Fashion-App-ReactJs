@@ -10,6 +10,8 @@ import { addToWishList } from "../../store/slices/wishListSlice";
 import { Favorite } from "@mui/icons-material";
 import UseGetCartData from "../../hooks/useGetCartData";
 import Swal from "sweetalert2";
+import { Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const CartItem = ({ product, index }) => {
   const dispatch = useDispatch();
@@ -44,17 +46,22 @@ export const CartItem = ({ product, index }) => {
     dispatch(removeFromCart(product));
     dispatch(addToWishList(product));
   };
+  const Navigate = useNavigate();
 
   return (
-    <div className="cartMenu__content__products__item" key={index}>
-      <div className="cartMenu__content__products__item__img">
+    <Grid container className="cartMenu__content__products__item" key={index}>
+      <Grid item xs={2} className="cartMenu__content__products__item__img">
         <img src={product?.images[0]} alt="img" />
-      </div>
-      <div className="cartMenu__content__products__item__details">
-        <h6 className="cartMenu__content__products__item__details__title">
+      </Grid>
+      <Grid item xs={7} className="cartMenu__content__products__item__details">
+        <h6
+          className="cartMenu__content__products__item__details__title"
+          title={product.title}
+          onClick={() => Navigate(`/product-details/${product.id}`)}
+        >
           {product.title}
         </h6>
-        <h6 className="cartMenu__content__products__item__details__price">
+        <div className="cartMenu__content__products__item__details__price">
           {product?.discountPercentage ? (
             <>
               <p className="productDetails__content__price__before">
@@ -71,15 +78,15 @@ export const CartItem = ({ product, index }) => {
           ) : (
             <p>${product?.price}</p>
           )}
-        </h6>
-        <p className="cartMenu__content__products__item__details__size">
+        </div>
+        <div className="cartMenu__content__products__item__details__size">
           Size : <span>{product?.size}</span>
-        </p>
-        <p className="cartMenu__content__products__item__details__color">
+        </div>
+        <div className="cartMenu__content__products__item__details__color">
           <p>
             Color :<span> {product?.color}</span>
           </p>
-        </p>
+        </div>
         <div className="cartMenu__content__products__item__details__counter">
           <span
             className="decrement"
@@ -95,7 +102,7 @@ export const CartItem = ({ product, index }) => {
             +
           </span>
         </div>
-      </div>
+      </Grid>
       <div className="cartMenu__content__products__item__icons">
         <div
           className="cartMenu__content__products__item__addWishlist"
@@ -112,7 +119,7 @@ export const CartItem = ({ product, index }) => {
           <DeleteForeverIcon />
         </div>
       </div>
-    </div>
+    </Grid>
   );
 };
 

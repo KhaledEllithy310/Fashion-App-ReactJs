@@ -16,7 +16,7 @@ export const useFetchSections = (sectionId = null) => {
     };
 
     fetchSections();
-  }, []);
+  }, [sectionId]);
 
   return [sections, setSections];
 };

@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { RemoveFromWishList } from "../../store/slices/wishListSlice";
 import { addToCart } from "../../store/slices/cartSlice";
 import { DeleteForever, ShoppingCart } from "@mui/icons-material";
+import { Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const WishItem = ({ product, index }) => {
   const dispatch = useDispatch();
@@ -12,43 +14,53 @@ const WishItem = ({ product, index }) => {
     dispatch(RemoveFromWishList(product));
     dispatch(addToCart(product));
   };
+  const Navigate = useNavigate();
 
   return (
-    <div className="cartMenu__content__products__item" key={index}>
-      <div className="cartMenu__content__products__item__img">
-        <img src={product?.images[0]} alt="img" />
-      </div>
-      <div className="cartMenu__content__products__item__details">
-        <h6 className="cartMenu__content__products__item__details__title">
-          {product.title}
-        </h6>
-        <h6 className="cartMenu__content__products__item__details__price">
-          {product?.discountPercentage ? (
-            <>
-              <p className="productDetails__content__price__before">
-                <del>${product?.price}</del>
-              </p>
-              <p className="productDetails__content__price__after">
-                $
-                {(
-                  (product?.price * (100 - +product?.discountPercentage)) /
-                  100
-                ).toFixed(2)}
-              </p>
-            </>
-          ) : (
-            <p>${product?.price}</p>
-          )}
-        </h6>
-        <p className="cartMenu__content__products__item__details__size">
-          Size : <span>{product?.size}</span>
-        </p>
-        <p className="cartMenu__content__products__item__details__color">
-          <p>
-            Color :<span> {product?.color}</span>
+    <Grid container className="cartMenu__content__products__item">
+      <Grid item xs={3}>
+        <div className="cartMenu__content__products__item__img">
+          <img src={product?.images[0]} alt="img" />
+        </div>
+      </Grid>
+
+      <Grid item xs={7}>
+        <div className="cartMenu__content__products__item__details">
+          <h6
+            className="cartMenu__content__products__item__details__title"
+            onClick={() => Navigate(`/product-details/${product.id}`)}
+          >
+            {product.title}
+          </h6>
+          <div className="cartMenu__content__products__item__details__price">
+            {product?.discountPercentage ? (
+              <>
+                <p className="productDetails__content__price__before">
+                  <del>${product?.price}</del>
+                </p>
+                <p className="productDetails__content__price__after">
+                  $
+                  {(
+                    (product?.price * (100 - +product?.discountPercentage)) /
+                    100
+                  ).toFixed(2)}
+                </p>
+              </>
+            ) : (
+              <p>${product?.price}</p>
+            )}
+          </div>
+          <p className="cartMenu__content__products__item__details__size">
+            Size : <span>{product?.size}</span>
           </p>
-        </p>
-      </div>
+          <div className="cartMenu__content__products__item__details__color">
+            <p>
+              Color :<span> {product?.color}</span>
+            </p>
+          </div>
+        </div>
+      </Grid>
+
       <div className="cartMenu__content__products__item__icons">
         <div
           className="cartPage__table__add"
@@ -65,7 +77,7 @@ const WishItem = ({ product, index }) => {
           <DeleteForever />
         </div>
       </div>
-    </div>
+    </Grid>
   );
 };
 

@@ -50,16 +50,13 @@
 /* img */
 
 .cartMenu__content__products__item__img {
-  min-width: 80px;
+  max-width: 80px;
   display: flex;
   align-items: center;
 }
 .cartMenu__content__products__item__img img {
   width: 100%;
-  height: 80px;
   display: block;
-  margin: auto;
-  /* height: 50%; */
 }
 
 /* product details */
@@ -71,10 +68,10 @@
 .cartMenu__content__products__item__details__title {
   font-size: 22px;
   text-transform: capitalize;
-  /* width: 50%; */
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap; */
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .cartMenu__content__products__item__details__price {
   display: flex;

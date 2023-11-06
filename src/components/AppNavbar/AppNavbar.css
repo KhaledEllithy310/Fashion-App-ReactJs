@@ -1,7 +1,13 @@
+.appNavbar__container {
+  padding-bottom: 67px;
+}
+
 header.appNavbar {
   background-color: var(--background);
   border-bottom: 1px solid rgba(0, 0, 0, 0.161);
-  /* color: rgb(41, 40, 40); */
+  color: rgb(41, 40, 40);
+  position: fixed;
+  z-index: 20;
 }
 
 .appNavbar button {
@@ -9,6 +15,12 @@ header.appNavbar {
   font-size: 18px;
   font-weight: 600;
   text-transform: capitalize;
+}
+
+.pages__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preLogo {
@@ -67,9 +79,13 @@ header.appNavbar {
   /* color: red; */
 }
 
-.appNavbar__cartIcon,
-.appNavbar__mode {
+.appNavbar__cartIcon {
   color: var(--text) !important;
+}
+
+.appNavbar__mode {
+  color: var(--primary) !important;
+  margin-right: 10px !important;
 }
 
 @media screen and (max-width: 430px) {
@@ -77,11 +93,16 @@ header.appNavbar {
     width: 1.4rem;
     font-weight: 600;
     text-transform: capitalize;
-    padding: 2px !important;
+    padding: 3px !important;
+  }
+
+  .appNavbar__cartIcon {
+    margin-left: 15px !important;
   }
 
   button.appNavbar__mode {
-    margin-right: 20px !important;
+    margin-right: 15px !important;
+    margin-left: 15px !important;
   }
   .preLogo {
     width: 30px;
@@ -92,4 +113,16 @@ header.appNavbar {
     width: 30px !important;
     height: 30px !important;
   }
+}
+
+.appNavbar__icons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-left: auto;
+}
+
+.menuIcon svg {
+  color: var(--text);
+  margin-right: 8px;
 }

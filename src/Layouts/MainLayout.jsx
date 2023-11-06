@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppNavbar from "../components/AppNavbar/AppNavbar";
 import { Outlet } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, createTheme } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { grey } from "@mui/material/colors";
+import { getUserIdFromLocalStorage } from "../helpers/LocalStorageFunctions";
+import { getCartByUserID } from "../store/slices/cartSlice";
+import { getWishListByUserID } from "../store/slices/wishListSlice";
+import ScrollToTopButton from "../components/ScrollToTop/ScrollToTop";
+import Spinner from "../components/Spinner/Spinner";
 
 const Layout = () => {
+  const dispatch = useDispatch();
+  const userId = getUserIdFromLocalStorage();
+  //get the cart by user id
+  dispatch(getCartByUserID(userId));
+  dispatch(getWishListByUserID(userId));
   const mode = useSelector((state) => state.mode);
   // console.log(mode);
   const darkTheme = createTheme({
@@ -49,13 +59,33 @@ const Layout = () => {
     },
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  window.onload = () => {
+    setIsLoading(true);
+  };
+
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        <AppNavbar />
-        <Outlet />
-      </ThemeProvider>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+            <AppNavbar />
+            <Outlet />
+            <ScrollToTopButton />
+          </ThemeProvider>
+        </>
+      )}
     </>
   );
 };

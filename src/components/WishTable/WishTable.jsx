@@ -15,12 +15,16 @@ import "./WishTable.css";
 import "../CartTable/CartTable.css";
 import { ShoppingCart } from "@mui/icons-material";
 import { RemoveFromWishList } from "../../store/slices/wishListSlice";
+import { useNavigate } from "react-router-dom";
 const WishTable = ({ productsWish }) => {
   const dispatch = useDispatch();
   const addToCartFromWishList = (product) => {
     dispatch(RemoveFromWishList(product));
     dispatch(addToCart(product));
   };
+
+  const Navigate = useNavigate();
+
   return (
     <TableContainer component={Paper}>
       <Table
@@ -41,21 +45,24 @@ const WishTable = ({ productsWish }) => {
             <StyledTableRow key={index}>
               <StyledTableCell component="th" scope="row">
                 <div className="cartMenu__content__products__item cartPage__table__item">
-                  <div className="cartMenu__content__products__item__img">
+                  <div className="cartTable__content__products__item__img">
                     <img src={product?.images[0]} alt="img" />
                   </div>
                   <div className="cartMenu__content__products__item__details">
-                    <h6 className="cartMenu__content__products__item__details__title">
+                    <h6
+                      className="cartMenu__content__products__item__details__title"
+                      onClick={() => Navigate(`/product-details/${product.id}`)}
+                    >
                       {product.title}
                     </h6>
                     <p className="cartMenu__content__products__item__details__size">
                       Size : <span>{product?.size}</span>
                     </p>
-                    <p className="cartMenu__content__products__item__details__color">
+                    <div className="cartMenu__content__products__item__details__color">
                       <p>
                         Color :<span> {product?.color}</span>
                       </p>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </StyledTableCell>

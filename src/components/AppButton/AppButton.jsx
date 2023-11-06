@@ -1,11 +1,13 @@
-import { useTheme } from "@emotion/react";
-import { Button } from "@mui/material";
 import React from "react";
 import "./AppButton.css";
-const AppButton = ({ title }) => {
-  const theme = useTheme();
-
-  return <button className="mainBtn">{title}</button>;
+import { useNavigate } from "react-router-dom";
+const AppButton = ({ title, path }) => {
+  const Navigate = useNavigate();
+  return (
+    <button className="mainBtn" onClick={() => Navigate(path)}>
+      {title}
+    </button>
+  );
 };
 
 export default AppButton;

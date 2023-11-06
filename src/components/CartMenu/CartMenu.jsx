@@ -9,13 +9,11 @@ import CartItem from "./CartItem";
 import { storeProductsInServer } from "../../helpers/CartFunctions";
 import useGetWishData from "../../hooks/useGetWishData";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
-const CartMenu = ({ open, onClose, anchor }) => {
+const CartMenu = ({ open, onClose, anchor, setCartMenu }) => {
   // const [closeMenu, setCloseMenu] = useState({});
   //get all data cart
   const [productsCart, totalItems, totalPrice] = UseGetCartData();
   const [productsWish, ,] = useGetWishData();
-
-
   useEffect(() => {
     return async () => {
       storeProductsInServer(productsCart);
@@ -24,6 +22,12 @@ const CartMenu = ({ open, onClose, anchor }) => {
   }, []);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const handleViewCart = () => {
+    navigate("/cart");
+    setCartMenu({ right: false }); // Close the Drawer
+  };
+
   return (
     <Drawer anchor={anchor} open={open} onClose={onClose} className="cartMenu">
       <div className="cartMenu__content">
@@ -64,7 +68,7 @@ const CartMenu = ({ open, onClose, anchor }) => {
           <div className="cartMenu__content__checkOut__btns">
             <button
               className="cartMenu__content__checkOut__btns__viewCart secBtn"
-              onClick={() => navigate("/cart")}
+              onClick={handleViewCart}
             >
               view cart
             </button>

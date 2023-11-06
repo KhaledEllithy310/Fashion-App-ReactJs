@@ -31,14 +31,20 @@
 }
 
 .product__image img {
-  object-fit: contain;
-  height: 200px;
+  /* object-fit: contain; */
+
+  /* height: 300px; */
+  height: auto;
   /* width: 100px; */
-  /* width: 100%; */
-  margin: auto;
+  width: 100%;
+  /* min-width: 50px; */
+  /* margin: auto; */
   transform: scale(1);
   transition: all 0.2s;
   display: block;
+  /* height: 250px;
+  max-width: 100%;
+  width: auto; */
 }
 
 .product__content {

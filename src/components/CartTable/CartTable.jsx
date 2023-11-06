@@ -19,6 +19,7 @@ import "./CartTable.css";
 import { Favorite } from "@mui/icons-material";
 import { addToWishList } from "../../store/slices/wishListSlice";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CartTable = ({ productsCart }) => {
   const dispatch = useDispatch();
@@ -53,8 +54,10 @@ const CartTable = ({ productsCart }) => {
     dispatch(removeFromCart(product));
     dispatch(addToWishList(product));
   };
+
+  const Navigate = useNavigate();
   return (
-    <TableContainer component={Paper}>
+    <TableContainer>
       <Table
         sx={{ minWidth: 700 }}
         className="cartPage__table"
@@ -75,26 +78,29 @@ const CartTable = ({ productsCart }) => {
             <StyledTableRow key={index}>
               <StyledTableCell component="th" scope="row">
                 <div className="cartMenu__content__products__item cartPage__table__item">
-                  <div className="cartMenu__content__products__item__img">
+                  <div className="cartTable__content__products__item__img">
                     <img src={product?.images[0]} alt="img" />
                   </div>
                   <div className="cartMenu__content__products__item__details">
-                    <h6 className="cartMenu__content__products__item__details__title">
-                      {product.title}
+                    <h6
+                      className="cartMenu__content__products__item__details__title"
+                      onClick={() => Navigate(`/product-details/${product.id}`)}
+                    >
+                      {product.title.slice(0, 20)}
                     </h6>
-                    <p className="cartMenu__content__products__item__details__size">
+                    <div className="cartMenu__content__products__item__details__size">
                       Size : <span>{product?.size}</span>
-                    </p>
-                    <p className="cartMenu__content__products__item__details__color">
-                      <p>
+                    </div>
+                    <div className="cartMenu__content__products__item__details__color">
+                      <div>
                         Color :<span> {product?.color}</span>
-                      </p>
-                    </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </StyledTableCell>
               <StyledTableCell>
-                <h6 className="cartMenu__content__products__item__details__price cartPage__table__price">
+                <div className="cartMenu__content__products__item__details__price cartPage__table__price">
                   {product?.discountPercentage ? (
                     <>
                       <p className="productDetails__content__price__before">
@@ -112,7 +118,7 @@ const CartTable = ({ productsCart }) => {
                   ) : (
                     <p>${product?.price}</p>
                   )}
-                </h6>
+                </div>
               </StyledTableCell>
               <StyledTableCell>
                 <div className="cartPage__table__quantity">

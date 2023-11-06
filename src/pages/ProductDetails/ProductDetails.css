@@ -49,19 +49,6 @@
   color: var(--text);
 }
 
-/* .productDetails__sliderImages {
-  display: flex;
-  gap: 5px;
-  flex-flow: column wrap;
-  align-content: start;
-  padding: 0 10px;
-}
-.productDetails__sliderImages img {
-  height: 100px;
-  border-radius: 5px;
-  object-fit: cover;
-} */
-
 .productDetails__content__title {
   text-transform: capitalize;
   font-size: 25px;

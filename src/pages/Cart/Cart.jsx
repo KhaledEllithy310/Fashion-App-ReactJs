@@ -14,22 +14,6 @@ import { clearCart } from "../../store/slices/cartSlice";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 import useGetWishData from "../../hooks/useGetWishData";
 const Cart = () => {
-  // const [page, setPage] = React.useState(0);
-  // const [rowsPerPage, setRowsPerPage] = React.useState(5);
-
-  // Avoid a layout jump when reaching the last page with empty rows.
-  // const emptyRows =
-  //   page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
-
-  // const handleChangePage = (event, newPage) => {
-  //   setPage(newPage);
-  // };
-
-  // const handleChangeRowsPerPage = (event) => {
-  //   setRowsPerPage(parseInt(event.target.value, 10));
-  //   setPage(0);
-  // };
-
   //get all data cart
   const [productsCart, ,] = UseGetCartData();
   const [productsWish, ,] = useGetWishData();
@@ -43,56 +27,42 @@ const Cart = () => {
     };
   }, []);
   return (
-    <Container className="">
+    <Container>
       <div className="cartPage">
+        <div className="cartPage__top">
+          <Grid item xs={6}>
+            <h3 className="cartPage__title">my cart</h3>
+          </Grid>
+          <Grid item xs={6}>
+            <div className="cartPage__iconsGrid">
+              {productsCart?.length > 0 ? (
+                <button
+                  className="cartMenu__content__products__clearAll secBtn"
+                  onClick={() => dispatch(clearCart())}
+                >
+                  clear all
+                </button>
+              ) : (
+                ""
+              )}
+              <span
+                className={!arrangeDefault ? "active" : ""}
+                onClick={() => setArrangeDefault(false)}
+              >
+                <GridViewIcon />
+              </span>
+              <span
+                className={arrangeDefault ? "active" : ""}
+                onClick={() => setArrangeDefault(true)}
+              >
+                <TableRowsIcon />
+              </span>
+            </div>
+          </Grid>
+        </div>
         <Grid container spacing={2}>
           <Grid item xs={12} md={9}>
-            <div className="cartPage__top">
-              <h4 className="cartPage__title">Items in my cart</h4>
-              <div className="cartPage__iconsGrid">
-                {productsCart?.length > 0 ? (
-                  <button
-                    className="cartMenu__content__products__clearAll secBtn"
-                    onClick={() => dispatch(clearCart())}
-                  >
-                    clear all
-                  </button>
-                ) : (
-                  ""
-                )}
-                <span
-                  className={!arrangeDefault ? "active" : ""}
-                  onClick={() => setArrangeDefault(false)}
-                >
-                  <GridViewIcon />
-                </span>
-                <span
-                  className={arrangeDefault ? "active" : ""}
-                  onClick={() => setArrangeDefault(true)}
-                >
-                  <TableRowsIcon />
-                </span>
-              </div>
-            </div>
-
             <Grid container spacing={2}>
-              {/* {productsCart.length > 0 ? (
-                arrangeDefault ? (
-                  <CartTable productsCart={productsCart} />
-                ) : productsCart?.length > 0 ? (
-                  productsCart?.map((product, index) => (
-                    <Grid key={index} item xs={12} sm={6}>
-                      <CartItem product={product} index={index} />
-                    </Grid>
-                  ))
-                ) : (
-                  ""
-                )
-              ) : (
-                <h5 className="cartMenu__content__title__sec">
-                  the cart is empty
-                </h5>
-              )} */}
               {productsCart.length > 0 ? (
                 arrangeDefault ? (
                   <CartTable productsCart={productsCart} />

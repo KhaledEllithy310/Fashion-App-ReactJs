@@ -11,6 +11,7 @@
 .cartPage__table th.item__text {
   text-align: left !important;
   padding-left: 25px;
+  width: 350px !important;
 }
 
 .cartPage__table__item {
@@ -52,4 +53,8 @@
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 600;
+}
+
+th {
+  width: fit-content;
 }

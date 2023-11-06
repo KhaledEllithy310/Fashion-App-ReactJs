@@ -69,7 +69,7 @@
 }
 
 .footer__social-icon:hover svg {
-  transform: rotateY(180deg);
+  transform: scale(1.2);
   background: linear-gradient(to top, var(--accent), var(--primary));
 }
 
