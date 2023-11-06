@@ -7,7 +7,7 @@ const Spinner = () => {
     <div className="loader">
       <ReactLoading
         type={"balls"}
-        color={"#ffffff"}
+        color={"#000"}
         height={"100px"}
         width={"100px"}
       />

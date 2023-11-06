@@ -102,23 +102,23 @@ function AppNavbar() {
     }
   });
   // change mode the website
+  // Function to handle toggling the theme mode
   const handleModeNew = () => {
-    const root = document.documentElement;
-    root.classList.toggle("dark-mode");
+    // Toggle the "dark-mode" class on the root element and get the updated mode
+    const isDarkMode = document.documentElement.classList.toggle("dark-mode");
     // Store the current mode in local storage
-    const isDarkMode = root.classList.contains("dark-mode");
     localStorage.setItem("preferredMode", isDarkMode ? "dark" : "light");
-    const newMode = preferredMode === "light" ? "dark" : "light";
-    setPreferredMode(newMode);
   };
 
   // Restore the preferred mode from local storage on page load
-  window.addEventListener("load", function () {
-    const root = document.documentElement;
+  window.addEventListener("load", () => {
+    // Retrieve the preferred mode from local storage
     const preferredMode = localStorage.getItem("preferredMode");
-    if (preferredMode === "dark") {
-      root.classList.add("dark-mode");
-    }
+    // Toggle the "dark-mode" class based on the preferred mode
+    document.documentElement.classList.toggle(
+      "dark-mode",
+      preferredMode === "dark"
+    );
   });
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);

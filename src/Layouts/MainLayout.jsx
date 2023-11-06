@@ -17,52 +17,52 @@ const Layout = () => {
   //get the cart by user id
   dispatch(getCartByUserID(userId));
   dispatch(getWishListByUserID(userId));
-  const mode = useSelector((state) => state.mode);
+  // const mode = useSelector((state) => state.mode);
   // console.log(mode);
-  const darkTheme = createTheme({
-    palette: {
-      mode,
-      ...(mode === "light"
-        ? {
-            button: {
-              main: grey[900],
-              sec: grey[700],
-            },
-            background: {
-              default: "#fff",
-              sec: "black",
-              card: grey[300],
-            },
-            text: {
-              primary: grey[900],
-              secondary: grey[800],
-              logoSec: "#fff",
-              active: grey[400],
-            },
-          }
-        : {
-            button: {
-              main: grey[900],
-              sec: grey[700],
-            },
-            background: {
-              sec: "#fff",
-              card: grey[600],
-            },
-            text: {
-              primary: "#fff",
-              secondary: grey[500],
-              logoSec: grey[900],
-              active: grey[800],
-            },
-          }),
-    },
-  });
+  // const darkTheme = createTheme({
+  //   palette: {
+  //     mode,
+  //     ...(mode === "light"
+  //       ? {
+  //           button: {
+  //             main: grey[900],
+  //             sec: grey[700],
+  //           },
+  //           background: {
+  //             default: "#fff",
+  //             sec: "black",
+  //             card: grey[300],
+  //           },
+  //           text: {
+  //             primary: grey[900],
+  //             secondary: grey[800],
+  //             logoSec: "#fff",
+  //             active: grey[400],
+  //           },
+  //         }
+  //       : {
+  //           button: {
+  //             main: grey[900],
+  //             sec: grey[700],
+  //           },
+  //           background: {
+  //             sec: "#fff",
+  //             card: grey[600],
+  //           },
+  //           text: {
+  //             primary: "#fff",
+  //             secondary: grey[500],
+  //             logoSec: grey[900],
+  //             active: grey[800],
+  //           },
+  //         }),
+  //   },
+  // });
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   window.onload = () => {
-    setIsLoading(true);
+    // setIsLoading(true);
   };
 
   useEffect(() => {
@@ -74,18 +74,18 @@ const Layout = () => {
 
   return (
     <>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <>
-          <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
+      {/* <ThemeProvider theme={darkTheme}> */}
+        {/* <CssBaseline /> */}
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <>
             <AppNavbar />
             <Outlet />
             <ScrollToTopButton />
-          </ThemeProvider>
-        </>
-      )}
+          </>
+        )}
+      {/* </ThemeProvider> */}
     </>
   );
 };
