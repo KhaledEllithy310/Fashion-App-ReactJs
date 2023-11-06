@@ -12,6 +12,6 @@
   left: 0; */
 }
 
-.loader .icon-loading {
-  fill: var(--accent);
+.loader span span {
+  background-color: var(--accent) !important;
 }
