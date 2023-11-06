@@ -59,10 +59,10 @@ const Layout = () => {
   //   },
   // });
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   window.onload = () => {
-    // setIsLoading(true);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -74,18 +74,15 @@ const Layout = () => {
 
   return (
     <>
-      {/* <ThemeProvider theme={darkTheme}> */}
-        {/* <CssBaseline /> */}
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          <>
-            <AppNavbar />
-            <Outlet />
-            <ScrollToTopButton />
-          </>
-        )}
-      {/* </ThemeProvider> */}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <AppNavbar />
+          <Outlet />
+          <ScrollToTopButton />
+        </>
+      )}
     </>
   );
 };

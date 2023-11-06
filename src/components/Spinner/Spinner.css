@@ -4,7 +4,8 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  /* background-color: var(--background); */
+  background-color: var(--background);
+  /* background-color: red; */
   /* position: fixed;
   z-index: 100;
   top: 0;

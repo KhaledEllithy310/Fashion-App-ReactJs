@@ -51,7 +51,7 @@ function AppNavbar() {
   const [, totalItemsWishProducts] = useGetWishData();
   //get all cart data from store
   const [productsCart, totalItemsCartProducts] = UseGetCartData();
-  const [preferredMode, setPreferredMode] = useState("light");
+  // const [preferredMode, setPreferredMode] = useState("light");
   //control to show settings menu
   useEffect(() => {
     const isAuth = getAuthFromLocalStorage();
@@ -110,16 +110,21 @@ function AppNavbar() {
     localStorage.setItem("preferredMode", isDarkMode ? "dark" : "light");
   };
 
+  const preferredMode = localStorage.getItem("preferredMode");
+  if (preferredMode === "dark") {
+    document.documentElement.classList.add("dark-mode");
+  }
+  console.log("preferredMode", preferredMode);
   // Restore the preferred mode from local storage on page load
-  window.addEventListener("load", () => {
-    // Retrieve the preferred mode from local storage
-    const preferredMode = localStorage.getItem("preferredMode");
-    // Toggle the "dark-mode" class based on the preferred mode
-    document.documentElement.classList.toggle(
-      "dark-mode",
-      preferredMode === "dark"
-    );
-  });
+  // window.addEventListener("load", () => {
+  //   // Retrieve the preferred mode from local storage
+  //   const preferredMode = localStorage.getItem("preferredMode");
+  //   // Toggle the "dark-mode" class based on the preferred mode
+  //   document.documentElement.classList.toggle(
+  //     "dark-mode",
+  //     preferredMode === "dark"
+  //   );
+  // });
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
