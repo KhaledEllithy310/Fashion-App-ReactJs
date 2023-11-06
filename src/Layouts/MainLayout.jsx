@@ -59,17 +59,17 @@ const Layout = () => {
   //   },
   // });
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  window.onload = () => {
-    setIsLoading(false);
-  };
+  // window.onload = () => {
+  //   setIsLoading(false);
+  // };
 
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (
