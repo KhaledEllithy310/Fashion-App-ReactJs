@@ -46,6 +46,10 @@
   object-fit: contain;
 }
 
+img.imgAbout3 {
+  display: none;
+}
+
 .aboutUs__main__title {
   color: var(--accent);
   text-transform: capitalize;
@@ -115,4 +119,13 @@
 
 .aboutUs__content__team__card__social .footer__social-icon:hover {
   transform: scale(1.05) !important;
+}
+
+@media screen and (max-width: 900px) {
+  img.imgAbout2 {
+    display: none;
+  }
+  img.imgAbout3 {
+    display: block;
+  }
 }

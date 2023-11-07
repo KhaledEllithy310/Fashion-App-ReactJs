@@ -87,8 +87,12 @@
 .banner__content__sectionName {
   text-transform: capitalize;
   margin: 10px 0;
+  cursor: pointer;
 }
 
+.banner__content__sectionName:hover {
+  color: var(--accent);
+}
 .banner__content__description {
   color: var(--placeholder);
   margin-bottom: 15px;

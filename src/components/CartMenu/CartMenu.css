@@ -1,6 +1,6 @@
 .css-1160xiw-MuiPaper-root-MuiDrawer-paper {
   background-color: var(--background) !important;
-  width: 350px;
+  width: 360px;
   z-index: 1000;
 }
 
@@ -15,7 +15,9 @@
 .cartMenu__content__products {
   /* padding: 20px 10px; */
   margin: auto;
-  height: 450px;
+  /* height: 450px; */
+  height: 65vh;
+  height: calc(89vh - 155px);
   overflow: auto;
   position: relative;
 }
@@ -159,6 +161,7 @@
   z-index: 10;
   border-top: 1px solid var(--placeholder);
   background-color: var(--background) !important;
+  /* height: 22vh; */
 }
 .cartMenu__content__checkOut__total {
   display: flex;

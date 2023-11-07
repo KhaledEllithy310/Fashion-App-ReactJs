@@ -126,6 +126,12 @@ small {
   border-radius: 10px;
 }
 
+input,
+textarea,
+select,
+.MuiSelect-select {
+  color: var(--text) !important;
+}
 .secondary {
   background-color: var(--secondary);
 }

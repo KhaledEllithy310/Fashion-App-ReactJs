@@ -198,20 +198,6 @@ const FilterProducts = ({
     resetFilterProducts();
   };
 
-  // const handleCheck = () => {
-  //   console.log("check");
-  //   const inputs = document.querySelectorAll("input");
-  //   console.log("inputs BEFORE", inputs);
-  //   setResetChecked(!resetChecked);
-  //   // console.log("inputs BEFORE", inputs.checked);
-  //   // Uncheck all checkboxes
-  //   // inputs.forEach((input) => {
-  //   //   input.checked = false;
-  //   // });
-  //   inputs.checked = !inputs.checked;
-  //   // console.log("inputs BEFORE", inputs.checked);
-  // };
-  // console.log("resetChecked", resetChecked);
   return (
     <div className="filter_products">
       <div className="filter_products__category filter_products__section">

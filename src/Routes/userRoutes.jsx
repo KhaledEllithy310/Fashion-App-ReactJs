@@ -1,14 +1,16 @@
-// import {MainLayout} from "../Layouts";
-import MainLayout from "../Layouts/MainLayout";
+import IsNotLoggedIn from "../components/IsNotLoggedIn";
+import IsLoggedIn from "../components/isLoggedIn";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Cart from "../pages/Cart/Cart";
+import ContactUs from "../pages/ContactUs/ContactUs";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
+import NotFound from "../pages/NotFound/NotFound";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import Products from "../pages/Products/Products";
 import Register from "../pages/Register/Register";
 import WishList from "../pages/WishList/WishList";
-// import MainLayout from './../Layouts/MainLayout';
+import MainLayout from "./../Layouts/MainLayout";
 
 const userRoutes = {
   path: "/",
@@ -17,75 +19,61 @@ const userRoutes = {
   children: [
     {
       path: "",
-      element: (
-        //   <IsLoggedIn>
-        <Home />
-        //   </IsLoggedIn>
-      ),
-    },
-    {
-      path: "products",
-      element: (
-        //   <IsLoggedIn>
-        <Products />
-        //   </IsLoggedIn>
-      ),
-    },
-    {
-      path: "products/:sectionName",
-      element: (
-        //   <IsLoggedIn>
-        <Products />
-        //   </IsLoggedIn>
-      ),
+      element: <Home />,
     },
     {
       path: "aboutUs",
-      element: (
-        //   <IsLoggedIn>
-        <AboutUs />
-        //   </IsLoggedIn>
-      ),
+      element: <AboutUs />,
     },
     {
+      path: "contactus",
+      element: <ContactUs />,
+    },
+    {
+      path: "products/:sectionName",
+      element: <Products />,
+    },
+
+    {
       path: "/product-details/:id",
-      element: (
-        //   <IsLoggedIn>
-        <ProductDetails />
-        //   </IsLoggedIn>
-      ),
+      element: <ProductDetails />,
     },
     {
       path: "cart",
       element: (
-        //   <IsLoggedIn>
-        <Cart />
-        //   </IsLoggedIn>
-      ),
-    },
-    {
-      path: "login",
-      element: (
-        //   <IsLoggedIn>
-        <Login />
-        //   </IsLoggedIn>
-      ),
-    },
-    {
-      path: "register",
-      element: (
-        //   <IsLoggedIn>
-        <Register />
-        //   </IsLoggedIn>
+        <IsNotLoggedIn>
+          <Cart />
+        </IsNotLoggedIn>
       ),
     },
     {
       path: "wishList",
       element: (
-        //   <IsLoggedIn>
-        <WishList />
-        //   </IsLoggedIn>
+        <IsNotLoggedIn>
+          <WishList />
+        </IsNotLoggedIn>
       ),
+    },
+    {
+      path: "login",
+      element: (
+        <IsLoggedIn>
+          <Login />
+        </IsLoggedIn>
+      ),
+    },
+    {
+      path: "register",
+      element: (
+        <IsLoggedIn>
+          <Register />
+        </IsLoggedIn>
+      ),
+    },
+
+    {
+      path: "*",
+      element: <NotFound />,
     },
   ],
 };

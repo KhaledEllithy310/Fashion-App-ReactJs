@@ -11,6 +11,7 @@ export const Banners = [
     img: Women,
     height_img: "400",
     className: "h-100",
+    path: "/products/women",
   },
   {
     products: 50,
@@ -19,6 +20,7 @@ export const Banners = [
     categories: ["blazer", "Jeans"],
     img: men,
     height_img: "50",
+    path: "/products/men",
   },
   {
     products: 100,
@@ -27,5 +29,6 @@ export const Banners = [
     categories: ["watches", "handBag", "Hat"],
     img: Accessories,
     height_img: "50",
+    path: "/products/women",
   },
 ];

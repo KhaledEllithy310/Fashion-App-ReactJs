@@ -1,0 +1,37 @@
+.contact__header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: var(--secondary);
+}
+
+.contact__link {
+  color: var(--text);
+  text-decoration: none;
+}
+.contact__text {
+  color: var(--text);
+}
+
+.contact__touch__Item {
+  margin-bottom: 10px;
+}
+
+.contact__item__header {
+  margin-bottom: 3px;
+}
+.contact__touch__Item svg {
+  width: 1.3rem !important;
+  height: 1.3rem !important;
+  padding: 3px !important;
+  margin-right: 5px;
+}
+.contact__touch__Item .footer__social-icon {
+  padding: 5px;
+}
+
+.contact__section__right__btn {
+  text-align: center;
+}
+.contactBtn {
+  width: fit-content;
+}

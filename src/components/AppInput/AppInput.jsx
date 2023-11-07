@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import "./AppInput.css";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const AppInput = ({ label, type, name, value, onChange, onBlur }) => {
+const AppInput = ({ label, type, name, value, onChange, onBlur, required }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -29,6 +29,7 @@ const AppInput = ({ label, type, name, value, onChange, onBlur }) => {
             type={showPassword ? "text" : "password"}
             value={value}
             name={name}
+            required
             // className="input"
             onChange={onChange}
             onBlur={onBlur}
@@ -58,6 +59,7 @@ const AppInput = ({ label, type, name, value, onChange, onBlur }) => {
           value={value}
           onChange={onChange}
           onBlur={onBlur}
+          required
           // error={error}
         />
       )}

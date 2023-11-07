@@ -1,0 +1,28 @@
+.notFound {
+  text-align: center;
+}
+.notFound__title {
+  font-size: 10rem;
+  background: linear-gradient(to right, var(--accent), var(--primary));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.notFound__description {
+  /* width: 30%; */
+  margin: 15px auto;
+}
+
+.notFound__btn {
+  width: fit-content;
+}
+
+@media screen and (max-width: 400px) {
+  .notFound__title {
+    font-size: 6rem;
+  }
+
+  .notFound__titleSec {
+    font-size: 2rem;
+  }
+}

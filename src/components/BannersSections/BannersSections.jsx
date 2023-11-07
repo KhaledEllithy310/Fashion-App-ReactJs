@@ -16,6 +16,7 @@ const BannersSections = () => {
             img={Banners[0].img}
             className="banner-section"
             height={Banners[0].height_img}
+            path={Banners[0].path}
           />
         </Grid>
 
@@ -29,6 +30,7 @@ const BannersSections = () => {
               categories={banner.categories}
               img={banner.img}
               height={Banners[0].height_img}
+              path={Banners[index].path}
             />
           ))}
         </Grid>

@@ -1,8 +1,9 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
 import "./AboutUs.css";
-import img1 from "../../assets/Images/ourVision.jpg";
-import img2 from "../../assets/Images/whyWe.png";
+import imgAbout1 from "../../assets/Images/ourVision.jpg";
+import imgAbout2 from "../../assets/Images/whyWe.png";
+import imgAbout3 from "../../assets/Images/whyWe1.png";
 import ourTeam1 from "../../assets/Images/our team/ourteam1.jpg";
 import ourTeam2 from "../../assets/Images/our team/ourteam2.jpg";
 import ourTeam3 from "../../assets/Images/our team/ourteam3.jpg";
@@ -37,7 +38,7 @@ const AboutUs = () => {
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
               <div className="aboutUs__content__WhoWeAre__image">
-                <img src={img1} alt="imageAboutUs" />
+                <img src={imgAbout1} alt="imageAboutUs" />
               </div>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -96,7 +97,8 @@ const AboutUs = () => {
             </Grid>
             <Grid item xs={12} md={6}>
               <div className="aboutUs__content__WhyWe__image">
-                <img src={img2} alt="imageAboutUs" />
+                <img src={imgAbout2} alt="imageAboutUs" className="imgAbout2" />
+                <img src={imgAbout3} alt="imageAboutUs" className="imgAbout3" />
               </div>
             </Grid>
           </Grid>
@@ -156,20 +158,7 @@ const AboutUs = () => {
         </Container>
       </div>
 
-      {/* aboutUs__content__second */}
-      {/* <Grid container spacing={4} className="aboutUs__content__second">
-        <Grid item xs={12} md={6}>
-          <div>
-            <h4>about</h4>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <div>
-            <img src={img2} alt="imageAboutUs" />
-          </div>
-        </Grid>
-      </Grid> */}
-
+  
       <Footer />
     </div>
   );

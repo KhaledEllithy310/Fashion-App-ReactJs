@@ -1,4 +1,3 @@
-
 export const pages = [
   {
     name: "Home",
@@ -20,9 +19,11 @@ export const pages = [
     name: "About Us",
     path: "/aboutUs",
   },
+  {
+    name: "Contact Us",
+    path: "/contactus",
+  },
 ];
-
-
 
 export const settingsNotSignIn = [
   {
@@ -37,15 +38,15 @@ export const settingsNotSignIn = [
 
 export const settingsSignIn = [
   {
-    name: "Logout",
+    name: "Log Out",
     path: "logout",
   },
   {
-    name: "my cart",
+    name: "My Cart",
     path: "/cart",
   },
   {
-    name: "my wishList",
+    name: "My WishList",
     path: "/wishList",
   },
 ];

@@ -18,7 +18,6 @@ import "./Footer.css";
 function Footer() {
   return (
     <>
-
       <footer className="footer">
         <Container className="footer__top">
           <Grid container spacing={2}>
@@ -106,9 +105,9 @@ function Footer() {
                 <KeyboardArrowRight />
                 <a
                   className="footer__text footer__link"
-                  href="tel:(08) 8827 633354"
+                  href="https://wa.me/+201011282551"
                 >
-                  (08) 8827 633354
+                  (020) 1011282551
                 </a>
               </Typography>
               <Typography className="footer__link__container ">
