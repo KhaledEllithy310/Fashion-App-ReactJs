@@ -32,7 +32,6 @@
   top: 10px;
   bottom: 10px;
   z-index: -1;
-  /* object-fit: fill; */
   overflow: hidden;
 }
 
@@ -42,7 +41,7 @@
 
 .grid1 img {
   height: 600px;
-  height: auto;
+  /* height: auto; */
 }
 
 .grid2 img {
@@ -71,7 +70,7 @@
 
   .banner__content::after {
     content: "";
-    background-color: rgba(0, 0, 0, 0.317);
+    background-color: rgba(0, 0, 0, 0.071);
     inset: 0;
     width: 100%;
     height: 100%;

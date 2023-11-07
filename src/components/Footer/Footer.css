@@ -58,7 +58,7 @@
 }
 
 .footer__social-icon svg {
-  color: var(--input);
+  color: white !important;
   width: 3rem;
   height: 3rem;
   margin-right: 20px;

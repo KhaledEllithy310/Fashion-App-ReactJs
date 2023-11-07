@@ -70,10 +70,13 @@
   text-transform: capitalize;
   font-size: 30px !important;
   font-weight: 700 !important;
+  color: var(--text);
+  background-color: var(--secondary) !important;
 }
 
 .dialog__filter__content {
   padding: 0 !important;
+  background-color: var(--background);
 }
 
 .filter_products__btn {
@@ -98,11 +101,13 @@
   color: var(--secondary) !important;
 }
 
-.css-xmhac9-MuiTypography-root-MuiDialogContentText-root,
-.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+.css-xmhac9-MuiTypography-root-MuiDialogContentText-root {
   background-color: var(--background) !important;
 }
 
+.closeFilterBtn {
+  color: var(--text) !important;
+}
 .filter__options {
   display: flex;
   flex-flow: row nowrap;
@@ -123,5 +128,6 @@
   }
   .showFilter {
     display: flex;
+    color: white;
   }
 }

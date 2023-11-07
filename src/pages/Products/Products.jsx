@@ -92,7 +92,7 @@ const Products = () => {
             filter options
           </DialogTitle>
           <IconButton
-            aria-label="close"
+            aria-label="close" className="closeFilterBtn"
             onClick={handleClose}
             sx={{
               position: "absolute",

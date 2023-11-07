@@ -1,6 +1,7 @@
 .css-1160xiw-MuiPaper-root-MuiDrawer-paper {
   background-color: var(--background) !important;
   width: 350px;
+  z-index: 1000;
 }
 
 .cartMenu__content {

@@ -105,7 +105,6 @@
 }
 
 .aboutUs__content__team__card__social svg {
-  color: var(--input);
   width: 2rem !important;
   height: 2rem !important;
   transition: all 0.4s;

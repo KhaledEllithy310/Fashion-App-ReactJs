@@ -141,6 +141,7 @@ small {
   font-family: "Poppins";
   cursor: pointer;
   transition: all 0.3s;
+  border: 1px solid var(--placeholder);
 }
 
 .secBtn:hover {

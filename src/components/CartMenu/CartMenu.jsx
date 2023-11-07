@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./CartMenu.css";
-import { Drawer } from "@mui/material";
+import { Drawer, IconButton } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../../store/slices/cartSlice";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import CartItem from "./CartItem";
 import { storeProductsInServer } from "../../helpers/CartFunctions";
 import useGetWishData from "../../hooks/useGetWishData";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
+import { Close } from "@mui/icons-material";
 const CartMenu = ({ open, onClose, anchor, setCartMenu }) => {
   // const [closeMenu, setCloseMenu] = useState({});
   //get all data cart
@@ -28,6 +29,10 @@ const CartMenu = ({ open, onClose, anchor, setCartMenu }) => {
     setCartMenu({ right: false }); // Close the Drawer
   };
 
+  const handleClose = () => {
+    setCartMenu({ right: false }); // Close the Drawer
+  };
+
   return (
     <Drawer anchor={anchor} open={open} onClose={onClose} className="cartMenu">
       <div className="cartMenu__content">
@@ -43,6 +48,18 @@ const CartMenu = ({ open, onClose, anchor, setCartMenu }) => {
           ) : (
             ""
           )}
+          <IconButton
+            aria-label="close"
+            className="closeFilterBtn"
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+            }}
+          >
+            <Close />
+          </IconButton>
         </h4>
         <div className="cartMenu__content__products">
           {productsCart?.length > 0 ? (

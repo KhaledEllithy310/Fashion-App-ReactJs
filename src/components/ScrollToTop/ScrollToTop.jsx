@@ -27,7 +27,7 @@ export default function ScrollToTopButton() {
     <>
       <button
         className={showButton ? "scroll__top" : "d-none"}
-        style={{ zIndex: "1000000" }}
+        style={{ zIndex: "100" }}
         onClick={() => scrollToTop()}
       >
         <KeyboardArrowUp className="iconTop" />
