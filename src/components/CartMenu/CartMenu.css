@@ -4,9 +4,11 @@
   z-index: 1000;
 }
 
-.cartMenu div.uiPaper-root {
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorRight.css-1ab2xsx {
   width: 360px !important;
+  background-color: var(--background) !important;
 }
+
 .cartMenu__content {
   margin: 10px;
   color: var(--text) !important;
