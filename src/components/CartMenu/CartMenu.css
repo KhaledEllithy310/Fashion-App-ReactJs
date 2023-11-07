@@ -4,7 +4,7 @@
   z-index: 1000;
 }
 
-.cartMenu div {
+.cartMenu div:last-child {
   background-color: var(--background) !important;
   width: 360px !important;
 }
