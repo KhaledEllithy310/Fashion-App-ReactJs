@@ -23,16 +23,9 @@ const Layout = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 1000);
   };
 
-  // setIsLoading(true);
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1500);
-  // }, []);
   const darkTheme = createTheme({});
   return (
     <>

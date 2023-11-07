@@ -42,7 +42,7 @@ function Footer() {
               </div>
               <div className="footer__link__container">
                 <KeyboardArrowRight />
-                <Link className="footer__link text-capitalize" to="/contact">
+                <Link className="footer__link text-capitalize" to="/contactus">
                   contact us
                 </Link>
               </div>
