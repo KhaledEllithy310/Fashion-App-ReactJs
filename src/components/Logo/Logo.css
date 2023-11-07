@@ -5,8 +5,7 @@
   /* align-items: start; */
 }
 
-.logoContainer{
-
+.logoContainer {
 }
 
 .preLogo,
@@ -14,4 +13,10 @@
   color: var(--text) !important;
   font-weight: 700 !important;
   cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  .logo {
+    display: none;
+  }
 }

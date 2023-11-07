@@ -1,5 +1,5 @@
 .input {
-  background-color: var(--input) !important;
+  background-color: var(--overlay) !important;
   border-radius: 5px !important;
   border: none !important;
   width: 100%;
@@ -7,7 +7,7 @@
 }
 
 input {
-  color: var(--text) !important;
+  color: var(--textSec) !important;
 }
 
 .css-1jjm1qg-MuiInputBase-root-MuiFilledInput-root {
@@ -18,7 +18,7 @@ input {
   background-color: var(--overlay) !important;
 }
 label {
-  color: var(--placeholder) !important;
+  color: var(--text) !important;
 }
 
 .css-8992ld-MuiInputBase-root-MuiFilledInput-root:after {

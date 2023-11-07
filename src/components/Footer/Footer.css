@@ -24,6 +24,7 @@
 .footer__about-text {
   font-size: 16px !important;
   color: var(--placeholder) !important;
+  margin-top: 23px !important;
 }
 
 .footer__link__container {
@@ -32,6 +33,9 @@
   margin-bottom: 10px !important;
 }
 
+.footer .preLogo {
+  text-transform: lowercase !important;
+}
 .footer__link {
   text-decoration: none;
   color: var(--text);
@@ -57,11 +61,19 @@
   margin-bottom: 15px;
 }
 
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-flow: row nowrap;
+}
+
 .footer__social-icon svg {
   color: white !important;
   width: 3rem;
   height: 3rem;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   transition: all 0.4s;
   background: linear-gradient(to right, var(--primary), var(--accent));
   border-radius: 50%;

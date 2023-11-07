@@ -1,5 +1,4 @@
 import { Fragment, useEffect } from "react";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { PropTypes } from "prop-types";
 import { getAuthFromLocalStorage } from "./../helpers/LocalStorageFunctions";
@@ -15,7 +14,7 @@ export default function IsLoggedIn({ children }) {
     }
   }, [isAuth, navigate]);
 
-  return <Fragment>{children}</Fragment>;
+  return isAuth ? <navigate to="/login" /> : <Fragment>{children}</Fragment>;
 }
 
 IsLoggedIn.propTypes = {

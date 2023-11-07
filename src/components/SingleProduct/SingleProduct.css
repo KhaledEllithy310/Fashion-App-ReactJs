@@ -6,6 +6,12 @@
   margin: 10px;
   position: relative;
   overflow: hidden;
+  background-color: var(--secondary);
+  transition: all 0.3s;
+}
+
+.product:hover {
+  box-shadow: 0 0 10px 0px var(--overlay);
 }
 .product__image {
   position: relative;

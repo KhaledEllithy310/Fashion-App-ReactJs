@@ -20,7 +20,7 @@ const AppExperience = () => {
   return (
     <div className="experience">
       <Container>
-        <h2 className="experience__title">
+        <h2 className="experience__title main__title">
           we provide best customer experience
         </h2>
         <Grid container className="experience__cards">

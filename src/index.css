@@ -11,6 +11,7 @@
 /* Light mode variables */
 :root {
   --text: #000205;
+  --textSec: #fafcff;
   --background: #dcdbdc;
   --backgroundSec: #cfcfcf;
   --primary: #0c3fac;
@@ -28,6 +29,7 @@
 /* Dark mode variables */
 :root.dark-mode {
   --text: #fafcff;
+  --textSec: #fafcff;
   --background: #242324;
   --backgroundSec: #2b2a2b;
 
@@ -175,4 +177,10 @@ select,
   transform: translate(0, -3px);
   box-shadow: 0 20px 80px -10px var(--primary);
   outline: none;
+}
+
+@media screen and (max-width: 500px) {
+  .main__title {
+    font-size: 30px;
+  }
 }

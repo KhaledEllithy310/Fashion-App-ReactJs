@@ -20,12 +20,17 @@ export default function AddressForm() {
     e.target.reset();
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendEmail(e);
+  };
+
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
         Shipping address
       </Typography>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <TextField

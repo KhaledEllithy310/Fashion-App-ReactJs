@@ -29,32 +29,33 @@ function Copyright() {
 
 const steps = ["Shipping address", "Payment details", "Review your order"];
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddressForm />;
-    case 1:
-      return <PaymentForm />;
-    case 2:
-      return <Review />;
-    default:
-      throw new Error("Unknown step");
-  }
-}
-
 export default function Checkout() {
   const form = React.useRef();
+  console.log(form);
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_5gavmdr",
-      "template_cg26txg",
-      form.current,
-      "g-cBTCaGufYxirBWj"
-    );
+    // emailjs.sendForm(
+    //   "service_5gavmdr",
+    //   "template_cg26txg",
+    //   form.current,
+    //   "g-cBTCaGufYxirBWj"
+    // );
     e.target.reset();
   };
+
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return <AddressForm sendForm={sendEmail} />;
+      case 1:
+        return <PaymentForm sendForm={sendEmail} />;
+      case 2:
+        return <Review sendForm={sendEmail} />;
+      default:
+        throw new Error("Unknown step");
+    }
+  }
 
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -99,8 +100,8 @@ export default function Checkout() {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              {getStepContent(activeStep)}
               <form ref={form} onSubmit={sendEmail}>
+                {getStepContent(activeStep)}
                 <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                   {activeStep !== 0 && (
                     <button className="secBtn backBtn" onClick={handleBack}>

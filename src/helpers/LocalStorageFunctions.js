@@ -38,7 +38,7 @@ export const getWishListFromLocalStorage = () => {
 
 //get Cart of User from the local storage that login
 export const getAuthFromLocalStorage = () => {
-  return JSON.parse(localStorage.getItem("isLoggedIn"))?.isAuth || {};
+  return JSON.parse(localStorage.getItem("isLoggedIn"))?.isAuth || false;
 };
 
 //get userId from the local storage that login

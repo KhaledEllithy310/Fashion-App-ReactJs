@@ -35,7 +35,9 @@ const ProductsSlider = () => {
   return (
     <div className="productsSlider">
       <Container>
-        <h2 className="productsSlider__title">Our top-selling products</h2>
+        <h2 className="productsSlider__title main__title">
+          Our top-selling products
+        </h2>
         <div className="container__sections__btn">
           {sections?.map((section) => (
             <button
