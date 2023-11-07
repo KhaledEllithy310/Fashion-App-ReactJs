@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AppNavbar from "../components/AppNavbar/AppNavbar";
 import { Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";

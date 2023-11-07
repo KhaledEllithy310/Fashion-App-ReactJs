@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Grid, TextField, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import {
-  Email,
+  
   Facebook,
   Instagram,
   Twitter,
@@ -12,7 +12,6 @@ import {
 // import MainButton from "./MainButton";
 // import Logo from "./Logo";
 import { Link } from "react-router-dom";
-import AppButton from "../AppButton/AppButton";
 import Logo from "../Logo/Logo";
 import "./Footer.css";
 function Footer() {

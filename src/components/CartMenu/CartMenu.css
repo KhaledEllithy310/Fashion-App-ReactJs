@@ -4,18 +4,20 @@
   z-index: 1000;
 }
 
+.cartMenu div {
+  background-color: var(--background) !important;
+  width: 360px !important;
+}
 .cartMenu__content {
   margin: 10px;
-  color: var(--text);
+  color: var(--text) !important;
   font-size: 20px;
 }
 .cartMenu__content__title {
   padding: 10px 0;
 }
 .cartMenu__content__products {
-  /* padding: 20px 10px; */
   margin: auto;
-  /* height: 450px; */
   height: 65vh;
   height: calc(89vh - 155px);
   overflow: auto;

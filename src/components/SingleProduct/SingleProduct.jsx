@@ -36,10 +36,7 @@ const SingleProduct = ({ item }) => {
   const handleClose = () => {
     setOpen(false);
   };
-
-  const addProductToWishList = (item) => {
-    dispatch(addToWishList(item));
-  };
+ 
   return (
     <div className="product">
       <div className="product__image">
