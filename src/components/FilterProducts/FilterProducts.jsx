@@ -148,29 +148,9 @@ const FilterProducts = ({
     setCategorySearch(categorySearch);
   };
 
-  // const handleReset = () => {
-  //   const inputs = document.querySelectorAll("input");
-  //   console.log("inputs BEFORE", inputs[0].checked);
-  //   setResetChecked(false);
-  //   // Uncheck all checkboxes
-  //   inputs.forEach((input) => {
-  //     input.checked = false;
-  //   });
-  //   console.log("inputs BEFORE", inputs[0].checked);
-
-  //   searchDataRef.current = [];
-  //   // Reset category, color, and size search states
-  //   setColorSearch(""); // Update colorSearch state
-  //   setSizeSearch(""); // Update sizeSearch state
-  //   setCategorySearch(""); // Update categorySearch state
-  //   // Call the resetFilterProducts function to remove the filters
-  //   resetFilterProducts();
-  // };
 
   const handleReset = () => {
-    // Uncheck all category checkboxes
-    // setCategories([]);
-
+ 
     // Uncheck all color checkboxes
     const colorCheckboxes = Array.from(
       document.querySelectorAll(".color-checkbox")
@@ -181,10 +161,6 @@ const FilterProducts = ({
       document.querySelectorAll(".size-checkbox")
     );
     sizeCheckboxes.forEach((checkbox) => (checkbox.checked = false));
-
-    // Reset the price slider
-    const priceSlider = document.querySelector(".slider_price");
-    // priceSlider.noUiSlider.reset();
 
     // Clear the search data
     searchDataRef.current = [];
@@ -242,7 +218,7 @@ const FilterProducts = ({
         </FormGroup>
       </div>
 
-      <div className="filter_products__size filter_products__section">
+      {/* <div className="filter_products__size filter_products__section">
         <h4 className="filter_products__titles">size</h4>
         <FormGroup>
           {products[0]?.sizes["black"]?.map((size) => {
@@ -261,7 +237,7 @@ const FilterProducts = ({
             );
           })}
         </FormGroup>
-      </div>
+      </div> */}
       <div className="filter_products__price filter_products__section filter_products__section--last">
         <h4 className="filter_products__titles">Price</h4>
 

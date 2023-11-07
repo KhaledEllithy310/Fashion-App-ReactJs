@@ -20,3 +20,7 @@
 .scroll__top:hover {
   transform: translateY(-5px);
 }
+
+.d-none{
+  display: none;
+}

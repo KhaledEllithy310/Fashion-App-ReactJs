@@ -78,7 +78,7 @@ const Products = () => {
   return (
     <>
       <h2 className="section__title">{sectionName}</h2>
-      <Container className="p-30">
+      <Container className="p-30 products">
         <Dialog
           fullScreen={fullScreen}
           open={open}

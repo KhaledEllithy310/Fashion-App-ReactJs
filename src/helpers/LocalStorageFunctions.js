@@ -45,6 +45,9 @@ export const getAuthFromLocalStorage = () => {
 export const getUserIdFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("isLoggedIn"))?.userData?.id;
 };
+export const getUserFromLocalStorage = () => {
+  return JSON.parse(localStorage.getItem("isLoggedIn"))?.userData;
+};
 
 //****************** end Auth ******************//
 

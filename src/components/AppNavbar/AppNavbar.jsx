@@ -26,7 +26,10 @@ import {
 import { logOutUser } from "../../helpers/AuthFunctions";
 import { storeProductsInServer } from "../../helpers/CartFunctions";
 import { logOut } from "../../store/slices/userSlice";
-import { getAuthFromLocalStorage } from "../../helpers/LocalStorageFunctions";
+import {
+  getAuthFromLocalStorage,
+  getUserFromLocalStorage,
+} from "../../helpers/LocalStorageFunctions";
 import { logOutCart } from "../../store/slices/cartSlice";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import useGetWishData from "../../hooks/useGetWishData";
@@ -36,7 +39,8 @@ import { useFetchSections } from "./../../hooks/useFetchSections";
 import { logOutWishList } from "../../store/slices/wishListSlice";
 import { storeProductsWishListInServer } from "../../helpers/WishListFunctions";
 import Logo from "../Logo/Logo";
-
+import manAvatar from "../../assets/Images/manAvatar.png";
+import womenAvatar from "../../assets/Images/womenAvatar.png";
 function AppNavbar() {
   const [settings, setSettings] = useState(settingsNotSignIn);
   //control with open or close menu cart
@@ -53,8 +57,9 @@ function AppNavbar() {
   const [productsCart, totalItemsCartProducts] = UseGetCartData();
   // const [preferredMode, setPreferredMode] = useState("light");
   //control to show settings menu
+  const userData = getUserFromLocalStorage();
+  const isAuth = getAuthFromLocalStorage();
   useEffect(() => {
-    const isAuth = getAuthFromLocalStorage();
     if (isAuth === true) setSettings(settingsSignIn);
     else setSettings(settingsNotSignIn);
   });
@@ -114,16 +119,6 @@ function AppNavbar() {
   if (preferredMode === "dark") {
     document.documentElement.classList.add("dark-mode");
   }
-  // Restore the preferred mode from local storage on page load
-  // window.addEventListener("load", () => {
-  //   // Retrieve the preferred mode from local storage
-  //   const preferredMode = localStorage.getItem("preferredMode");
-  //   // Toggle the "dark-mode" class based on the preferred mode
-  //   document.documentElement.classList.toggle(
-  //     "dark-mode",
-  //     preferredMode === "dark"
-  //   );
-  // });
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -167,18 +162,10 @@ function AppNavbar() {
 
   const handleProductsMenu = (path) => {
     setAnchorElUser(null);
-    // if (path === "logout") {
-    //   logOutUser();
-    //   dispatch(logOut());
-    //   dispatch(logOutCart());
-    //   setTimeout(() => {
-    //     navigate("/");
-    //   }, 1000);
-    // } else navigate(path);
   };
 
   const [listSections, setListSections] = useState([]);
-  const [sections, setSections] = useFetchSections();
+  const [sections] = useFetchSections();
 
   // console.log(sections);
 
@@ -196,7 +183,6 @@ function AppNavbar() {
     };
     createListOfSections(sections);
   }, []);
-  // console.log("listSections", listSections);
 
   return (
     <div className="appNavbar__container">
@@ -338,7 +324,15 @@ function AppNavbar() {
               </IconButton>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="" src="/static/images/avatar/2.jpg" />
+                  {userData?.gender === "male" && (
+                    <Avatar alt="manAvatar" src={manAvatar} />
+                  )}
+                  {userData?.gender === "female" && (
+                    <Avatar alt="womenAvatar" src={womenAvatar} />
+                  )}
+                  {!isAuth && (
+                    <Avatar alt="" src="/static/images/avatar/2.jpg" />
+                  )}
                 </IconButton>
               </Tooltip>
               <Menu

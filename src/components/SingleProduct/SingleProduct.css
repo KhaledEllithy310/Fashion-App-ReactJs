@@ -142,7 +142,7 @@
   padding: 8px;
   transition: all 0.3s;
   cursor: pointer;
-  background-color: var(--text);
+  background-color: white;
   color: var(--accent);
   transition: all 0.3s;
 }
@@ -175,8 +175,14 @@
   left: 10px;
   font-family: "Poppins";
   font-size: 13px;
-  padding: 2px 8px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .category__btn {
@@ -196,6 +202,7 @@
 .dialog__productDetails {
   background-color: var(--background) !important;
   color: var(--text) !important;
+  /* padding: 20px; */
 }
 
 /* .dialog__productDetails  {

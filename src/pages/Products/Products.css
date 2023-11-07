@@ -16,6 +16,20 @@
   text-align: center;
 }
 
-.p-30{
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--accent) !important;
+}
+
+.p-30 {
   padding: 30px 0;
+}
+
+.products .resetFilter {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .products .resetFilter {
+    display: flex;
+  }
 }

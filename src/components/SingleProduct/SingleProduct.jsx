@@ -36,7 +36,7 @@ const SingleProduct = ({ item }) => {
   const handleClose = () => {
     setOpen(false);
   };
- 
+
   return (
     <div className="product">
       <div className="product__image">
@@ -103,7 +103,7 @@ const SingleProduct = ({ item }) => {
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
         PaperProps={{
-          sx: { maxWidth: "800px" },
+          sx: { maxWidth: "900px" },
         }}
       >
         <DialogTitle

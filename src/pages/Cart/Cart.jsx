@@ -68,7 +68,7 @@ const Cart = () => {
           <Grid container spacing={2} className="cart__content">
             <Grid item xs={12} md={9}>
               <Grid container spacing={2}>
-                {productsCart.length > 0 ? (
+                {productsCart?.length > 0 ? (
                   arrangeDefault ? (
                     <CartTable productsCart={productsCart} />
                   ) : (

@@ -148,26 +148,7 @@ const ProductDetails = ({ productId }) => {
         {product && (
           <>
             <Grid container className="productDetails">
-              {/* <Grid item sm={3} className="productDetails__sliderImages">
-                {selectedImages?.map((image) => (
-                  <img
-                    key={image}
-                    src={image}
-                    alt="imgProduct"
-                    onClick={() => {
-                      handleImageClick(image);
-                    }}
-                  />
-                ))}
-              </Grid>
-              <Grid item sm={9}>
-                <AppSliderImages
-                  images={selectedImages}
-                  selectedImage={selectedImage}
-                />
-              </Grid> */}
-
-              <Grid item sm={6} className="productDetails__slider">
+              <Grid item sm={7} className="productDetails__slider">
                 <Grid container className="" spacing={3}>
                   <Grid item sm={2} className="">
                     <div className="productDetails__slider__images">
@@ -183,14 +164,14 @@ const ProductDetails = ({ productId }) => {
                       ))}
                     </div>
                   </Grid>
-                  <Grid item sm={10} className="">
+                  <Grid item sm={8} className="">
                     <div className="productDetails__slider__targetImage">
                       <img id="targetImage" src={selectedImage} alt="" />
                     </div>
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item sm={6} className="productDetails__content">
+              <Grid item sm={5} className="productDetails__content">
                 <h5 className="productDetails__content__title">
                   {product.title}
                 </h5>

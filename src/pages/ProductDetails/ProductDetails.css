@@ -72,7 +72,7 @@
 
 .productDetails__content__price__after {
   color: rgb(44, 188, 44);
-  font-family: "Poppins";
+  font-weight: 600;
 }
 
 .productDetails__btns {
@@ -135,7 +135,7 @@
 }
 
 .productDetails__slider__images img {
-  height: 80px;
+  height: 75px;
   width: 60px;
   /* margin-bottom: 10px; */
   cursor: pointer;
@@ -144,12 +144,16 @@
 
 .productDetails__slider__targetImage {
   /* min-width: 230px; */
-  width: 250px;
+  /* width: 250px; */
+  width: fit-content;
   margin: auto;
 }
 
 .productDetails__slider__targetImage img {
-  width: 100%;
+  /* width: 100%; */
+  width: 250px;
+
+  height: auto;
   border: 1px solid white;
   object-fit: contain;
 }
@@ -177,6 +181,4 @@
   .productDetails__content {
     padding-left: 0px;
   }
-
-
 }
