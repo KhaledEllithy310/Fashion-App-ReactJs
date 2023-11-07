@@ -50,7 +50,7 @@ export const CartItem = ({ product, index }) => {
 
   return (
     <Grid container className="cartMenu__content__products__item" key={index}>
-      <Grid item xs={2} className="cartMenu__content__products__item__img">
+      <Grid item xs={3} className="cartMenu__content__products__item__img">
         <img src={product?.images[0]} alt="img" />
       </Grid>
       <Grid item xs={7} className="cartMenu__content__products__item__details">

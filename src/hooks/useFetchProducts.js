@@ -14,24 +14,20 @@ export const useFetchProducts = (
 ) => {
   const [products, setProducts] = useState([]);
   const [totalPageNum, setTotalPageNum] = useState(1);
+  const [isLoading, setIsLoading] = useState(true); // Add loading state
 
   useEffect(() => {
-    console.log("productId", productId);
-    console.log("sectionName", sectionName);
-    console.log("pageNumber", pageNumber);
-    console.log("searchValue", searchValue);
     const fetchProducts = async () => {
       try {
         let data;
+        setIsLoading(true);
         if (productId === null && searchValue === "") {
           // Fetch all products with pagination
-          console.log("searchValue === '' ");
           data = await getProductsPaginate(sectionName, pageNumber);
           const allProducts = await getProducts(sectionName);
           setTotalPageNum(Math.ceil(allProducts.data.length / 8));
         } else if (productId === null && searchValue !== "") {
           // Fetch filtered products with pagination
-          console.log("searchValue !== null");
           data = await getProductsFilter(sectionName, pageNumber, searchValue);
           const allFilteredProducts = await getProducts(
             sectionName,
@@ -46,11 +42,13 @@ export const useFetchProducts = (
         setProducts(data.data);
       } catch (error) {
         console.error("Error fetching products:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchProducts();
   }, [pageNumber, productId, searchValue, sectionName]);
 
-  return [products, setProducts, totalPageNum];
+  return [products, setProducts, totalPageNum, isLoading];
 };

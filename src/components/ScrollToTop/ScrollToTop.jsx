@@ -30,7 +30,7 @@ export default function ScrollToTopButton() {
         style={{ zIndex: "1000000" }}
         onClick={() => scrollToTop()}
       >
-        <KeyboardArrowUp className="iconTop"/>
+        <KeyboardArrowUp className="iconTop" />
       </button>
     </>
   );

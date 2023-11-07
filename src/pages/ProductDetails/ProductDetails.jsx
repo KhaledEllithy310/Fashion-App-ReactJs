@@ -66,7 +66,6 @@ const ProductDetails = ({ productId }) => {
       images: product.images[selectedColor],
     };
 
-    console.log(isAuth);
     if (selectedColor && selectedSize) {
       if (isAuth === true) dispatch(addToWishList(newProduct));
       else showNotification("error", "You are not logged in", 1100);
@@ -122,7 +121,6 @@ const ProductDetails = ({ productId }) => {
     const imageElements = document.querySelectorAll(
       ".productDetails__slider__images img"
     );
-    console.log(imageElements);
     //remove old active
     imageElements.forEach((imageElement) => {
       imageElement.classList.remove("active");

@@ -43,6 +43,10 @@
   background: linear-gradient(to right, var(--primary), var(--accent));
 }
 
+.experience__cards__item__content__icon svg {
+  color: white !important;
+  /* color: var(--text) !important; */
+}
 .experience__cards__item__content__title {
   color: var(--text);
   font-size: 1.5rem !important;

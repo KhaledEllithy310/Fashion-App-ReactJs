@@ -1,6 +1,6 @@
-.css-1vxvp5a-MuiPaper-root-MuiDrawer-paper {
-  background-color: #242324 !important;
-  width: 320px;
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  background-color: var(--background) !important;
+  width: 350px;
 }
 
 .cartMenu__content {
@@ -13,7 +13,6 @@
 }
 .cartMenu__content__products {
   /* padding: 20px 10px; */
-  font-family: "Poppins";
   margin: auto;
   height: 450px;
   overflow: auto;
@@ -21,7 +20,9 @@
 }
 
 .cartMenu__content__products__clearAll {
-  margin-left: 10px;
+  margin-left: 20px;
+  background-color: var(--placeholder);
+  color: var(--secondary);
 }
 
 .cartMenu__content__title {

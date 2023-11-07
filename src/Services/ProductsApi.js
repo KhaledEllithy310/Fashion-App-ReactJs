@@ -1,7 +1,6 @@
 import { myAxios } from "./BaseApi";
 
 export const getProducts = async (sectionName, searchValue = "") => {
-  console.log(searchValue);
   const res = await myAxios.get(
     `/products?section=${sectionName}${searchValue}`
   );

@@ -114,7 +114,6 @@ function AppNavbar() {
   if (preferredMode === "dark") {
     document.documentElement.classList.add("dark-mode");
   }
-  console.log("preferredMode", preferredMode);
   // Restore the preferred mode from local storage on page load
   // window.addEventListener("load", () => {
   //   // Retrieve the preferred mode from local storage

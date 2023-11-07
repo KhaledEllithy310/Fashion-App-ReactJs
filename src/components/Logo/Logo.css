@@ -4,3 +4,14 @@
   align-items: center;
   /* align-items: start; */
 }
+
+.logoContainer{
+
+}
+
+.preLogo,
+.logo {
+  color: var(--text) !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}

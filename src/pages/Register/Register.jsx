@@ -17,11 +17,9 @@ const Register = () => {
     const isEmailExisted = allUsers.data.findIndex(
       (user) => user.email === userData.email
     );
-    console.log(isEmailExisted);
     //if email is not found so add user
     if (isEmailExisted === -1) {
       const res = await addUser(userData);
-      console.log(res);
       dispatch(addNewUser(userData));
       //reset form after successful registration
       formik.resetForm();

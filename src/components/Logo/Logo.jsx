@@ -10,7 +10,7 @@ const Logo = () => {
     <div className="logoContainer">
       <Typography
         className="preLogo"
-        variant="h6"
+        variant="h4"
         onClick={() => navigate("/")}
         noWrap
         component="a"
@@ -18,7 +18,7 @@ const Logo = () => {
         f
       </Typography>
       <Typography
-        variant="h6"
+        variant="h4"
         className="logo"
         noWrap
         onClick={() => navigate("/")}

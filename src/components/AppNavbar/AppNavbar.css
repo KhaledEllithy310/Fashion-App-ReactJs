@@ -34,13 +34,7 @@ header.appNavbar {
   background-color: var(--accent) !important;
 }
 
-.preLogo,
-.logo {
-  color: var(--text) !important;
-  font-family: "Poppins" !important;
-  font-weight: 700 !important;
-  cursor: pointer;
-}
+
 .nav-link {
   color: var(--text);
   text-decoration: none;

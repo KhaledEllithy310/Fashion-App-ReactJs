@@ -12,7 +12,7 @@
   padding-bottom: 8px;
   margin-bottom: 10px;
   position: relative;
-  color: var(--placeholder);
+  color: var(--text);
 }
 
 .filter_products__titles::after {

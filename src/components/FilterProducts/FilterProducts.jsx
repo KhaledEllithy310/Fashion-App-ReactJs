@@ -80,12 +80,10 @@ const FilterProducts = ({
 
   const handlePriceChange = (e) => {
     const priceRange = e.target.value;
-    console.log(priceRange);
     // Add color to searchData if it's checked
     if (searchDataRef.current.length > 0) {
       searchDataRef.current.forEach((element, index) => {
         // console.log(element);
-        console.log(element.includes("price_lte"));
         if (element.includes("price_lte")) {
           searchDataRef.current.splice(index, 1);
         } else {
@@ -115,7 +113,6 @@ const FilterProducts = ({
     const colorSearch = searchDataRef.current.join("");
     // Set the colorSearch state
     setColorSearch(colorSearch);
-    console.log(searchDataRef.current);
   };
   const handleSizeChange = (e, size) => {
     const isChecked = e.target.checked;
@@ -132,12 +129,10 @@ const FilterProducts = ({
     const sizeSearch = searchDataRef.current.join("");
     // Set the sizeSearch state
     setSizeSearch(sizeSearch);
-    console.log(searchDataRef.current);
   };
 
   const handleCategoryChange = (e, category) => {
     const isChecked = e.target.checked;
-    console.log(e);
     // Add category to searchData if it's checked
     if (isChecked) searchDataRef.current.push(`&category=${category.name}`);
     else {
@@ -151,7 +146,6 @@ const FilterProducts = ({
     const categorySearch = searchDataRef.current.join("");
     // Set the categorySearch state
     setCategorySearch(categorySearch);
-    console.log(searchDataRef.current);
   };
 
   // const handleReset = () => {
@@ -182,18 +176,15 @@ const FilterProducts = ({
       document.querySelectorAll(".color-checkbox")
     );
     colorCheckboxes.forEach((checkbox) => (checkbox.checked = false));
-    console.log("colorCheckboxes", colorCheckboxes);
     // Uncheck all size checkboxes
     const sizeCheckboxes = Array.from(
       document.querySelectorAll(".size-checkbox")
     );
     sizeCheckboxes.forEach((checkbox) => (checkbox.checked = false));
-    console.log("sizeCheckboxes", sizeCheckboxes);
 
     // Reset the price slider
     const priceSlider = document.querySelector(".slider_price");
     // priceSlider.noUiSlider.reset();
-    console.log("priceSlider", priceSlider);
 
     // Clear the search data
     searchDataRef.current = [];

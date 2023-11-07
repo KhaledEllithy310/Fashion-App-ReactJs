@@ -8,7 +8,12 @@
   display: flex !important;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
+  padding: 40px 0;
+  background-color: var(--secondary);
+}
+
+.cart__content {
+  margin-top: 20px !important;
 }
 
 @media screen and (max-width: 440px) {
@@ -22,6 +27,9 @@
     width: 100% !important;
   }
 
+  .cartPage__top__item {
+    max-width: 100% !important;
+  }
   .cartMenu__content__products__clearAll {
     margin: 0;
   }

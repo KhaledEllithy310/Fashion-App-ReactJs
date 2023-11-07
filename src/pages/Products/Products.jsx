@@ -21,21 +21,20 @@ import { useParams } from "react-router-dom";
 import FilterProducts from "../../components/FilterProducts/FilterProducts";
 import { useTheme } from "@emotion/react";
 import { Close, FilterAlt } from "@mui/icons-material";
+import Spinner from "../../components/Spinner/Spinner";
 const Products = () => {
   const { sectionName } = useParams();
   const [page, setPage] = useState(1);
   const [allSearchValue, setAllSearchValue] = useState("");
   const [loading, setLoading] = useState(true); // Add loading state
 
-  const [products, , totalPageNum] = useFetchProducts(
+  const [products, , totalPageNum, isLoading] = useFetchProducts(
     null,
     sectionName,
     page,
     allSearchValue
   );
-  // console.log("products", products);
 
-  console.log("allSearchValue", allSearchValue);
   const handleChange = (event, value) => {
     setPage(value);
   };
@@ -50,13 +49,14 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
+    console.log("loading", loading);
+    setLoading(true);
     if (products.length > 0) {
       setLoading(false); // Set loading to false when products are fetched
     }
   }, [products]);
   const filterProducts = async (searchValue) => {
     const value = searchValue.join("");
-    console.log(value);
     setAllSearchValue(value);
   };
   const [open, setOpen] = useState(false);
@@ -74,103 +74,95 @@ const Products = () => {
 
   const resetFilterProducts = () => {
     setAllSearchValue("");
-    console.log("resetFilter");
   };
-  const check = () => {
-    setAllSearchValue("");
-    console.log("resetFilter");
-  };
-  console.log(resetFilterProducts);
   return (
-    <Container>
-      <h1>All Products</h1>
-
-      <Dialog
-        fullScreen={fullScreen}
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="responsive-dialog-title"
-        PaperProps={{
-          sx: { maxWidth: "800px" },
-        }}
-      >
-        <DialogTitle id="responsive-dialog-title" className="dialog__filter">
-          filter options
-        </DialogTitle>
-        <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={{
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
+    <>
+      <h2 className="section__title">{sectionName}</h2>
+      <Container className="p-30">
+        <Dialog
+          fullScreen={fullScreen}
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="responsive-dialog-title"
+          PaperProps={{
+            sx: { maxWidth: "800px" },
           }}
         >
-          <Close />
-        </IconButton>
-        <DialogContent className="dialog__filter__content">
-          <DialogContentText>
-            {/* Filter Products component */}
+          <DialogTitle id="responsive-dialog-title" className="dialog__filter">
+            filter options
+          </DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+            }}
+          >
+            <Close />
+          </IconButton>
+          <DialogContent className="dialog__filter__content">
+            <DialogContentText>
+              {/* Filter Products component */}
+              <FilterProducts
+                sectionName={sectionName}
+                page={page}
+                filterProducts={filterProducts}
+                resetFilterProducts={resetFilterProducts}
+              />
+            </DialogContentText>
+          </DialogContent>
+        </Dialog>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4} md={3} className="filter__container">
             <FilterProducts
               sectionName={sectionName}
               page={page}
               filterProducts={filterProducts}
               resetFilterProducts={resetFilterProducts}
-              check={check}
             />
-          </DialogContentText>
-        </DialogContent>
-      </Dialog>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4} md={3} className="filter__container">
-          <FilterProducts
-            sectionName={sectionName}
-            page={page}
-            filterProducts={filterProducts}
-            resetFilterProducts={resetFilterProducts}
-            check={check}
-          />
-        </Grid>
-        <Grid item xs={12} sm={8} md={9}>
-          <div className="filter__options">
-            <div className="showFilter " onClick={handleClickOpen}>
-              <FilterAlt />
-            </div>
+          </Grid>
+          <Grid item xs={12} sm={8} md={9}>
+            <div className="filter__options">
+              <div className="showFilter " onClick={handleClickOpen}>
+                <FilterAlt />
+              </div>
 
-            <div className="resetFilter secBtn " onClick={resetFilterProducts}>
-              Reset
+              <div className="resetFilter secBtn" onClick={resetFilterProducts}>
+                Reset
+              </div>
             </div>
-          </div>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <>
-              {products.length === 0 ? (
-                <div>No products available.</div>
-              ) : (
-                <>
-                  <Grid container spacing={2}>
-                    {products.map((item) => (
-                      <Grid key={item.id} item xs={12} sm={6} md={4}>
-                        <SingleProduct item={item} />
-                      </Grid>
-                    ))}
-                  </Grid>
-                  <div className="pagination">
-                    <Pagination
-                      count={totalPageNum}
-                      page={page}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </>
-              )}
-            </>
-          )}
+            {isLoading ? (
+              <Spinner />
+            ) : (
+              <>
+                {products.length === 0 ? (
+                  <div>No products available.</div>
+                ) : (
+                  <>
+                    <Grid container spacing={2}>
+                      {products.map((item) => (
+                        <Grid key={item.id} item xs={12} sm={6} md={4}>
+                          <SingleProduct item={item} />
+                        </Grid>
+                      ))}
+                    </Grid>
+                    <div className="pagination">
+                      <Pagination
+                        count={totalPageNum}
+                        page={page}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </>
+                )}
+              </>
+            )}
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </>
   );
 };
 

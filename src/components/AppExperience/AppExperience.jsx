@@ -9,7 +9,7 @@ import { useSpring, animated } from "react-spring";
 const AppExperience = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 1,
+    // threshold: .2,
   });
   console.log("inView", inView);
   const cardTransitions = useSpring({
@@ -42,9 +42,9 @@ const AppExperience = () => {
                   >
                     {data.icon}
                   </Typography>
-                  <Typography className="experience__cards__item__content__title">
+                  <h5 className="experience__cards__item__content__title">
                     {data.title}
-                  </Typography>
+                  </h5>
                   <Typography className="experience__cards__item__content__description">
                     {data.description}
                   </Typography>

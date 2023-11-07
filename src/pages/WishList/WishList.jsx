@@ -25,62 +25,68 @@ const WishList = () => {
   const [arrangeDefault, setArrangeDefault] = useState(true);
 
   return (
-    <Container className="">
-      <div className="cartPage">
-        <div className="cartPage__top">
-          <Grid item xs={6}>
-            <h4 className="cartPage__title">my wishList </h4>
-          </Grid>
-          <Grid item xs={6}>
-            <div className="cartPage__iconsGrid">
-              {productsWish?.length > 0 ? (
-                <button
-                  className="cartMenu__content__products__clearAll secBtn"
-                  onClick={() => dispatch(clearCart())}
-                >
-                  clear all
-                </button>
-              ) : (
-                ""
-              )}
-              <span
-                className={!arrangeDefault ? "active" : ""}
-                onClick={() => setArrangeDefault(false)}
-              >
-                <GridView />
-              </span>
-              <span
-                className={arrangeDefault ? "active" : ""}
-                onClick={() => setArrangeDefault(true)}
-              >
-                <TableRows />
-              </span>
-            </div>
-          </Grid>
-        </div>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
-              {productsWish?.length > 0 ? (
-                arrangeDefault ? (
-                  <WishTable productsWish={productsWish} />
+    <>
+      <div className=" secondary">
+        <Container>
+          <Grid container className="cartPage__top">
+            <Grid item xs={6} className="cartPage__top__item">
+              <h4 className="cartPage__title">my wishList </h4>
+            </Grid>
+            <Grid item xs={6} className="cartPage__top__item">
+              <div className="cartPage__iconsGrid">
+                {productsWish?.length > 0 ? (
+                  <button
+                    className="cartMenu__content__products__clearAll secBtn"
+                    onClick={() => dispatch(clearCart())}
+                  >
+                    clear all
+                  </button>
                 ) : (
-                  productsWish?.map((product, index) => (
-                    <Grid key={index} item xs={12} sm={6} md={4}>
-                      <WishItem product={product} index={index} />
-                    </Grid>
-                  ))
-                )
-              ) : (
-                <h5 className="cartMenu__content__title__sec">
-                  The wishList is empty.
-                </h5>
-              )}
+                  ""
+                )}
+                <span
+                  className={!arrangeDefault ? "active" : ""}
+                  onClick={() => setArrangeDefault(false)}
+                >
+                  <GridView />
+                </span>
+                <span
+                  className={arrangeDefault ? "active" : ""}
+                  onClick={() => setArrangeDefault(true)}
+                >
+                  <TableRows />
+                </span>
+              </div>
             </Grid>
           </Grid>
-        </Grid>
+        </Container>
       </div>
-    </Container>
+      <Container>
+        <div className="cartPage">
+            <Grid container spacing={2} className="cart__content ">
+              <Grid item xs={12}>
+                <Grid container spacing={2}>
+                  {productsWish?.length > 0 ? (
+                    arrangeDefault ? (
+                      <WishTable productsWish={productsWish} />
+                    ) : (
+                      productsWish?.map((product, index) => (
+                        <Grid key={index} item xs={12} sm={6} md={4}>
+                          <WishItem product={product} index={index} />
+                        </Grid>
+                      ))
+                    )
+                  ) : (
+                    <h5 className="cartMenu__content__title__sec">
+                      The wishList is empty.
+                    </h5>
+                  )}
+                </Grid>
+              </Grid>
+            </Grid>
+        </div>
+      </Container>
+    </>
   );
 };
 
