@@ -5,7 +5,6 @@
 }
 
 .cartMenu div:last-child {
-  background-color: var(--background) !important;
   width: 360px !important;
 }
 .cartMenu__content {
