@@ -24,12 +24,12 @@ const Register = () => {
       const res = await addUser(userData);
       dispatch(addNewUser(userData));
       //reset form after successful registration
-      showNotification("success", "Register successfully", 1000);
+      showNotification("success", "Register successfully", 900);
       setTimeout(() => {
         Navigate("/login");
-      });
+      }, 100);
       formik.resetForm();
-    } else showNotification("success", "this email is already registered");
+    } else showNotification("success", "this email is already registered", 900);
   };
 
   const formik = useFormik({
