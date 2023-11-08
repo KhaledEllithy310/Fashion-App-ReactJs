@@ -150,6 +150,7 @@ select,
   cursor: pointer;
   transition: all 0.3s;
   border: 1px solid var(--placeholder);
+  min-width: fit-content;
 }
 
 .secBtn:hover {
@@ -171,6 +172,7 @@ select,
   cursor: pointer;
   width: 10rem;
   transition: all 0.3s;
+  min-width: fit-content;
 }
 
 .mainBtn:hover {

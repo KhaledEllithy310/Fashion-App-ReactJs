@@ -8,6 +8,7 @@ import { validationSchemaRegister } from "../../helpers/validationForms";
 import { addUser, getAllUsers } from "../../Services/UsersApi";
 import { useDispatch } from "react-redux";
 import { addNewUser } from "../../store/slices/userSlice";
+import { showNotification } from "../../helpers/Notification";
 const Register = () => {
   const dispatch = useDispatch();
 
@@ -22,8 +23,9 @@ const Register = () => {
       const res = await addUser(userData);
       dispatch(addNewUser(userData));
       //reset form after successful registration
+      showNotification("success", "Register successfully");
       formik.resetForm();
-    } else console.log("this email is already registered");
+    } else showNotification("success", "this email is already registered");
   };
 
   const formik = useFormik({

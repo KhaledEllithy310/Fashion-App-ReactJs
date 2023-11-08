@@ -145,13 +145,15 @@
 .productDetails__slider__targetImage {
   /* min-width: 230px; */
   /* width: 250px; */
-  width: fit-content;
+  width: 100%;
+  /* height: 300px; */
+  /* width: fit-content; */
   margin: auto;
 }
 
 .productDetails__slider__targetImage img {
-  /* width: 100%; */
-  width: 250px;
+  width: 100%;
+  /* width: 270px; */
 
   height: auto;
   border: 1px solid white;

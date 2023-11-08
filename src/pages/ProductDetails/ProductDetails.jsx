@@ -149,7 +149,7 @@ const ProductDetails = ({ productId }) => {
           <>
             <Grid container className="productDetails">
               <Grid item sm={7} className="productDetails__slider">
-                <Grid container className="" spacing={3}>
+                <Grid container className="" spacing={3} justifyContent={"center"}>
                   <Grid item sm={2} className="">
                     <div className="productDetails__slider__images">
                       {selectedImages?.map((image) => (
@@ -164,7 +164,7 @@ const ProductDetails = ({ productId }) => {
                       ))}
                     </div>
                   </Grid>
-                  <Grid item sm={8} className="">
+                  <Grid item sm={9} className="">
                     <div className="productDetails__slider__targetImage">
                       <img id="targetImage" src={selectedImage} alt="" />
                     </div>
