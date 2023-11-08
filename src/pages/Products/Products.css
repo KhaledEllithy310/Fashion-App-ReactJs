@@ -16,7 +16,8 @@
   text-align: center;
 }
 
-.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected,
+.css-1xr9krm.Mui-selected {
   background-color: var(--accent) !important;
 }
 
