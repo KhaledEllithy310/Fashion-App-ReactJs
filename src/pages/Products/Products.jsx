@@ -92,7 +92,8 @@ const Products = () => {
             filter options
           </DialogTitle>
           <IconButton
-            aria-label="close" className="closeFilterBtn"
+            aria-label="close"
+            className="closeFilterBtn"
             onClick={handleClose}
             sx={{
               position: "absolute",
@@ -138,7 +139,9 @@ const Products = () => {
             ) : (
               <>
                 {products.length === 0 ? (
-                  <div>No products available.</div>
+                  <h4 className="cartMenu__content__title__sec">
+                    No products available.
+                  </h4>
                 ) : (
                   <>
                     <Grid container spacing={2}>
