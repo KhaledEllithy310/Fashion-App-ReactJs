@@ -2,21 +2,8 @@ import React from "react";
 import "./AppExperience.css";
 import { Container, Grid, Paper, Typography } from "@mui/material";
 import { experienceData } from "./../../helpers/data-experience";
-import styled from "@emotion/styled";
-import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "react-spring";
 
 const AppExperience = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    // threshold: .2,
-  });
-  console.log("inView", inView);
-  const cardTransitions = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? "translateY(0)" : "translateY(100px)",
-  });
-
   return (
     <div className="experience">
       <Container>
@@ -32,10 +19,9 @@ const AppExperience = () => {
               sm={6}
               md={3}
               className="experience__cards__item"
-              ref={ref}
             >
               <Paper className="experience__cards__item__content">
-                <animated.div style={cardTransitions}>
+                <div>
                   <Typography
                     className="experience__cards__item__content__icon"
                     sx={{ fontSize: "50px" }}
@@ -48,7 +34,7 @@ const AppExperience = () => {
                   <Typography className="experience__cards__item__content__description">
                     {data.description}
                   </Typography>
-                </animated.div>
+                </div>
               </Paper>
             </Grid>
           ))}

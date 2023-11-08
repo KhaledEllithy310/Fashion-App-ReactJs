@@ -1,16 +1,13 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import {
-  
   Facebook,
   Instagram,
   Twitter,
   YouTube,
   KeyboardArrowRight,
 } from "@mui/icons-material";
-// import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-// import MainButton from "./MainButton";
-// import Logo from "./Logo";
+
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./Footer.css";
@@ -35,7 +32,7 @@ function Footer() {
               <div className="footer__link__container">
                 <KeyboardArrowRight />
 
-                <Link className="footer__link text-capitalize" to="/about">
+                <Link className="footer__link text-capitalize" to="/aboutUs">
                   about us
                 </Link>
               </div>

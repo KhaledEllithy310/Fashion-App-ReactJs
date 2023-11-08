@@ -4,7 +4,6 @@ export const getProducts = async (sectionName, searchValue = "") => {
   const res = await myAxios.get(
     `/products?section=${sectionName}${searchValue}`
   );
-  console.log(res);
   return res;
 };
 export const getProductsPaginate = async (sectionName, pageNumber) => {

@@ -17,7 +17,6 @@ const ProductsSlider = () => {
 
   const defaultSectionData = sections[0];
 
-  console.log("defaultSectionData", defaultSectionData);
   useEffect(() => {
     if (defaultSectionData) {
       setTargetSectionName(defaultSectionData?.name);

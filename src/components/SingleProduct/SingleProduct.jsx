@@ -15,15 +15,11 @@ import {
   IconButton,
 } from "@mui/material";
 import ProductDetails from "./../../pages/ProductDetails/ProductDetails";
-import { useDispatch } from "react-redux";
-import { addToWishList } from "../../store/slices/wishListSlice";
 
 const SingleProduct = ({ item }) => {
   // console.log("item", item.images);
   const colors = Object.keys(item.images);
-  // console.log(item.images[colors[0]][0]);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   //open dialog foe show product
   const [open, setOpen] = useState(false);
   const theme = useTheme();

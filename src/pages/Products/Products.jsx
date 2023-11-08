@@ -49,7 +49,6 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-    console.log("loading", loading);
     setLoading(true);
     if (products.length > 0) {
       setLoading(false); // Set loading to false when products are fetched

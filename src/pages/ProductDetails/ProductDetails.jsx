@@ -149,7 +149,12 @@ const ProductDetails = ({ productId }) => {
           <>
             <Grid container className="productDetails">
               <Grid item sm={7} className="productDetails__slider">
-                <Grid container className="" spacing={3} justifyContent={"center"}>
+                <Grid
+                  container
+                  className=""
+                  spacing={3}
+                  justifyContent={"center"}
+                >
                   <Grid item sm={2} className="">
                     <div className="productDetails__slider__images">
                       {selectedImages?.map((image) => (
@@ -198,7 +203,7 @@ const ProductDetails = ({ productId }) => {
                   )}
                 </div>
 
-                <div className="product__colors">
+                <ul className="product__colors">
                   {product?.colors &&
                     product?.colors.map((color) => (
                       <li
@@ -208,14 +213,14 @@ const ProductDetails = ({ productId }) => {
                         onClick={(e) => selectColor(e, color)}
                       ></li>
                     ))}{" "}
-                </div>
-                <div className="product__sizes">
+                </ul>
+                <ul className="product__sizes">
                   {selectedSizes.map((size) => (
                     <li key={size} onClick={(e) => selectSize(e, size)}>
                       {size}
                     </li>
                   ))}
-                </div>
+                </ul>
 
                 <div className="productDetails__btns">
                   <button

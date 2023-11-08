@@ -11,7 +11,7 @@ const CartCheckOut = () => {
   // useState for promocode to open or close the input
   const [togglePromoCode, setTogglePromoCode] = useState(false);
   //get all data cart
-  const [productsCart, totalItems, totalPrice] = UseGetCartData();
+  const [, , totalPrice] = UseGetCartData();
   const Navigate = useNavigate();
   const dispatch = useDispatch();
   const handleCheckOut = () => {
@@ -42,7 +42,7 @@ const CartCheckOut = () => {
           <h6 className="text">tax</h6>
           <h6 className="price">$60</h6>
         </div>
-        <div className="cartPage__check__details__promoCode">
+        {/* <div className="cartPage__check__details__promoCode">
           <p
             className="cartPage__check__details__promoCode__text"
             onClick={() => setTogglePromoCode(!togglePromoCode)}
@@ -56,7 +56,7 @@ const CartCheckOut = () => {
               type={"text"}
             />
           )}
-        </div>
+        </div> */}
         <div className="cartPage__check__details__totalPrice">
           <h6 className="text big">total</h6>
           <h6 className="price big">${totalPrice + 60}</h6>
