@@ -88,6 +88,7 @@
   text-transform: capitalize;
   margin: 10px 0;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .banner__content__sectionName:hover {
