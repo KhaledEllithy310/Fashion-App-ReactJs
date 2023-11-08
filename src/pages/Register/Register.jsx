@@ -9,9 +9,10 @@ import { addUser, getAllUsers } from "../../Services/UsersApi";
 import { useDispatch } from "react-redux";
 import { addNewUser } from "../../store/slices/userSlice";
 import { showNotification } from "../../helpers/Notification";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
   const dispatch = useDispatch();
-
+  const Navigate = useNavigate();
   //add user function
   const registerUser = async (userData) => {
     const allUsers = await getAllUsers();
@@ -23,7 +24,10 @@ const Register = () => {
       const res = await addUser(userData);
       dispatch(addNewUser(userData));
       //reset form after successful registration
-      showNotification("success", "Register successfully");
+      showNotification("success", "Register successfully", 1000);
+      setTimeout(() => {
+        Navigate("/login");
+      });
       formik.resetForm();
     } else showNotification("success", "this email is already registered");
   };
