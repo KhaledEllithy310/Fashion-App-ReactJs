@@ -93,7 +93,6 @@ const FilterProducts = ({
       searchDataRef.current.push(
         `&price_gte=${priceRange[0]}&price_lte=${priceRange[1]}`
       );
-    filterProducts(searchDataRef.current);
   };
 
   const handleColorChange = (e, color) => {
@@ -107,11 +106,6 @@ const FilterProducts = ({
         searchDataRef.current.splice(index, 1);
       }
     }
-    // Join searchData elements to form colorSearch string
-    const colorSearch = searchDataRef.current.join("");
-    // Set the colorSearch state
-    // setColorSearch(colorSearch);
-    // filterProducts(searchDataRef.current);
   };
   // const handleSizeChange = (e, size) => {
   //   const isChecked = e.target.checked;
@@ -141,9 +135,6 @@ const FilterProducts = ({
         searchDataRef.current.splice(index, 1);
       }
     }
-    // setTimeout(() => {
-    //   filterProducts(e, searchDataRef.current);
-    // }, 500);
   };
 
   const handleSearchName = (e) => {
@@ -186,8 +177,6 @@ const FilterProducts = ({
     const formFilter = document.getElementById("filter_products__form");
     formFilter.reset();
   };
-
-
 
   return (
     <div className="filter_products">
@@ -285,7 +274,9 @@ const FilterProducts = ({
           />
         </div>
         <div className="filter_products__btn">
-          <button className="mainBtn">filter</button>
+          <button type="submit" className="mainBtn">
+            filter
+          </button>
           <div className=" secBtn " onClick={handleReset}>
             Reset
           </div>

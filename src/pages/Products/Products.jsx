@@ -57,7 +57,7 @@ const Products = () => {
     }
   }, [products]);
   const filterProducts = async (e, searchValue) => {
-    // e.preventDefault();
+    e.preventDefault();
     const value = searchValue.join("");
     setAllSearchValue(value);
     // handleClose();

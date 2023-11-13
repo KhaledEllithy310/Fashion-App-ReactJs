@@ -2723,26 +2723,9 @@
   "wishLists": [
     {
       "userId": 1,
-      "productsWish": [
-        {
-          "id": 1,
-          "title": "T-shirt",
-          "price": 1000,
-          "discountPercentage": 30,
-          "description": "good T-shirt",
-          "color": "black",
-          "size": "s",
-          "images": [
-            "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671145d7acec6eb7f7ab84be584df450e6f258_thumbnail_220x293.webp",
-            "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671150e274f68ac44bae577aacb909063a72cb_thumbnail_220x293.webp",
-            "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671154170a7423c3156320615b4bdd625ee566_thumbnail_220x293.webp",
-            "https://img.ltwebstatic.com/images3_pi/2023/06/02/1685671159d61a793626956c95e5131e31be5bd945_thumbnail_220x293.webp"
-          ],
-          "quantity": 3
-        }
-      ],
+      "productsWish": [],
       "isLoading": false,
-      "totalItems": 1,
+      "totalItems": 0,
       "id": 1
     },
     {
