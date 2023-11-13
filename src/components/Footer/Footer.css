@@ -89,3 +89,9 @@
   background-color: var(--secondary);
   padding: 20px;
 }
+
+.GitHub {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}

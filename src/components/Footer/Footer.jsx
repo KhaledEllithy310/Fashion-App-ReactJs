@@ -102,17 +102,10 @@ function Footer() {
                 <a
                   className="footer__text footer__link"
                   href="https://wa.me/+201011282551"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   (020) 1011282551
-                </a>
-              </Typography>
-              <Typography className="footer__link__container ">
-                <KeyboardArrowRight />
-                <a
-                  className="footer__text footer__link"
-                  href="fax:(08) 8827 633354"
-                >
-                  (08) 8827 633354
                 </a>
               </Typography>
               <Typography className=" footer__link__container ">
@@ -176,7 +169,17 @@ function Footer() {
           </div>
         </div>
         <Typography align="center" className="footer__bottom__copyRight">
-          © 2023 Your Company. All Rights Reserved.
+          © 2023{" "}
+          <span>
+            <a
+              href="https://github.com/KhaledEllithy310"
+              target="_blank"
+              rel="noreferrer" className="GitHub"
+            >
+              Khaled Ellithy
+            </a>
+          </span>
+          . All Rights Reserved.
         </Typography>
       </div>
     </>

@@ -90,6 +90,8 @@ function ContactUs() {
                       <a
                         className="contact__link"
                         href="https://wa.me/+201011282551"
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         (020) 1011282551
                       </a>
@@ -205,11 +207,8 @@ function ContactUs() {
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item xs={12} className="contact__section__right__btn" >
-                    <button
-                      type="submit"
-                      className="mainBtn contactBtn"
-                    >
+                  <Grid item xs={12} className="contact__section__right__btn">
+                    <button type="submit" className="mainBtn contactBtn">
                       Send Message
                     </button>
                   </Grid>
