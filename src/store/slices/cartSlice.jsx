@@ -70,7 +70,6 @@ export const cartSlice = createSlice({
       calculateTotalPrice(state);
 
       //increment the count of products
-      // state.totalItems++;
       calculateTotalItems(state);
       //store the cart in local storage
       setDataInLocalStorage("cart", state);
@@ -138,13 +137,13 @@ export const cartSlice = createSlice({
     builder.addCase(getCartByUserID.fulfilled, (state, action) => {
       const { userId, isLoading, totalItems, totalPrice, productsCart } =
         action.payload || {};
-      // console.log(action.payload);
       const newCart = {
         cart: { userId, productsCart },
         isLoading,
         totalItems,
         totalPrice,
       };
+
       setDataInLocalStorage("cart", newCart);
       return newCart;
     });

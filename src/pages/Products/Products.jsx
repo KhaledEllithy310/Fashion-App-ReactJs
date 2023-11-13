@@ -9,6 +9,7 @@ import {
   Grid,
   IconButton,
   Pagination,
+  TextField,
   useMediaQuery,
 } from "@mui/material";
 import "./Products.css";
@@ -44,6 +45,7 @@ const Products = () => {
   useEffect(() => {
     return async () => {
       storeProductsInServer(productsCart);
+      {}
       storeProductsWishListInServer(productsWish);
     };
   }, []);
@@ -54,9 +56,11 @@ const Products = () => {
       setLoading(false); // Set loading to false when products are fetched
     }
   }, [products]);
-  const filterProducts = async (searchValue) => {
+  const filterProducts = async (e, searchValue) => {
+    // e.preventDefault();
     const value = searchValue.join("");
     setAllSearchValue(value);
+    // handleClose();
   };
   const [open, setOpen] = useState(false);
   const theme = useTheme();
@@ -73,10 +77,13 @@ const Products = () => {
 
   const resetFilterProducts = () => {
     setAllSearchValue("");
+    // handleClose();
   };
+
   return (
     <>
       <h2 className="section__title">{sectionName}</h2>
+
       <Container className="p-30 products">
         <Dialog
           fullScreen={fullScreen}
@@ -84,7 +91,7 @@ const Products = () => {
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
           PaperProps={{
-            sx: { maxWidth: "800px" },
+            sx: { maxWidth: "800px", minWidth: "300px" },
           }}
         >
           <DialogTitle id="responsive-dialog-title" className="dialog__filter">
@@ -125,7 +132,10 @@ const Products = () => {
           </Grid>
           <Grid item xs={12} sm={8} md={9}>
             <div className="filter__options">
-              <div className="showFilter " onClick={handleClickOpen}>
+              <div
+                className="showFilter "
+                onClick={handleClickOpen}
+              >
                 <FilterAlt />
               </div>
 

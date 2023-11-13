@@ -139,7 +139,6 @@ function AppNavbar() {
   };
 
   const [productsWish, ,] = useGetWishData();
-  // console.log("productsWish", productsWish);
   //log out the user
   const handleUserMenu = (path) => {
     setAnchorElUser(null);

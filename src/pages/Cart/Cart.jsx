@@ -85,9 +85,11 @@ const Cart = () => {
                 )}
               </Grid>
             </Grid>
-            <Grid item xs={12} md={3}>
-              <CartCheckOut />
-            </Grid>
+            {productsCart.length > 0 && (
+              <Grid item xs={12} md={3}>
+                <CartCheckOut />
+              </Grid>
+            )}
           </Grid>
         </div>
       </Container>

@@ -29,7 +29,7 @@ const Register = () => {
         Navigate("/login");
       }, 100);
       formik.resetForm();
-    } else showNotification("success", "this email is already registered", 900);
+    } else showNotification("error", "this email is already registered", 900);
   };
 
   const formik = useFormik({

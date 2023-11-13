@@ -7,7 +7,7 @@ import {
   FormGroup,
   Slider,
   SliderThumb,
-  Typography,
+  TextField,
 } from "@mui/material";
 import "./FilterProducts.css";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
@@ -59,15 +59,12 @@ const FilterProducts = ({
   page,
   filterProducts,
   resetFilterProducts,
+  handleClose,
 }) => {
   const [sections] = useFetchSections();
   const [products] = useFetchProducts(null, sectionName);
   const [targetSection, setTargetSection] = useState();
-  const [, setCategorySearch] = useState("");
-  const [, setColorSearch] = useState("");
-  const [, setSizeSearch] = useState("");
-  const [,] = useState("");
-
+  const [open, setOpen] = useState(true); // State variable for dialog visibility
   useEffect(() => {
     sections.forEach((section) => {
       if (section.name === sectionName) setTargetSection(section);
@@ -96,6 +93,7 @@ const FilterProducts = ({
       searchDataRef.current.push(
         `&price_gte=${priceRange[0]}&price_lte=${priceRange[1]}`
       );
+    filterProducts(searchDataRef.current);
   };
 
   const handleColorChange = (e, color) => {
@@ -112,24 +110,25 @@ const FilterProducts = ({
     // Join searchData elements to form colorSearch string
     const colorSearch = searchDataRef.current.join("");
     // Set the colorSearch state
-    setColorSearch(colorSearch);
+    // setColorSearch(colorSearch);
+    // filterProducts(searchDataRef.current);
   };
-  const handleSizeChange = (e, size) => {
-    const isChecked = e.target.checked;
-    // Add size to searchData if it's checked
-    if (isChecked) searchDataRef.current.push(`&size=${size}`);
-    else {
-      // Remove size from searchData if it's unchecked
-      const index = searchDataRef.current.indexOf(`&size=${size}`);
-      if (index > -1) {
-        searchDataRef.current.splice(index, 1);
-      }
-    }
-    // Join searchData elements to form sizeSearch string
-    const sizeSearch = searchDataRef.current.join("");
-    // Set the sizeSearch state
-    setSizeSearch(sizeSearch);
-  };
+  // const handleSizeChange = (e, size) => {
+  //   const isChecked = e.target.checked;
+  //   // Add size to searchData if it's checked
+  //   if (isChecked) searchDataRef.current.push(`&size=${size}`);
+  //   else {
+  //     // Remove size from searchData if it's unchecked
+  //     const index = searchDataRef.current.indexOf(`&size=${size}`);
+  //     if (index > -1) {
+  //       searchDataRef.current.splice(index, 1);
+  //     }
+  //   }
+  //   // Join searchData elements to form sizeSearch string
+  //   const sizeSearch = searchDataRef.current.join("");
+  //   // Set the sizeSearch state
+  //   setSizeSearch(sizeSearch);
+  // };
 
   const handleCategoryChange = (e, category) => {
     const isChecked = e.target.checked;
@@ -142,15 +141,32 @@ const FilterProducts = ({
         searchDataRef.current.splice(index, 1);
       }
     }
-    // Join searchData elements to form categorySearch string
-    const categorySearch = searchDataRef.current.join("");
-    // Set the categorySearch state
-    setCategorySearch(categorySearch);
+    // setTimeout(() => {
+    //   filterProducts(e, searchDataRef.current);
+    // }, 500);
   };
 
+  const handleSearchName = (e) => {
+    const searchValue = e.target.value;
+
+    if (searchDataRef.current.length > 0) {
+      searchDataRef.current.forEach((element, index) => {
+        // console.log(element);
+        if (element.includes("title_like")) {
+          searchDataRef.current.splice(index, 1);
+          console.log("1");
+          searchDataRef.current.push(`&title_like=${searchValue}`);
+        } else {
+          console.log("2");
+        }
+      });
+    } else {
+      searchDataRef.current.push(`&title_like=${searchValue}`);
+      console.log("3");
+    }
+  };
 
   const handleReset = () => {
- 
     // Uncheck all color checkboxes
     const colorCheckboxes = Array.from(
       document.querySelectorAll(".color-checkbox")
@@ -165,60 +181,75 @@ const FilterProducts = ({
     // Clear the search data
     searchDataRef.current = [];
 
-    // Reset category, color, and size search states
-    setColorSearch("");
-    setSizeSearch("");
-    setCategorySearch("");
-
     // Call the resetFilterProducts function to remove the filters
     resetFilterProducts();
+    const formFilter = document.getElementById("filter_products__form");
+    formFilter.reset();
   };
+
+
 
   return (
     <div className="filter_products">
-      <div className="filter_products__category filter_products__section">
-        <h4 className="filter_products__titles">category</h4>
-        <FormGroup>
-          {categoryData?.map((category) => {
-            return (
-              <FormControlLabel
-                key={category?.name}
-                control={
-                  <Checkbox
-                    className="filter_products__category__checkbox"
-                    onChange={(e) => handleCategoryChange(e, category)}
-                    // checked={resetChecked}
-                  />
-                }
-                label={category?.name}
-              />
-            );
-          })}
-        </FormGroup>
-      </div>
-      <div className="filter_products__color filter_products__section ">
-        <h4 className="filter_products__titles">colors</h4>
+      <form
+        id="filter_products__form"
+        onSubmit={(e) => filterProducts(e, searchDataRef.current)}
+      >
+        <div className="filter_products__section">
+          <TextField
+            id="name"
+            label="Search By Name"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            className="input"
+            onChange={(e) => handleSearchName(e)}
+          />
+        </div>
 
-        <FormGroup>
-          {products[0]?.colors?.map((color) => {
-            return (
-              <FormControlLabel
-                key={color}
-                control={
-                  <Checkbox
-                    className="filter_products__category__checkbox"
-                    onChange={(e) => handleColorChange(e, color)}
-                    // checked={resetChecked === false ? false : ""}
-                  />
-                }
-                label={color}
-              />
-            );
-          })}
-        </FormGroup>
-      </div>
+        <div className="filter_products__category filter_products__section">
+          <h4 className="filter_products__titles">category</h4>
+          <FormGroup>
+            {categoryData?.map((category) => {
+              return (
+                <FormControlLabel
+                  key={category?.name}
+                  control={
+                    <Checkbox
+                      className="filter_products__category__checkbox"
+                      onChange={(e) => handleCategoryChange(e, category)}
+                      // checked={resetChecked}
+                    />
+                  }
+                  label={category?.name}
+                />
+              );
+            })}
+          </FormGroup>
+        </div>
+        <div className="filter_products__color filter_products__section ">
+          <h4 className="filter_products__titles">colors</h4>
 
-      {/* <div className="filter_products__size filter_products__section">
+          <FormGroup>
+            {products[0]?.colors?.map((color) => {
+              return (
+                <FormControlLabel
+                  key={color}
+                  control={
+                    <Checkbox
+                      className="filter_products__category__checkbox"
+                      onChange={(e) => handleColorChange(e, color)}
+                      // checked={resetChecked === false ? false : ""}
+                    />
+                  }
+                  label={color}
+                />
+              );
+            })}
+          </FormGroup>
+        </div>
+
+        {/* <div className="filter_products__size filter_products__section">
         <h4 className="filter_products__titles">size</h4>
         <FormGroup>
           {products[0]?.sizes["black"]?.map((size) => {
@@ -238,35 +269,31 @@ const FilterProducts = ({
           })}
         </FormGroup>
       </div> */}
-      <div className="filter_products__price filter_products__section filter_products__section--last">
-        <h4 className="filter_products__titles">Price</h4>
+        <div className="filter_products__price filter_products__section filter_products__section--last">
+          <h4 className="filter_products__titles">Price</h4>
 
-        <AirbnbSlider
-          slots={{ thumb: AirbnbThumbComponent }}
-          getAriaLabel={(index) =>
-            index === 0 ? "Minimum price" : "Maximum price"
-          }
-          defaultValue={[0, 5000]}
-          valueLabelDisplay="on"
-          className="slider_price"
-          onChange={(e) => handlePriceChange(e)}
-          max={5000}
-        />
-      </div>
-      <div className="filter_products__btn">
-        <button
-          className="mainBtn"
-          onClick={() => filterProducts(searchDataRef.current)}
-        >
-          filter
-        </button>
-        <div className=" secBtn " onClick={handleReset}>
-          Reset
+          <AirbnbSlider
+            slots={{ thumb: AirbnbThumbComponent }}
+            getAriaLabel={(index) =>
+              index === 0 ? "Minimum price" : "Maximum price"
+            }
+            defaultValue={[0, 5000]}
+            valueLabelDisplay="on"
+            className="slider_price"
+            onChange={(e) => handlePriceChange(e)}
+            max={5000}
+          />
         </div>
-        {/* <div className=" secBtn " onClick={handleCheck}>
+        <div className="filter_products__btn">
+          <button className="mainBtn">filter</button>
+          <div className=" secBtn " onClick={handleReset}>
+            Reset
+          </div>
+          {/* <div className=" secBtn " onClick={handleCheck}>
           check
         </div> */}
-      </div>
+        </div>
+      </form>
     </div>
   );
 };

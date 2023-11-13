@@ -3,12 +3,20 @@ import AppNavbar from "../components/AppNavbar/AppNavbar";
 import { Outlet } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getUserIdFromLocalStorage } from "../helpers/LocalStorageFunctions";
-import { getCartByUserID } from "../store/slices/cartSlice";
-import { getWishListByUserID } from "../store/slices/wishListSlice";
+import { getCartByUserID, logOutCart } from "../store/slices/cartSlice";
+import {
+  getWishListByUserID,
+  logOutWishList,
+} from "../store/slices/wishListSlice";
 import ScrollToTopButton from "../components/ScrollToTop/ScrollToTop";
 import Spinner from "../components/Spinner/Spinner";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, createTheme } from "@mui/material";
+import { storeProductsWishListInServer } from "../helpers/WishListFunctions";
+import { storeProductsInServer } from "../helpers/CartFunctions";
+import { logOut } from "../store/slices/userSlice";
+import UseGetCartData from "../hooks/useGetCartData";
+import useGetWishData from "../hooks/useGetWishData";
 
 const Layout = () => {
   const dispatch = useDispatch();
@@ -17,30 +25,15 @@ const Layout = () => {
   dispatch(getCartByUserID(userId));
   dispatch(getWishListByUserID(userId));
 
-  const [isLoading, setIsLoading] = useState(true);
-
-  window.onload = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  };
-
   const darkTheme = createTheme({});
   return (
     <>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <>
-          <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
-            <AppNavbar />
-            <Outlet />
-            <ScrollToTopButton />
-          </ThemeProvider>
-        </>
-      )}
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <AppNavbar />
+        <Outlet />
+        <ScrollToTopButton />
+      </ThemeProvider>
     </>
   );
 };

@@ -185,4 +185,11 @@ select,
   .main__title {
     font-size: 30px;
   }
+
+  .mainBtn,
+  .secBtn {
+    font-size: 15px;
+    width: fit-content;
+  }
+
 }

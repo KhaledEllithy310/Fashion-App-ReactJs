@@ -2,7 +2,6 @@ import IsNotLoggedIn from "../components/IsNotLoggedIn";
 import IsLoggedIn from "../components/isLoggedIn";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Cart from "../pages/Cart/Cart";
-import Checkout from "../pages/CheckOut/CheckOut";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
@@ -52,14 +51,6 @@ const userRoutes = {
       element: (
         <IsNotLoggedIn>
           <WishList />
-        </IsNotLoggedIn>
-      ),
-    },
-    {
-      path: "checkout",
-      element: (
-        <IsNotLoggedIn>
-          <Checkout />
         </IsNotLoggedIn>
       ),
     },

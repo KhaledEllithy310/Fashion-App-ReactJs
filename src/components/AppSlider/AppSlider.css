@@ -7,12 +7,12 @@
 }
 @media screen and (max-width: 525px) {
   .slide__item {
-    height: 70vh;
+    height: 60vh;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 420px) {
   .slide__item {
-    height: 43vh;
+    min-height: 40vh;
   }
 
   .slide__item__content__title {
