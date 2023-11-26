@@ -1,10 +1,12 @@
-# Fashion-App
+# Fashion-App  [Live Demo](https://fashion-store-umber.vercel.app/)
 
 ## Description
 
 Welcome to our project! This is a Fashion App made in Javascript and React.js framework. It allows users to quickly and easily browse, search for, and purchase clothing and accessories. The app features a user-friendly interface, a wide selection of products, and a secure checkout process.
 
-## Technology Stack:
+![Fashion Home](./src/assets/slidersection.png)
+
+## Technologies
 
 - HTML
 - CSS
@@ -16,8 +18,8 @@ Welcome to our project! This is a Fashion App made in Javascript and React.js fr
 - Email.js
 - JSON-Server
 
-  ## Features:
-  
+## Features
+
 - Authorization and Authentication
 - Product pagination
 - Product search feature
@@ -37,5 +39,3 @@ To run the app locally,
 - Run `npm install` to install the dependencies.
 - Run `npm start` to run the application.
 - Run `npm run json-server` to run the json server.
-
-  
